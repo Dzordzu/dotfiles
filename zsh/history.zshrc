@@ -1,0 +1,20 @@
+HISTFILE=~/.histfile
+HISTSIZE=3000
+SAVEHIST=2500
+
+# Reversed history search
+bindkey '^K' history-incremental-search-backward
+
+export HSTR_CONFIG=hicolor
+export HH_CONFIG=hicolor         # get more colors
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
+
+hh-start-search() {
+    TMP=$BUFFER
+    zle push-input
+    BUFFER="hh $TMP"
+    zle accept-line
+}
+zle -N hh-start-search
+bindkey "\C-r" hh-start-search     # bind hh to Ctrl-r (for Vi mode check doc)
