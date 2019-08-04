@@ -7,3 +7,5 @@ export TERM="xterm-256color"
 # Start with a fetch
 screenfetch
 
+setxkbmap -layout pl
+
