@@ -192,4 +192,5 @@ for_window [workspace="chill" class="[Aa]lacritty"] floating enable, resize set 
 
 
 exec feh --bg-scale ~/Wallpapers/main
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
