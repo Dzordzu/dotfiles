@@ -16,7 +16,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Visual
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'jacoborus/tender.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -32,7 +33,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'jtratner/vim-flavored-markdown'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " C++
 Plug 'rip-rip/clang_complete'
