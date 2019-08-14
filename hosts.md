@@ -12,10 +12,18 @@ Every file SHOULD start with the following lines
 127.0.1.1	hostname.localdomain	hostname
 ```
 
-## Address ranges
+## Address ranges (local network)
 
 ### 127.1.x.x
-Contains global apps with fancy hostnames
+Contains global apps with fancy hostnames:
+
+| IP | Domain |
+| -- | ------ |
+| 127.1.0.0 | me.dzordzu |
+| 127.1.0.1 | gitlab.dzordzu |
+| 127.1.0.2 | redmine.dzordzu |
+| 127.1.0.3 | nexus.dzordzu |
+| 127.1.0.4 | kimai.dzordzu |
 
 ### 127.2.x.x
 Contains temporary hostnames (for tests, apps that will last 10mins on system, running production (joke) etc.)
