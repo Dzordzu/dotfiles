@@ -24,6 +24,8 @@ Contains global apps with fancy hostnames:
 | 127.1.0.2 | redmine.dzordzu |
 | 127.1.0.3 | nexus.dzordzu |
 | 127.1.0.4 | kimai.dzordzu |
+| 127.1.0.5 | icinga.dzordzu |
+| 127.1.0.6 | netbox.dzordzu |
 
 ### 127.2.x.x
 Contains temporary hostnames (for tests, apps that will last 10mins on system, running production (joke) etc.)
