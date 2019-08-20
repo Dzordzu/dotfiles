@@ -1,6 +1,6 @@
-HISTFILE=~/.histfile
-HISTSIZE=3000
-SAVEHIST=2500
+export HISTFILE=~/.histfile
+export HISTSIZE=3000
+export SAVEHIST=2500
 
 # Reversed history search
 bindkey '^K' history-incremental-search-backward
@@ -8,7 +8,7 @@ bindkey '^K' history-incremental-search-backward
 export HSTR_CONFIG=hicolor
 export HH_CONFIG=hicolor         # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
+# export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
 hh-start-search() {
     TMP=$BUFFER
