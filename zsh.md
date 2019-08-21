@@ -14,5 +14,5 @@ git clone https://github.com/Dzordzu/dotfiles.git
 mkdir -p ~/.config/zsh
 cp dotfiles/zsh/* ~/.config/zsh
 cp dotfiles/zsh/.zshrc ~/.zshrc
-rm -r dotfiles
+rm -rf dotfiles
 ```
