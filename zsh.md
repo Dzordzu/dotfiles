@@ -13,6 +13,6 @@ This configuration needs:
 git clone https://github.com/Dzordzu/dotfiles.git
 mkdir -p ~/.config/zsh
 cp dotfiles/zsh/* ~/.config/zsh
-ln ~/.config/zsh/.zshrc ~/.zshrc
+cp dotfiles/zsh/.zshrc ~/.zshrc
 rm -r dotfiles
 ```
