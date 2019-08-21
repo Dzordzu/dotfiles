@@ -16,7 +16,7 @@ This configuration needs:
 git clone https://github.com/Dzordzu/dotfiles.git
 mkdir -p ~/.config/vim/
 cp dotfiles/vim/* ~/.config/vim/
-ln ~/.config/vim/.vimrc ~/.vimrc
+cp dotfiles/vim/.vimrc ~/.vimrc
 rm -r dotfiles
 ```
 
