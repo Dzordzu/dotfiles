@@ -41,4 +41,7 @@ Plug 'rip-rip/clang_complete'
 " TOML
 Plug 'cespare/vim-toml'
 
+" Tmus
+Plug 'tmux-plugins/vim-tmux'
+
 call plug#end()
