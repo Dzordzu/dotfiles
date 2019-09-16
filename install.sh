@@ -33,6 +33,6 @@ trizen -Sy --noconfirm \
 
 # Install tmux
 trizen -Sy --noconfirm \
-   hstr \
+   hstr-git \
    tmux
 
