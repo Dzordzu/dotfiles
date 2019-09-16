@@ -1,7 +1,6 @@
 #!/bin/zsh
 export KEYTIMEOUT=1
 export TERMINAL=alacritty
-export EDITOR=/bin/vim
 
 # Constants
 # ZSH_THEME="cobalt2"
@@ -25,13 +24,4 @@ fi
 
 # ZSH config
 alias ls='ls --color=auto'
-
-# Use vim bindings
-EDITOR=/bin/vim
-bindkey -v
-
-## ESC + v as vim edit
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
 
