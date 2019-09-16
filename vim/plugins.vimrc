@@ -23,6 +23,11 @@ Plug 'jacoborus/tender.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
+" Nginx
+Plug 'chr4/nginx.vim'
+
+" Python
+Plug 'davidhalter/jedi-vim'
 
 " Latex and UML
 Plug 'aklt/plantuml-syntax'
@@ -41,7 +46,7 @@ Plug 'rip-rip/clang_complete'
 " TOML
 Plug 'cespare/vim-toml'
 
-" Tmus
+" Tmux
 Plug 'tmux-plugins/vim-tmux'
 
 call plug#end()
