@@ -22,6 +22,7 @@ trizen -Sy --noconfirm \
 # Install vim
 trizen -Sy --noconfirm \
    vim-plug \
+   xclip \
    vim-instant-markdown
 
 # Install zsh
