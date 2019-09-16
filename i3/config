@@ -30,13 +30,14 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show drun -show-icons -line-padding 4 -padding 25
+bindsym $mod+e exec rofi -show run -line-padding 4 -padding 25
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -49,10 +50,16 @@ bindsym $mod+l focus right
 bindsym $mod+h focus left
 
 # move focused window
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+h move left
+bindsym $mod+Mod1+j move down
+bindsym $mod+Mod1+k move up
+bindsym $mod+Mod1+l move right
+bindsym $mod+Mod1+h move left
+
+# resize focused window
+bindsym $mod+Mod1+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
 
 # split in horizontal orientation
 bindsym $mod+s split h
@@ -79,8 +86,8 @@ bindsym $mod+c move position center
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "general"
-set $ws2 "chill"
+set $ws1 "1"
+set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -114,38 +121,19 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 
-bindcode 121 exec amixer -D pulse -c 1 set Master 1+
-bindcode 122 exec amixer -D -c 1 set Master 2dB-
-bindcode 123 exec amixer -D -c 1 set Master 2dB+ unmute
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
+bindcode 121 exec pactl set-sink-mute 0 toggle # mute
+bindcode 122 exec pactl -- set-sink-volume 0 -5%
+bindcode 123 exec pactl set-sink-mute 0 0 && pactl -- set-sink-volume 0 +5%
+bindcode 99 exec spectacle &
 
 mode "launch" {
+
+        bindsym $mod+s split h
+        bindsym $mod+v split v
 
         bindsym t exec i3-sensible-terminal
         bindsym b exec firefox
@@ -154,12 +142,15 @@ mode "launch" {
         bindsym $mod+r mode "default"
         bindsym Return mode "default"
 }
-bindsym $mod+Shift+a mode "launch"
+bindsym $mod+Shift+l mode "launch"
 
 mode "system" {
 
-        bindsym s exec shutdown -h now
-#       bindsym l exec
+        bindsym s exec "shutdown -h now"
+        bindsym l exec "i3lock -i ~/Wallpapers/lock.resized && i3-msg mode 'default'"
+        bindsym e exec "i3-msg exit 
+        bindsym c reload 
+        bindsym r restart 
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -182,15 +173,16 @@ bindsym Control+Mod1+b exec firefox --new-window
 exec firefox
 exec alacritty
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 gaps outer 10
 gaps inner 10
 focus_follows_mouse no
 
 
-for_window [workspace="chill" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center
+for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center
 
 
-exec feh --bg-scale ~/Wallpapers/main
+exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/Slideshow/
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 
