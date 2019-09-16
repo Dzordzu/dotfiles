@@ -22,3 +22,6 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Re
 autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) .
             \ ' | xclip -selection clipboard')
 
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_override_foldtext = 0
+
