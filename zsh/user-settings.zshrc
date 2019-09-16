@@ -1,4 +1,5 @@
 export KEYTIMEOUT=1
+export TERMINAL=alacritty
 
 # Constants
 # ZSH_THEME="cobalt2"
