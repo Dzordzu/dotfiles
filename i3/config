@@ -186,3 +186,5 @@ exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/Slideshow/
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
+exec xrandr --output HDMI1 --auto --left-of eDP1
+exec xrandr --output DP1 --auto --right-of eDP1
