@@ -5,8 +5,8 @@ export SAVEHIST=2500
 # Reversed history search
 bindkey '^K' history-incremental-search-backward
 
-export HSTR_CONFIG=hicolor
-export HH_CONFIG=hicolor         # get more colors
+export HSTR_CONFIG=hicolor,blacklist
+export HH_CONFIG=hicolor,blacklist         # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 # export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
