@@ -182,7 +182,7 @@ focus_follows_mouse no
 for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center
 
 
-exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/Slideshow/
+exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 

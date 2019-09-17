@@ -12,6 +12,13 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 # Prepare .config
 mkdir -p ~/.config
 
+# Install wallpapers
+mkdir -p ~/Wallpapers/Package
+cp -R $DIR/wallpapers/* ~/Wallpapers/Package/
+if [ ! -f ~/Wallpapers/main ]; then
+   ln ~/Wallpapers/Package/main ~/Wallpapers/main
+fi
+
 # Install i3
 cp -rf $DIR/i3 ~/.config/
 
@@ -25,7 +32,6 @@ mv ~/.config/tmux/.tmux.conf ~/.tmux.conf
 # Install zsh
 cp -rf $DIR/zsh ~/.config
 mv ~/.config/zsh/.zshrc ~/.zshrc
-
 
 # Install polybar
 ETH_INT=$(ip link | awk 'BEGIN {FS=": "} {print $2}' | grep "^en")
