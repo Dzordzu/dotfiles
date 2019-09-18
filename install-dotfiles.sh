@@ -36,9 +36,11 @@ mv ~/.config/zsh/.zshrc ~/.zshrc
 # Install polybar
 ETH_INT=$(ip link | awk 'BEGIN {FS=": "} {print $2}' | grep "^en")
 WL_INT=$(ip link | awk 'BEGIN {FS=": "} {print $2}' | grep "^wl")
+TUN_INT=$(ip link | awk 'BEGIN {FS=": "} {print $2}' | grep "^tun")
 cp -rf $DIR/polybar ~/.config
 sed -i "s/????ETH????/$ETH_INT/g" ~/.config/polybar/modules/network.ini
 sed -i "s/????WL????/$WL_INT/g" ~/.config/polybar/modules/network.ini
+sed -i "s/????TUN????/$TUN_INT/g" ~/.config/polybar/modules/network.ini
 
 # Install rofi
 cp -rf $DIR/rofi ~/.config
