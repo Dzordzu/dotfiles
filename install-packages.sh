@@ -10,7 +10,6 @@ trizen -Sy --noconfirm \
 trizen -Sy --noconfirm \
    i3-gaps \
    libevent \
-   dmenu \
    i3lock
 
 # Install polybar
