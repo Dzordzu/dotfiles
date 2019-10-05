@@ -33,7 +33,8 @@ trizen -Sy --noconfirm \
 # Langs
 trizen -Sy --noconfirm \
    clang \
-   ruby
+   ruby \
+   texlive-most
 
 # Services
 sudo systemctl enable sddm
