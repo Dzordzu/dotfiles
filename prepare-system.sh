@@ -16,7 +16,9 @@ trizen -Sy --noconfirm \
 # Graphical stuff
 trizen -Sy --noconfirm \
    sddm \
-   xorg
+   xorg \
+   firefox \
+   ttf-dejavu
 
 # Drivers support
 trizen -Sy --noconfirm \
