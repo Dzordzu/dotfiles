@@ -8,6 +8,7 @@ makepkg -si --noconfirm
 
 # Install base
 trizen -Sy --noconfirm \
+   perl-lwp-protocol-https \
    bluez \
    p7zip \
    gzip \
