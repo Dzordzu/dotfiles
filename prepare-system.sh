@@ -7,5 +7,5 @@ cd trizen
 makepkg -si
 
 # Install base
-trizen -Sy \
+trizen -Sy --noconfirm \
    bluez 
