@@ -26,6 +26,7 @@ trizen -Sy --noconfirm \
 
 # Install zsh
 trizen -Sy --noconfirm \
+   zsh \
    antibody \
    oh-my-zsh \
    screenfetch \
