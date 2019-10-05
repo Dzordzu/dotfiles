@@ -49,6 +49,6 @@ cp -rf $DIR/rofi ~/.config
 cp -rf $DIR/vim ~/.config
 mv ~/.config/vim/.vimrc ~/.vimrc
 vim +VimEnter +PlugInstall +qall
-cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
