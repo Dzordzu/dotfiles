@@ -30,6 +30,11 @@ trizen -Sy --noconfirm \
    docker \
    docker-compose
 
+# Langs
+trizen -Sy --noconfirm \
+   clang \
+   ruby
+
 # Services
 sudo systemctl enable sddm
 sudo systemctl start sddm
