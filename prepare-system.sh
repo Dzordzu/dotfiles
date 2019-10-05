@@ -1,5 +1,5 @@
 
-pacman -Sy base-devel
+sudo pacman -Sy --no-confirm base-devel
 
 # Install trizen 
 git clone https://aur.archlinux.org/trizen.git
