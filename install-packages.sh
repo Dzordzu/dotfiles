@@ -28,7 +28,7 @@ trizen -Sy --noconfirm \
 trizen -Sy --noconfirm \
    antibody \
    oh-my-zsh \
-   screenfetchi \
+   screenfetch \
    neofetch
 
 # Install tmux

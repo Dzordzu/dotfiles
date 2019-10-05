@@ -13,6 +13,7 @@ trizen -Sy --noconfirm \
    gzip \
    tar
 
+# Graphical stuff
 trizen -Sy --noconfirm \
    sddm \
    xorg
@@ -20,5 +21,6 @@ trizen -Sy --noconfirm \
 sudo systemctl enable sddm
 sudo systemctl start sddm
 
+# Drivers support
 trizen -Sy --noconfirm \
    bluez
