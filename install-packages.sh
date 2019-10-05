@@ -20,6 +20,7 @@ trizen -Sy --noconfirm \
 
 # Install vim
 trizen -Sy --noconfirm \
+   gvim \
    vim-plug \
    xclip \
    vim-instant-markdown
