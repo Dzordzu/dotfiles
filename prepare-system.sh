@@ -25,6 +25,11 @@ trizen -Sy --noconfirm \
    openssh \
    bluez
 
+# Docker
+trizen -Sy --noconfirm \
+   docker \
+   docker-compose
+
 # Services
 sudo systemctl enable sddm
 sudo systemctl start sddm
