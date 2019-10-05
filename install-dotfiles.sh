@@ -48,3 +48,7 @@ cp -rf $DIR/rofi ~/.config
 # Install vim
 cp -rf $DIR/vim ~/.config
 mv ~/.config/vim/.vimrc ~/.vimrc
+vim -c PlugInstall -c q
+cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+ruby extconf.rb
+make
