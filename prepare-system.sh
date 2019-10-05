@@ -1,13 +1,10 @@
 
 name=''
-if [ -z "$1" ]; then
-   name="dzordzu"
-else
-   name=$1
+if [ ! -z "$1" ]; then
+   name="$1"
+   useradd -m $1
+   su $1
 fi
-
-useradd -m $1
-su $1
 
 # Install trizen 
 git clone https://aur.archlinux.org/trizen.git
