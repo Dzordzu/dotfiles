@@ -28,7 +28,7 @@ trizen -Sy --noconfirm \
 trizen -Sy --noconfirm \
    zsh \
    antibody \
-   oh-my-zsh \
+   oh-my-zsh-git \
    screenfetch \
    neofetch
 
