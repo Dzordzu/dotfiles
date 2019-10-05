@@ -8,7 +8,6 @@ makepkg -si --noconfirm
 
 # Install basic compression
 trizen -Sy --noconfirm \
-   perl-lwp-protocol-https \
    p7zip \
    gzip \
    tar
@@ -20,8 +19,10 @@ trizen -Sy --noconfirm \
    firefox \
    ttf-dejavu
 
-# Drivers support
+# Drivers and protocols support
 trizen -Sy --noconfirm \
+   perl-lwp-protocol-https \
+   openssh \
    bluez
 
 # Services
