@@ -8,4 +8,7 @@ makepkg -si
 
 # Install base
 trizen -Sy --noconfirm \
-   bluez 
+   bluez \
+   p7zip \
+   gzip \
+   tar
