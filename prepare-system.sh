@@ -18,9 +18,11 @@ trizen -Sy --noconfirm \
    sddm \
    xorg
 
-sudo systemctl enable sddm
-sudo systemctl start sddm
-
 # Drivers support
 trizen -Sy --noconfirm \
    bluez
+
+# Services
+sudo systemctl enable sddm
+sudo systemctl start sddm
+
