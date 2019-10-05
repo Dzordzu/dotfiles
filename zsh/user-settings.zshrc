@@ -24,4 +24,5 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 # ZSH config
 alias ls='ls --color=auto'
+alias v='vim'
 
