@@ -29,6 +29,9 @@ Plug 'chr4/nginx.vim'
 " Python
 Plug 'davidhalter/jedi-vim'
 
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
 " Latex and UML
 Plug 'aklt/plantuml-syntax'
 Plug 'scrooloose/vim-slumlord'
