@@ -38,3 +38,5 @@ trizen -Sy --noconfirm \
    hstr-git \
    tmux
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
