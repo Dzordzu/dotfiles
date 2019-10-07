@@ -17,7 +17,8 @@ trizen -Sy --noconfirm \
    sddm \
    xorg \
    firefox \
-   ttf-dejavu
+   ttf-dejavu \
+   nerd-fonts-complete
 
 # Drivers and protocols support
 trizen -Sy --noconfirm \
