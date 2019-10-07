@@ -52,4 +52,7 @@ Plug 'cespare/vim-toml'
 " Tmux
 Plug 'tmux-plugins/vim-tmux'
 
+" Jenkins
+Plug 'martinda/Jenkinsfile-vim-syntax'
+
 call plug#end()
