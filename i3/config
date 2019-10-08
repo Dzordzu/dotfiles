@@ -55,6 +55,12 @@ bindsym $mod+Mod1+k move up
 bindsym $mod+Mod1+l move right
 bindsym $mod+Mod1+h move left
 
+# move workspace to other screen
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+l move workspace to output right
+
 # resize focused window
 bindsym $mod+Mod1+Left resize shrink width 10 px or 10 ppt
 bindsym $mod+Mod1+Down resize grow height 10 px or 10 ppt
