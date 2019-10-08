@@ -10,6 +10,7 @@ trizen -Sy --noconfirm \
 trizen -Sy --noconfirm \
    i3-gaps \
    libevent \
+   lxqt-notificationd \
    i3lock
 
 # Install polybar
