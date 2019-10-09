@@ -18,6 +18,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jacoborus/tender.vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 " Git
 Plug 'airblade/vim-gitgutter'
