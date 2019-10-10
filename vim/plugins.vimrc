@@ -57,5 +57,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Jenkins
 Plug 'martinda/Jenkinsfile-vim-syntax'
 
+" Scala
+Plug 'derekwyatt/vim-scala'
 
 call plug#end()
