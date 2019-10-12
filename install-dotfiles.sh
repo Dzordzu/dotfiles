@@ -52,3 +52,4 @@ vim +VimEnter +PlugInstall +qall
 cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
+vim -c "bufdo e" -c q
