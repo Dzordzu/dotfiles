@@ -30,6 +30,9 @@ Plug 'tpope/vim-fugitive'
 " Nginx
 Plug 'chr4/nginx.vim'
 
+" REPL
+Plug 'jpalardy/vim-slime'
+
 " Python
 Plug 'davidhalter/jedi-vim'
 
