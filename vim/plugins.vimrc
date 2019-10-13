@@ -40,6 +40,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'scrooloose/vim-slumlord'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'https://github.com/lervag/vimtex'
 
 " Markdown
 Plug 'godlygeek/tabular'
