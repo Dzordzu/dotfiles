@@ -25,3 +25,7 @@ autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) .
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_override_foldtext = 0
 let g:table_mode_corner='|'
+
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
