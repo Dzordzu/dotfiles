@@ -19,6 +19,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'dhruvasagar/vim-table-mode'
 " Plug 'nathanaelkane/vim-indent-guides'
 
+" General langs
+Plug 'sheerun/vim-polyglot'
+
 " Theme
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
@@ -66,5 +69,8 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " Scala
 Plug 'derekwyatt/vim-scala'
+
+" Ocaml
+Plug 'ocaml/merlin'
 
 call plug#end()
