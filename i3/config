@@ -189,8 +189,10 @@ for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000
 
 
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
+exec dunst &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 exec_always xrandr --output HDMI1 --auto --left-of eDP1
 exec_always xrandr --output DP1 --auto --right-of eDP1
+

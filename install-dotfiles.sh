@@ -53,6 +53,8 @@ cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 
+# Install dunst
+cp -rf $DIR/dunst ~/.config
 
 # Apply changes
 i3-msg reload
