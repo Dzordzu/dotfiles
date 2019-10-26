@@ -57,6 +57,8 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 " C++
 Plug 'rip-rip/clang_complete'
 Plug 'vhdirk/vim-cmake'
+Plug 'richq/vim-cmake-completion'
+
 
 " TOML
 Plug 'cespare/vim-toml'
