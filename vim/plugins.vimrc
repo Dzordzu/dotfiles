@@ -21,6 +21,7 @@ Plug 'dhruvasagar/vim-table-mode'
 
 " General langs
 Plug 'sheerun/vim-polyglot'
+Plug 'ycm-core/YouCompleteMe'
 
 " Theme
 Plug 'jacoborus/tender.vim'

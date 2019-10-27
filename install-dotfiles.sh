@@ -53,6 +53,10 @@ cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 
+cd ~/.vim/plugged/YouCompleteMe
+python3 install.py --all
+
+
 # Install dunst
 cp -rf $DIR/dunst ~/.config
 
