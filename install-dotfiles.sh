@@ -1,5 +1,7 @@
 #!/bin/bash
 
+INSTALL_TYPE="$1"
+
 # Get current directory
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -48,13 +50,17 @@ cp -rf $DIR/rofi ~/.config
 # Install vim
 cp -rf $DIR/vim ~/.config
 mv ~/.config/vim/.vimrc ~/.vimrc
-vim +VimEnter +PlugInstall +qall
-cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
-ruby extconf.rb
-make
 
-cd ~/.vim/plugged/YouCompleteMe
-python3 install.py --all
+if [[ "$INSTALL_TYPE" == "full" ]]; then 
+   vim +VimEnter +PlugInstall +PlugClean +qall
+   
+   cd ~/.vim/plugged/command-t/ruby/command-t/ext/command-t
+   ruby extconf.rb
+   make
+
+   cd ~/.vim/plugged/YouCompleteMe
+   python3 install.py --all
+fi
 
 
 # Install dunst
