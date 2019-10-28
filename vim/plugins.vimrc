@@ -17,6 +17,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'tarekbecker/vim-yaml-formatter'
 " Plug 'nathanaelkane/vim-indent-guides'
 
 " General langs
