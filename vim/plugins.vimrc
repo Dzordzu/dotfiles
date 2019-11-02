@@ -3,6 +3,10 @@ call plug#begin('~/.vim/plugged')
 
 " HTML
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'jaxbot/browserlink.vim'
+
+" CSS
+Plug 'cakebaker/scss-syntax.vim'
 
 " Docker
 Plug 'docker/docker'
