@@ -39,3 +39,5 @@ noremap <silent> <buffer> <Leader>v :vsp<Enter>
 noremap <silent> <buffer> <Leader>s :sp<Enter>
 
 command JSONFormatter %!python -m json.tool
+
+set foldmethod=syntax
