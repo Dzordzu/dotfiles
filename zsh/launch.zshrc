@@ -10,7 +10,7 @@ fi
 TMUX_STARTED=~/.tmux-started.new-session
 if [[ -f "$TMUX_STARTED" ]]; then
    rm ~/.tmux-started.new-session
-   screenfetch
+   neofetch
 fi
 
 
