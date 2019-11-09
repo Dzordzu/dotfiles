@@ -11,4 +11,5 @@ trizen -Sy --noconfirm \
    oh-my-zsh-git \
    screenfetch \
    neofetch \
+   hstr \
    thefuck
