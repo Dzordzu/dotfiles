@@ -33,3 +33,6 @@ trizen -Sy --noconfirm \
    rust \
    texlive-most
 
+# Server
+trizen -Sy --noconfirm \
+   nginx 
