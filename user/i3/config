@@ -185,7 +185,7 @@ gaps inner 10
 focus_follows_mouse no
 
 
-for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center
+for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center, move left +300px
 
 
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
