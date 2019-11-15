@@ -40,5 +40,12 @@ trizen -Sy --noconfirm \
    hstr-git \
    tmux
 
+# Network and minor
+trizen -Sy --noconfirm \
+   nmap \
+   bind-utils \
+
+
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
