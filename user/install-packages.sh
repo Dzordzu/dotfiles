@@ -9,6 +9,7 @@ trizen -Sy --noconfirm \
 # Install i3
 trizen -Sy --noconfirm \
    i3-gaps \
+   feh \
    libevent \
    lxqt-notificationd \
    i3lock
