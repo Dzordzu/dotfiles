@@ -35,6 +35,7 @@ filetype plugin on
 
 set splitbelow
 set splitright
+
 noremap <silent> <buffer> <Leader>v :vsp<Enter>
 noremap <silent> <buffer> <Leader>s :sp<Enter>
 

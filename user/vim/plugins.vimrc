@@ -27,6 +27,7 @@ Plug 'tarekbecker/vim-yaml-formatter'
 " General langs
 Plug 'sheerun/vim-polyglot'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'chiel92/vim-autoformat'
 
 " Theme
 Plug 'jacoborus/tender.vim'
