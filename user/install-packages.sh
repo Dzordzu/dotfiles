@@ -9,6 +9,7 @@ trizen -Sy --noconfirm \
 # Install i3
 trizen -Sy --noconfirm \
    i3-gaps \
+   feh \
    libevent \
    lxqt-notificationd \
    i3lock
@@ -38,6 +39,13 @@ trizen -Sy --noconfirm \
 trizen -Sy --noconfirm \
    hstr-git \
    tmux
+
+# Network and minor
+trizen -Sy --noconfirm \
+   nmap \
+   bind-utils \
+
+
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
