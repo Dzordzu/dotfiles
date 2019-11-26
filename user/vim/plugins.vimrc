@@ -30,6 +30,7 @@ Plug 'tarekbecker/vim-yaml-formatter'
 Plug 'sheerun/vim-polyglot'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
+Plug 'reedes/vim-wordy'
 
 " Theme
 Plug 'jacoborus/tender.vim'
