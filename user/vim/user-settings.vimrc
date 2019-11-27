@@ -36,8 +36,8 @@ filetype plugin on
 set splitbelow
 set splitright
 
-noremap <silent> <buffer> <Leader>v :vsp<Enter>
-noremap <silent> <buffer> <Leader>s :sp<Enter>
+noremap <silent> <buffer> <Leader>V :vsp<Enter>
+noremap <silent> <buffer> <Leader>S :sp<Enter>
 
 command JSONFormatter %!python -m json.tool
 
