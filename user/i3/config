@@ -157,6 +157,8 @@ mode "system" {
         bindsym e exec "i3-msg exit 
         bindsym c reload 
         bindsym r restart 
+        bindsym w exec "feh --bg-scale --auto-reload ~/Wallpapers/main && i3-msg mode 'default'"
+
 
         bindsym Return mode "default"
         bindsym Escape mode "default"

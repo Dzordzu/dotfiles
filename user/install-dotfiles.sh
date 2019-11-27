@@ -16,9 +16,10 @@ mkdir -p ~/.config
 
 # Install wallpapers
 mkdir -p ~/Wallpapers/Package
-cp -R $DIR/wallpapers/* ~/Wallpapers/Package/
+cp -r $DIR/wallpapers/* ~/Wallpapers/Package/
 if [ ! -f ~/Wallpapers/main ]; then
-   ln ~/Wallpapers/Package/main ~/Wallpapers/main
+   echo "Setting wallpaper"
+   cp ~/Wallpapers/Package/main ~/Wallpapers/main
 fi
 
 # Install i3
