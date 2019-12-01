@@ -16,8 +16,8 @@ If you want to setup dotfiles you need to:
 Use standalone `./install-dotfiles`
 ### Updates that require plugin installation
 Use `./install-dotfiles full`
-### Change theme
-Use `./change-theme.sh [THEME NAME]`
+### Choose theme
+Use `./choose-theme.sh [THEME NAME]`
 
 Currently supported:
 1. **Dark (default)**
