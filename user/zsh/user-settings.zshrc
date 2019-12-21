@@ -1,6 +1,7 @@
 #!/bin/zsh
 export KEYTIMEOUT=1
 export TERMINAL=alacritty
+export EDITOR=vim
 
 # Constants
 # ZSH_THEME="cobalt2"
@@ -25,6 +26,9 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 # ZSH config
 alias ls='ls --color=auto'
 alias v='vim'
+alias gu='git ls-files --others --exclude-standard'
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE
+
+
