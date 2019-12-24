@@ -68,5 +68,5 @@ fi
 cp -rf $DIR/dunst ~/.config
 
 # Apply changes
-i3-msg reload
+DISPLAY=:0 i3-msg reload
 tmux source-file ~/.tmux.conf

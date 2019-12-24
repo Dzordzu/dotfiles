@@ -5,6 +5,7 @@ trizen -Sy --noconfirm \
 # Install rofi
 trizen -Sy --noconfirm \
    rofi-dmenu
+   bitwarden-rofi
 
 # Install i3
 trizen -Sy --noconfirm \
