@@ -185,7 +185,7 @@ mode "key" {
         bindsym --release e exec xdotool key           equal
         bindsym --release p exec xdotool key           plus
         bindsym --release m exec xdotool key           minus
-        bindsym --release $mod+pi exec xdotool key     Shift+minus
+        bindsym --release $mod+pi exec xdotool key     underscore
 
         bindsym --release colon exec xdotool key       backslash
         bindsym --release $mod+colon exec xdotool key  Shift+backslash
