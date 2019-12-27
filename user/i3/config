@@ -189,6 +189,8 @@ mode "key" {
         bindsym --release m $key_command           minus
         bindsym --release $mod+m $key_command      underscore
 
+        bindsym --release d $key_command           BackSpace
+
         bindsym --release colon exec --no-startup-id xdotool key       backslash
         bindsym --release $mod+colon exec --no-startup-id xdotool key  Shift+backslash
 
