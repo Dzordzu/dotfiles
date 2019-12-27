@@ -185,6 +185,7 @@ mode "key" {
         bindsym --release e exec xdotool key           equal
         bindsym --release p exec xdotool key           plus
         bindsym --release m exec xdotool key           minus
+        bindsym --release $mod+pi exec xdotool key     Shift+minus
 
         bindsym --release colon exec xdotool key       backslash
         bindsym --release $mod+colon exec xdotool key  Shift+backslash
@@ -196,8 +197,8 @@ mode "key" {
 
 bindsym $mod+Shift+l mode "launch"
 bindsym $mod+Shift+s mode "system"
-bindsym $mod+Shift+q kill
 bindsym $mod+Shift+k mode "key"
+bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
