@@ -181,8 +181,8 @@ mode "key" {
         bindsym --release k $key_command           braceright
         bindsym --release $mod+k $key_command      braceleft
           
-        bindsym --release l                        bracketright
-        bindsym --release $mod+l                   bracketleft
+        bindsym --release l $key_command           bracketright
+        bindsym --release $mod+l $key_command      bracketleft
 
         bindsym --release e $key_command           equal
         bindsym --release p $key_command           plus
