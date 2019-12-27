@@ -172,23 +172,25 @@ mode "system" {
         bindsym $mod+Shift+s mode "default"
 }
 
+set $key_command exec --no-startup-id xdotool key --clearmodifiers
+
 mode "key" {
-        bindsym --release j exec xdotool key           Shift+0 
-        bindsym --release $mod+j exec xdotool key      Shift+9
+        bindsym --release j $key_command           Shift+0 
+        bindsym --release $mod+j $key_command      Shift+9
 
-        bindsym --release k exec xdotool key           braceright
-        bindsym --release $mod+k exec xdotool key      braceleft
+        bindsym --release k $key_command           braceright
+        bindsym --release $mod+k $key_command      braceleft
           
-        bindsym --release l exec xdotool key           bracketright
-        bindsym --release $mod+l exec xdotool key      bracketleft
+        bindsym --release l                        bracketright
+        bindsym --release $mod+l                   bracketleft
 
-        bindsym --release e exec xdotool key           equal
-        bindsym --release p exec xdotool key           plus
-        bindsym --release m exec xdotool key           minus
-        bindsym --release $mod+m exec xdotool key      underscore
+        bindsym --release e $key_command           equal
+        bindsym --release p $key_command           plus
+        bindsym --release m $key_command           minus
+        bindsym --release $mod+m $key_command      underscore
 
-        bindsym --release colon exec xdotool key       backslash
-        bindsym --release $mod+colon exec xdotool key  Shift+backslash
+        bindsym --release colon exec --no-startup-id xdotool key       backslash
+        bindsym --release $mod+colon exec --no-startup-id xdotool key  Shift+backslash
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
