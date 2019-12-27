@@ -32,9 +32,6 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 
-# kill focused window
-bindsym $mod+Shift+q kill
-
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -line-padding 4 -padding 25
 bindsym $mod+e exec rofi -show run -line-padding 4 -padding 25
@@ -156,7 +153,6 @@ mode "launch" {
         bindsym $mod+Shift+l mode "default"
         bindsym Return mode "default"
 }
-bindsym $mod+Shift+l mode "launch"
 
 mode "system" {
 
@@ -173,9 +169,35 @@ mode "system" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $mod+Shift+s mode "default"
 }
+
+mode "key" {
+        bindsym --release j exec xdotool key           Shift+0 
+        bindsym --release $mod+j exec xdotool key      Shift+9
+
+        bindsym --release k exec xdotool key           braceright
+        bindsym --release $mod+k exec xdotool key      braceleft
+          
+        bindsym --release l exec xdotool key           bracketright
+        bindsym --release $mod+l exec xdotool key      bracketleft
+
+        bindsym --release e exec xdotool key           equal
+        bindsym --release p exec xdotool key           plus
+        bindsym --release m exec xdotool key           minus
+
+        bindsym --release colon exec xdotool key       backslash
+        bindsym --release $mod+colon exec xdotool key  Shift+backslash
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+Shift+k mode "default"
+}
+
+bindsym $mod+Shift+l mode "launch"
 bindsym $mod+Shift+s mode "system"
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+k mode "key"
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show

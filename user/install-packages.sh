@@ -13,7 +13,8 @@ trizen -Sy --noconfirm \
    feh \
    libevent \
    lxqt-notificationd \
-   i3lock
+   i3lock \
+   xdotool
 
 # Install polybar
 trizen -Sy --noconfirm \
