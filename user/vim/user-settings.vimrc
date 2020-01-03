@@ -36,10 +36,19 @@ filetype plugin on
 set splitbelow
 set splitright
 
-noremap <silent> <buffer> <Leader>V :vsp<Enter>
-noremap <silent> <buffer> <Leader>S :sp<Enter>
+" No need for it (deprecated)
+" noremap <silent> <buffer> <Leader>V :vsp<Enter>
+" noremap <silent> <buffer> <Leader>S :sp<Enter>
 
 command JSONFormatter %!python -m json.tool
 
 set foldmethod=syntax
 let g:polyglot_disabled = ['latex']
+
+noremap <silent> <Leader>yd :YcmCompleter GoToDefinition<Enter>
+noremap <silent> <Leader>yD :YcmCompleter GoToDeclaration<Enter>
+noremap <silent> <Leader>yi :YcmCompleter GoToInclude<Enter>
+noremap <Leader>yr :YcmCompleter GoToReferences<Enter>
+noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
+noremap <Leader>yt :YcmCompleter GetType<Enter>
+
