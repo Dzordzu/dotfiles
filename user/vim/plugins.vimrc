@@ -17,6 +17,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'git://git.wincent.com/command-t.git'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 
 " Visual
