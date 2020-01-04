@@ -3,6 +3,8 @@ export KEYTIMEOUT=1
 export TERMINAL=alacritty
 export EDITOR=vim
 
+setxkbmap pl
+
 # Constants
 # ZSH_THEME="cobalt2"
 
