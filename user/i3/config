@@ -202,6 +202,7 @@ mode "key" {
 bindsym $mod+Shift+l mode "launch"
 bindsym $mod+Shift+s mode "system"
 bindsym $mod+Shift+k mode "key"
+bindsym $mod+Shift+r exec "if [ $(xset -q | grep 'auto repeat:' | awk '{print $3}') = 'on' ]; then xset -r && notify-send 'Turned off an auto key mode'; else xset r && notify-send 'Turned on an auto key mode'; fi"
 bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+minus move scratchpad
