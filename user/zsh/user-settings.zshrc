@@ -33,4 +33,4 @@ alias gu='git ls-files --others --exclude-standard'
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE
 
-
+export PATH=$HOME/.npm/bin:$PATH 
