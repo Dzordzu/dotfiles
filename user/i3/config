@@ -35,7 +35,7 @@ bindsym $mod+Return exec alacritty
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -line-padding 4 -padding 25
 bindsym $mod+e exec rofi -show run -line-padding 4 -padding 25
-bindsym $mod+r exec bwmenu &
+bindsym $mod+r exec "bwmenu --auto-lock 3600 -c 10 &"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
