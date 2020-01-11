@@ -578,3 +578,38 @@ def_key "ctrl-p"
 def_key "q"
   quit
 
+#
+#colors_enabled = yes
+#
+#empty_tag_color = cyan
+#
+#header_window_color = default
+#
+#volume_color = default
+#
+#state_line_color = default
+#
+#state_flags_color = default:b
+#
+main_window_color = blue
+#
+#color1 = white
+#
+#color2 = green
+#
+#progressbar_color = black:b
+#
+#progressbar_elapsed_color = green:b
+#
+#statusbar_color = default
+#
+# statusbar_time_color = default
+#
+# player_state_color = default:b
+#
+#alternative_ui_separator_color = black:b
+#
+#window_border_color = green
+#
+#active_window_border = red
+
