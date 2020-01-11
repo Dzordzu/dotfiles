@@ -221,8 +221,8 @@ exec firefox
 exec alacritty
 
 for_window [class=".*"] border pixel 1
-gaps outer 10
-gaps inner 10
+# gaps outer 10
+# gaps inner 10
 focus_follows_mouse no
 
 
