@@ -1,6 +1,7 @@
 # Install alacritty 
 trizen -Sy --noconfirm \
-   alacritty
+   alacritty \
+   w3m
 
 # Install music player
 trizen -Sy --noconfirm \
