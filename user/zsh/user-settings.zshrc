@@ -29,6 +29,7 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 alias ls='ls --color=auto'
 alias v='vim'
 alias gu='git ls-files --others --exclude-standard'
+alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings'
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE

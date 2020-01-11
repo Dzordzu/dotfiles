@@ -68,7 +68,8 @@ fi
 cp -rf $DIR/dunst ~/.config
 
 # Install ncmpcpp
-cp -rf $DIR/ncmpcpp/* ~/.ncmpcpp/
+mkdir -p ~/.config/ncmpcpp
+cp -rf $DIR/ncmpcpp ~/.config
 
 # Apply changes
 DISPLAY=:0 i3-msg reload
