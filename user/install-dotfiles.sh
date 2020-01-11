@@ -67,6 +67,9 @@ fi
 # Install dunst
 cp -rf $DIR/dunst ~/.config
 
+# Install ncmpcpp
+cp -rf $DIR/ncmpcpp/* ~/.ncmpcpp
+
 # Apply changes
 DISPLAY=:0 i3-msg reload
 tmux source-file ~/.tmux.conf

@@ -2,9 +2,20 @@
 trizen -Sy --noconfirm \
    alacritty
 
+# Install music player
+trizen -Sy --noconfirm \
+   mopidy-spotify \
+   mopidy-mpd \
+   mopidy-musicbox \
+   mopidy-youtube-git
+
+# Install browser 
+trizen -Sy --noconfirm \
+   qutebrowser
+
 # Install rofi
 trizen -Sy --noconfirm \
-   rofi-dmenu
+   rofi-dmenu \
    bitwarden-rofi
 
 # Install i3
