@@ -67,9 +67,9 @@ fi
 # Install dunst
 cp -rf $DIR/dunst ~/.config
 
-# Install ncmpcpp
-mkdir -p ~/.config/ncmpcpp
-cp -rf $DIR/ncmpcpp ~/.config
+# Install ncmpcpp and cava
+mkdir -p ~/.config/{ncmpcpp,cava}
+cp -rf $DIR/{ncmpcpp,cava} ~/.config
 
 # Apply changes
 DISPLAY=:0 i3-msg reload
