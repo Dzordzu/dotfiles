@@ -5,6 +5,7 @@ connections_text="$(nmcli conn | grep vpn)"
 
 IFS="\n" read -r -a connections_array <<< $connections_text
 result=`awk '{ ORS=" "; ($4 != "--") ? res = "(vpn: " $1 ")" : res=""; print res}' <<< $connections_text`
+result=`sed 's/\(.\+\)\s+/\1/g' <<< $result`
 
 echo "%{F#fcfaa7} $result"
 
