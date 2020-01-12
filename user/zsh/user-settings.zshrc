@@ -5,16 +5,6 @@ export EDITOR=vim
 
 setxkbmap pl
 
-# Get current directory
-SOURCE="${BASH_SOURCE[0]}"
-while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
-  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
-  SOURCE="$(readlink "$SOURCE")"
-  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
-done
-DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
-DIR=$( dirname $DIR/../ )
-
 # Constants
 # ZSH_THEME="cobalt2"
 
@@ -47,4 +37,4 @@ setopt MENU_COMPLETE
 
 
 export PATH=$HOME/.npm/bin:$PATH 
-export PATH=$DIR:$PATH 
+export PATH=$DOTFILES_DIR/:$PATH 
