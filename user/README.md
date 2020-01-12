@@ -1,27 +1,30 @@
 # dotfiles
 Preconfigured dotfiles, configs and style guides for linux environment and apps
 
+## Exported variables
+- `$DOTFILES_DIR`
+
 ## Usage
 ### Setup a new environment
-If you want a basic packages for the system use `./prepare-system.sh`. 
+If you want a basic packages for the system use `df-prepare-system`. 
 
 ### Setup dotfiles
 If you want to setup dotfiles you need to:
 
-1. Install needed packages `./install-packages.sh`
-2. Install dotfiles `./install-dotfiles.sh full`
+1. Install needed packages `df-install-packages`
+2. Install dotfiles `df-install-dotfiles full`
 
 ## Customization
 ### Simple updates
-Use standalone `./install-dotfiles`
+Use standalone `df-install-dotfiles`
 ### Updates that require plugin installation
-Use `./install-dotfiles full`
+Use `df-install-dotfiles full`
 ### Choose theme
-Use `./choose-theme.sh [THEME NAME]`
+Use `df-choose-theme [THEME NAME]`
 
 Currently supported:
-1. **Dark (default)**
-2. Light
+1. `dark` **(default)**
+2. `light`
 
 ## Configs
 - [vim](./docs/vim.md)
