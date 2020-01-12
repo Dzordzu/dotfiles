@@ -9,10 +9,13 @@ Preconfigured dotfiles, configs and style guides for linux environment and apps
 If you want a basic packages for the system use `df-prepare-system`. 
 
 ### Setup dotfiles
-If you want to setup dotfiles you need to:
+In order to setup dotfiles:
 
-1. Install needed packages `df-install-packages`
+1. Install required packages `./df-install-packages`
 2. Install dotfiles `df-install-dotfiles full`
+3. `source ~/.zshrc`
+
+Note: Once installed, dotfiles dir is prepended to $PATH
 
 ## Customization
 ### Simple updates
