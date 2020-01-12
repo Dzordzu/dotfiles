@@ -74,3 +74,4 @@ cp -rf $DIR/{ncmpcpp,cava} ~/.config
 # Apply changes
 DISPLAY=:0 i3-msg reload
 tmux source-file ~/.tmux.conf
+
