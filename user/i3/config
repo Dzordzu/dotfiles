@@ -233,6 +233,7 @@ for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000
 
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
 exec dunst &
+exec unclutter --timeout 1 &
 exec_always export I3SOCK=''
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
