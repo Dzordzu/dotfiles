@@ -12,10 +12,10 @@ If you want a basic packages for the system use `df-prepare-system`.
 In order to setup dotfiles:
 
 1. Install required packages `./df-install-packages`
-2. Install dotfiles `df-install-dotfiles full`
+2. Install dotfiles `./df-install-dotfiles full`
 3. `source ~/.zshrc`
 
-Note: Once installed, dotfiles dir is prepended to $PATH
+*Note: Once installed, dotfiles dir is prepended to $PATH (df_\* commands)*
 
 ## Customization
 ### Simple updates
