@@ -38,7 +38,7 @@ mv ~/.config/zsh/.zshrc ~/.zshrc
 sed -i "1 a # Generated variables" ~/.zshrc
 sed -i "2 a \ " ~/.zshrc
 
-sed -i "2 a export DOTFILES_DIR=$DIR" ~/.zshrc
+sed -i "2 a export DF_DIR=$DIR" ~/.zshrc
 
 # Install polybar
 ETH_INT=$(ip link | awk 'BEGIN {FS=": "} {print $2}' | grep "^en")
