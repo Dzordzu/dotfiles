@@ -166,6 +166,8 @@ mode "system" {
         bindsym r exec reboot 
         bindsym w exec "feh --bg-scale --auto-reload ~/Wallpapers/main && i3-msg mode 'default'"
 
+        bindsym t exec "xinput disable 18"
+        bindsym Shift+t exec "xinput enable 18"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
