@@ -1,0 +1,7 @@
+#!/bin/bash
+_PS_EXAMPLE_BASE=~/example
+_PS_EXAMPLE_START=$_PS_EXAMPLE_BASE/main.cpp
+_PS_EXAMPLE_BUILD=$_PS_EXAMPLE_BASE/build
+_PS_EXAMPLE_UNFOLD=3
+tmux new-window -c $_PS_EXAMPLE_BUILD -d
+cd ~/school/zmpo/DifferentialEvolution && vim -c "e $_PS_EXAMPLE_START" -c NERDTree -c "wincmd w" -c "execute 'normal! $_PS_EXAMPLE_UNFOLDzr'"

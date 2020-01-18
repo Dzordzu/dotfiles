@@ -1,0 +1,7 @@
+#!/bin/bash
+systemctl --user start mopidy
+tmux send-keys -t.$(tmux split-window -b -d -P -F "#{pane_id}") cava Enter
+ncmpcpp
+
+
+

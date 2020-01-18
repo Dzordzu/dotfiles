@@ -1,2 +1,4 @@
 !.gitignore
+!ps_mopidy
+!example_vim
 ./*
