@@ -37,4 +37,5 @@ setopt MENU_COMPLETE
 
 
 export PATH=$HOME/.npm/bin:$PATH 
-export PATH=$DOTFILES_DIR/:$PATH 
+export PATH=$DF_DIR:$PATH 
+export PATH=$HOME/.config/zsh/project-scripts:$PATH 
