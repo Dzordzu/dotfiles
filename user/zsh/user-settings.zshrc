@@ -39,3 +39,4 @@ setopt MENU_COMPLETE
 export PATH=$HOME/.npm/bin:$PATH 
 export PATH=$DF_DIR:$PATH 
 export PATH=$HOME/.config/zsh/project-scripts:$PATH 
+export I3SOCK=$(i3 --get-socketpath)

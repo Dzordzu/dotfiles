@@ -215,6 +215,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+bindsym $mod+Shift+comma workspace next
+bindsym $mod+Shift+period workspace prev
+bindsym $mod+Shift+slash exec "notify-send Workspace: $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name')"
+
 bindsym Control+Mod1+b exec qutebrowser 
 bindsym Control+Mod1+f exec firefox --new-window
 
@@ -225,13 +229,12 @@ bindsym Control+Mod1+f exec firefox --new-window
 # }
 
 
-exec qutebrowser
-exec alacritty
+exec alacritty &
 
 for_window [class=".*"] border pixel 1
+focus_follows_mouse no
 # gaps outer 10
 # gaps inner 10
-focus_follows_mouse no
 
 
 for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000 700, move position center, move left +300px
@@ -240,9 +243,8 @@ for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
 exec dunst &
 exec unclutter --timeout 1 &
-exec_always export I3SOCK=''
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 exec_always xrandr --output HDMI-A-0 --auto --above eDP
-
