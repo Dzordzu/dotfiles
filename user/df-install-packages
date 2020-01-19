@@ -27,6 +27,7 @@ trizen -Sy --noconfirm \
    lxqt-notificationd \
    i3lock \
    unclutter \
+   perl-anyevent-i3 \
    xdotool
 
 # Install polybar
