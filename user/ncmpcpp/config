@@ -329,7 +329,7 @@ browser_sort_format = {%b}{%t}|{%f} {(%l)}
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -400,7 +400,7 @@ browser_sort_format = {%b}{%t}|{%f} {(%l)}
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = clock
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
