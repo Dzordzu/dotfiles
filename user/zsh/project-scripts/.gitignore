@@ -1,4 +1,4 @@
 !.gitignore
 !ps_mopidy
-!example_vim
+ps_diff_evo
 ./*
