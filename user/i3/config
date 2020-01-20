@@ -154,6 +154,11 @@ mode "launch" {
         bindsym Return mode "default"
 }
 
+set $x_touchpad xinput list | awk ' /[Tt]ouchpad/ {print $0}' | awk 'match($0, /id=([0-9]+)/, a) {print a[1]}'
+
+set $x_mouse xinput list | awk ' /[Mm]ouse/ {print $0}' | awk 'match($0, /id=([0-9]+)/, a) {print a[1]}' 
+
+
 mode "system" {
 
         bindsym s exec "shutdown -h now"
@@ -166,8 +171,11 @@ mode "system" {
         bindsym r exec reboot 
         bindsym w exec "feh --bg-scale --auto-reload ~/Wallpapers/main && i3-msg mode 'default'"
 
-        bindsym t exec "xinput disable 18"
-        bindsym Shift+t exec "xinput enable 18"
+        bindsym t exec "for dev in $($x_touchpad); do xinput disable $dev; done"
+        bindsym Shift+t exec "for dev in $($x_touchpad); do xinput enable $dev; done"
+
+        bindsym m exec "for dev in $($x_mouse); do xinput disable $dev; done"
+        bindsym Shift+m exec "for dev in $($x_mouse); do xinput enable $dev; done"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
