@@ -166,9 +166,10 @@ mode "system" {
         bindsym e exit
         # like i3
         bindsym i restart 
-        bindsym Shift+i exec "~/dotfiles/user/df-install-dotfiles && notify-send -t 1200 'Installed new dotfiles'"
-        # based on below (closest letter)
+        bindsym Shift+i exec "~/dotfiles/user/df-install-dotfiles && i3-msg restart && notify-send -t 1200 'Installed new dotfiles'"
+        # based on above(closest letter)
         bindsym o reload 
+        bindsym Shift+o exec "~/dotfiles/user/df-install-dotfiles && notify-send -t 1200 'Installed new dotfiles'"
         bindsym r exec reboot 
         bindsym w exec "feh --bg-scale --auto-reload ~/Wallpapers/main && i3-msg mode 'default'"
 
