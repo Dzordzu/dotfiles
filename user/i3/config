@@ -229,7 +229,7 @@ bindsym $mod+minus scratchpad show
 
 bindsym $mod+Shift+comma workspace next
 bindsym $mod+Shift+period workspace prev
-bindsym $mod+Shift+slash exec "notify-send Workspace: $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name')"
+bindsym $mod+Shift+slash exec "notify-send Workspace:\ $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name')"
 
 bindsym Control+Mod1+b exec qutebrowser 
 bindsym Control+Mod1+f exec firefox --new-window
