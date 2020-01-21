@@ -46,6 +46,7 @@ trizen -Sy --noconfirm \
 # Install zsh
 trizen -Sy --noconfirm \
    zsh \
+   ruby-colorls \
    antibody \
    oh-my-zsh-git \
    screenfetch \

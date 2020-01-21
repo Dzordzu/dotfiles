@@ -26,7 +26,8 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 
 # ZSH config
-alias ls='ls --color=auto'
+alias ls='colorls'
+#alias ls='ls --color=auto'
 alias v='vim'
 alias gu='git ls-files --others --exclude-standard'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings'
