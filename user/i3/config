@@ -253,6 +253,7 @@ for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 1000
 
 
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
+exec "glava --desktop"
 exec dunst &
 exec unclutter --timeout 1 &
 
