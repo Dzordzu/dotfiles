@@ -8,7 +8,10 @@ trizen -Sy --noconfirm \
    mopidy-spotify \
    mopidy-mpd \
    mopidy-musicbox \
-   mopidy-youtube-git
+   mopidy-youtube-git \
+   glava \
+   ncmpcpp \
+   cava 
 
 # Install browser 
 trizen -Sy --noconfirm \
