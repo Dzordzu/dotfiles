@@ -1,4 +1,5 @@
 !.gitignore
 !ps_mopidy
+!ps_resize_tmp
 ps_diff_evo
 ./*
