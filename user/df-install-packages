@@ -44,7 +44,9 @@ trizen -Sy --noconfirm \
    gvim \
    vim-plug \
    xclip \
-   vim-instant-markdown
+   npm
+
+npm install instant-markdown-d
 
 # Install zsh
 trizen -Sy --noconfirm \
