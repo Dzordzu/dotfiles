@@ -31,6 +31,7 @@ alias ls='colorls'
 alias v='vim'
 alias gu='git ls-files --others --exclude-standard'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings'
+alias mopir='systemctl --user restart mopidy.service'
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE
@@ -41,3 +42,4 @@ export PATH=$HOME/.npm/bin:$PATH
 export PATH=$DF_DIR:$PATH 
 export PATH=$HOME/.config/zsh/project-scripts:$PATH 
 export I3SOCK=$(i3 --get-socketpath)
+
