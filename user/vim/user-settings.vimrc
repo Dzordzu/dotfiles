@@ -52,3 +52,7 @@ noremap <Leader>yr :YcmCompleter GoToReferences<Enter>
 noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
 noremap <Leader>yt :YcmCompleter GetType<Enter>
 
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
