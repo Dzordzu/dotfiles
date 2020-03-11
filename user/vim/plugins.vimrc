@@ -14,7 +14,6 @@ Plug 'docker/docker'
 " Files and motion
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
-Plug 'git://git.wincent.com/command-t.git'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -86,5 +85,8 @@ Plug 'derekwyatt/vim-scala'
 
 " Ocaml
 Plug 'ocaml/merlin'
+
+" Arduino
+Plug 'stevearc/vim-arduino'
 
 call plug#end()

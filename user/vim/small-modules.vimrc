@@ -18,3 +18,5 @@ let g:ctrlp_working_path_mode = 'rac'
 
 "" VIM-INSTANT-MARKDOWN
 let g:instant_markdown_browser = "ps_qutebrowser_nw"
+
+let g:arduino_dir = '/usr/share/arduino'
