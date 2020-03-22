@@ -521,8 +521,7 @@ ${1:a}_{1,1} & $1_{1,2} & \cdots & $1_{1,$2} \\\\
 $1_{2,1} & $1_{2,2} & \cdots & $1_{2,$2} \\\\
 \vdots  & \vdots  & \ddots & \vdots  \\\\
 $1_{$3,1} & $1_{$3,2} & \cdots & $1_{${3:Size y},${2:Size x}}
-\end{pmatrix}
-$0
+\end{pmatrix}$0
 endsnippet
 
 context "math()"
@@ -532,10 +531,39 @@ ${1:a}_{1} \\\\
 $1_{2} \\\\
 \vdots \\\\
 $1_{${2:Size}}
-\end{pmatrix}
-$0
+\end{pmatrix}$0
 endsnippet
 
+
+context "math()"
+snippet all "\forall" iA 
+\forall
+endsnippet
+
+context "math()"
+snippet nabla "\nabla" iA 
+\nabla
+endsnippet
+
+context "math()"
+snippet iff "\iff" iA 
+\iff
+endsnippet
+
+context "math()"
+snippet implies "\implies" iA 
+\implies
+endsnippet
+
+context "math()"
+snippet neg "\neg" iA 
+\neg
+endsnippet
+
+context "math()"
+snippet exists "\exists" iA 
+\exists
+endsnippet
 
 context "math()"
 snippet geq "geq" iA 
@@ -558,12 +586,12 @@ snippet less "less" iA
 endsnippet
 
 context "math()"
-snippet or "or" iA 
+snippet lor "or" iA 
 \lor
 endsnippet
 
 context "math()"
-snippet and "and" iA 
+snippet and "land" iA 
 \land
 endsnippet
 

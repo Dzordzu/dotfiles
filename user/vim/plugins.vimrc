@@ -58,7 +58,7 @@ Plug 'neovimhaskell/haskell-vim'
 
 " Latex and UML
 Plug 'aklt/plantuml-syntax'
-Plug 'scrooloose/vim-slumlord'
+" Plug 'scrooloose/vim-slumlord'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'https://github.com/lervag/vimtex'
 

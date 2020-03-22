@@ -56,3 +56,5 @@ noremap <Leader>yt :YcmCompleter GetType<Enter>
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+
+let &runtimepath.=',~/.config/vim'
