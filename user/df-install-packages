@@ -61,7 +61,8 @@ trizen -Sy --noconfirm \
 # Install tmux
 trizen -Sy --noconfirm \
    hstr-git \
-   tmux
+   tmux \
+   powerline
 
 # Network and minor
 trizen -Sy --noconfirm \
