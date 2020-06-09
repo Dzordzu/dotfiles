@@ -1,5 +1,5 @@
 # Use vim bindings
-export EDITOR=/bin/vim
+export EDITOR=/bin/nvim
 bindkey -v
 
 ## ESC + v as vim edit

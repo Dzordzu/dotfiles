@@ -49,6 +49,7 @@ sed -i "s/????ETH????/$ETH_INT/g" ~/.config/polybar/modules/network.ini
 sed -i "s/????WL????/$WL_INT/g" ~/.config/polybar/modules/network.ini
 sed -i "s/????TUN????/$TUN_INT/g" ~/.config/polybar/modules/network.ini
 
+
 # Install rofi
 cp -rf $DIR/rofi ~/.config
 
