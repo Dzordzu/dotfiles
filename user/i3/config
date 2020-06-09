@@ -257,6 +257,7 @@ exec dunst &
 exec unclutter --timeout 1 &
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always "for dev in $($x_touchpad); do xinput disable $dev; done"
 
 
 exec_always xrandr --output HDMI-A-0 --auto --above eDP
