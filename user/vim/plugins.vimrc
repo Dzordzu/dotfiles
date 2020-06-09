@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " HTML
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plug 'jaxbot/browserlink.vim'
+"USES PYTHON2" Plug 'jaxbot/browserlink.vim'
 
 " CSS
 Plug 'cakebaker/scss-syntax.vim'
@@ -28,6 +28,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tarekbecker/vim-yaml-formatter'
+Plug 'kshenoy/vim-signature'
 " Plug 'nathanaelkane/vim-indent-guides'
 
 " General langs
@@ -92,5 +93,9 @@ Plug 'ocaml/merlin'
 
 " Arduino
 Plug 'stevearc/vim-arduino'
+
+" R
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+
 
 call plug#end()

@@ -19,4 +19,3 @@ export TERM="xterm-256color"
 eval $(thefuck --alias)
 
 setxkbmap -layout pl
-

@@ -28,7 +28,9 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 # ZSH config
 alias ls='colorls'
 #alias ls='ls --color=auto'
-alias v='vim'
+alias v='nvim'
+
+
 alias gu='git ls-files --others --exclude-standard'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings'
 alias mopir='systemctl --user restart mopidy.service'
@@ -42,4 +44,7 @@ export PATH=$HOME/.npm/bin:$PATH
 export PATH=$DF_DIR:$PATH 
 export PATH=$HOME/.config/zsh/project-scripts:$PATH 
 export I3SOCK=$(i3 --get-socketpath)
+# alias start_idf='. /opt/esp-idf-sdk/export.sh; IDF_PATH=~dzordzu/.esp/ESP8266_RTOS_SDK'
 
+
+PATH=/home/dzordzu/.visual-paradigm-16/bin:$PATH
