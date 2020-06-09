@@ -75,6 +75,10 @@ cp -rf $DIR/dunst ~/.config
 mkdir -p ~/.config/{ncmpcpp,cava,glava}
 cp -rf $DIR/{ncmpcpp,cava,glava} ~/.config
 
+
+# Install powerline
+cp -rf $DIR/powerline ~/.config
+
 # Apply changes
 DISPLAY=:0 i3-msg reload
 tmux source-file ~/.tmux.conf
