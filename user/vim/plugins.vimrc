@@ -25,7 +25,6 @@ Plug 'rodjek/vim-puppet'
 " YAML
 Plug 'pedrohdz/vim-yaml-folds'
 
-
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
