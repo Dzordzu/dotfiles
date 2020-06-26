@@ -17,6 +17,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'dbakker/vim-projectroot'
+
+" Puppet
+Plug "rodjek/vim-puppet"
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -36,6 +40,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
+Plug 'rhysd/vim-grammarous'
 
 " Theme
 Plug 'jacoborus/tender.vim'
