@@ -20,3 +20,7 @@ let g:ctrlp_working_path_mode = 'rac'
 let g:instant_markdown_browser = "qutebrowser"
 
 let g:arduino_dir = '/usr/share/arduino'
+
+
+"" SYNTASTIC
+let g:syntastic_yaml_checkers = ['yamllint']

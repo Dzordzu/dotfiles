@@ -20,7 +20,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'dbakker/vim-projectroot'
 
 " Puppet
-Plug "rodjek/vim-puppet"
+Plug 'rodjek/vim-puppet' 
+
+" YAML
+Plug 'pedrohdz/vim-yaml-folds'
+
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -41,6 +45,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'
+Plug 'vim-syntastic/syntastic' 
 
 " Theme
 Plug 'jacoborus/tender.vim'
