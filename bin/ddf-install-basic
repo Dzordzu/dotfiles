@@ -52,8 +52,8 @@ export_to_shells DDF_BIN $DIR/bin
 export_to_shells PATH "$DIR/own-bin/private:$DIR/own-bin/hosts:$DIR/bin:\$PATH"
 
 
-if [ ! -z $HOSTNAME ];then
-   hostnamectl set-hostname $HOSTNAME
+if [ ! -z $NEW_HOSTNAME ];then
+   hostnamectl set-hostname "$NEW_HOSTNAME"
 fi
 
 
