@@ -29,6 +29,8 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 alias ls='colorls'
 #alias ls='ls --color=auto'
 alias v='nvim'
+alias dwarf='ssh root@10.26.27.71'
+alias alicedpm='ssh root@10.11.31.2'
 
 
 alias gu='git ls-files --others --exclude-standard'
