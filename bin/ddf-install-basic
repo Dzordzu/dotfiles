@@ -52,6 +52,11 @@ export_to_shells DDF_BIN $DIR/bin
 export_to_shells PATH "$DIR/own-bin/private:$DIR/own-bin/hosts:$DIR/bin:\$PATH"
 
 
+if [ ! -z $HOSTNAME ];then
+   hostnamectl set-hostname $HOSTNAME
+fi
+
+
 verbose_message ""
 verbose_message "Preparing packages: "
 # Install basic packages (multisystem)
