@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo mount -o remount,size=8G /tmp/

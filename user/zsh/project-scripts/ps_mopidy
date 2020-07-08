@@ -1,8 +1,0 @@
-#!/bin/bash
-tmux send-keys -t.$(tmux split-window -b -d -P -F "#{pane_id}") cava Enter
-tmux set status off
-i3-msg fullscreen
-ncmpcpp
-
-
-
