@@ -1,10 +1,12 @@
 ---
 - hosts: localhost
   become: true
+  vars:
+    ntp_timezone: Europe/Warsaw
+  roles:
+    - geerlingguy.ntp
   tasks:
     - name: Install puppet
       package:
         name: puppet
         state: present
-    - name: Install and manage ntpd
-      nxos_ntp:
