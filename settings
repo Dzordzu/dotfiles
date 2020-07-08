@@ -7,7 +7,7 @@ SHELLS=(zshrc bashrc cshrc profile)
 
 # Set to any hostname you wish. 
 # Empty value keeps your current hostname
-HOSTNAME=
+NEW_HOSTNAME=
 
 # Change to 1 in order to set up ONLY a
 # connection with the master puppet node
