@@ -22,6 +22,7 @@ export_to_shells() {
    shell_files=(bashrc zshrc cshrc profile)
    for shell_file in ${shell_files[*]}; do
       verbose_message "export $1=$2 >> ~/.$shell_file" 2
+      export $1=$2 >> ~/.$shell_file
    done
 }
 
@@ -56,4 +57,5 @@ verbose_message "Preparing packages: "
 # Install basic packages (multisystem)
 if [[ "$DISTRO_ID" == 'arch' ]]; then
    verbose_message "sudo pacman -Sy --noconfirm git python ansible"
+   sudo pacman -Sy --noconfirm git python ansible
 fi
