@@ -1,7 +1,7 @@
 ---
-name: install puppet
-hosts: localhost
-become: true
-package:
-  name: ansible
-  state: present
+- name: install puppet
+  hosts: localhost
+  become: true
+  package:
+    name: ansible
+    state: present
