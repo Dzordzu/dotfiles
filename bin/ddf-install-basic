@@ -1,0 +1,36 @@
+#!/bin/bash
+
+random_string() {
+   echo `tr -dc a-zA-Z < /dev/urandom  | head -c 10`
+}
+
+export_to_shells() {
+   shell_files=(bashrc zshrc cshrc profile)
+   for shell_file in ${shell_files[*]}; do
+      echo "export $3$1=$2 >> ~/.$shell_file"
+   done
+}
+
+# Get current directory
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname $( dirname "$SOURCE") )" >/dev/null 2>&1 && pwd )"
+
+source $DIR/settings
+echo $SLAVE_INSTALL
+
+# Set some basic variables
+DISTRO_ID=`cat /etc/*-release | awk -F '=' '/^ID/ {print $2}'`
+
+export_to_shells DDF_DIR $DIR
+export_to_shells DDF_BIN $DIR/bin
+export_to_shells PATH "$DIR/bin:\$PATH"
+
+# Install basic packages (multisystem)
+if [[ "$DISTRO_ID" == 'arch' ]]; then
+   echo "sudo pacman -Sy --noconfirm git python ansible"
+fi
