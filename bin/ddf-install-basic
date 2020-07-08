@@ -64,3 +64,5 @@ if [[ "$DISTRO_ID" == 'arch' ]]; then
    verbose_message "sudo pacman -Sy --noconfirm git python ansible"
    pacman -Sy --noconfirm git python ansible
 fi
+
+ansible-playbook $DIR/ansible/prepare-puppet.yml
