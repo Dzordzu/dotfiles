@@ -4,5 +4,5 @@
   tasks:
     - name: Install puppet
       package:
-        name: ansible
+        name: puppet
         state: present
