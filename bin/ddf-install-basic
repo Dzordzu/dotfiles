@@ -65,4 +65,5 @@ if [[ "$DISTRO_ID" == 'arch' ]]; then
    pacman -Sy --noconfirm git python ansible
 fi
 
+ansible-galaxy install geerlingguy.ntp
 ansible-playbook $DIR/ansible/default-install.yml
