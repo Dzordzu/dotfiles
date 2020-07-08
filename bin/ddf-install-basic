@@ -21,8 +21,7 @@ export_to_shells() {
    verbose_message "exporting $1"
    shell_files=(bashrc zshrc cshrc profile)
    for shell_file in ${shell_files[*]}; do
-      verbose_message "export $1=$2 >> ~/.$shell_file" 2
-      exec "export $1=$2"
+      verbose_message "export $1=$2 to ~/.$shell_file" 2
       echo "export $1=$2" >> ~/.$shell_file
    done
 }
