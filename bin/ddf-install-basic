@@ -65,4 +65,4 @@ if [[ "$DISTRO_ID" == 'arch' ]]; then
    pacman -Sy --noconfirm git python ansible
 fi
 
-ansible-playbook $DIR/ansible/prepare-puppet.yml
+ansible-playbook $DIR/ansible/default-install.yml

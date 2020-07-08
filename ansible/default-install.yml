@@ -6,3 +6,5 @@
       package:
         name: puppet
         state: present
+    - name: Install and manage ntpd
+      nxos_ntp:
