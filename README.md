@@ -6,3 +6,15 @@
 1. Install script - `python` and `git` packages (bash)
 2. Install basic soft and configure `ansible` and `puppet` (ansible)
 3. Install external packages (puppet)
+
+## Dirs
+
+```
+.
+├── ansible/       # Ansible config
+├── bin/           # Installation bins + custom scripts
+├── conf/          # Packages configurations
+├── puppet/        # Puppet configs
+├── README.md      # This file
+└── settings       # Settings for ddf-install-basic
+```
