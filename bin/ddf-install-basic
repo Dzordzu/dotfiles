@@ -1,13 +1,27 @@
 #!/bin/bash
 
+verbose_message() {
+   if [ -z $2 ]; then 
+      message_verbosity=1
+   else
+      message_verbosity=$2
+   fi
+   if [[ "$VERBOSE" -ge "$message_verbosity" ]]; then
+      echo $1
+   fi
+}
+
+
+
 random_string() {
    echo `tr -dc a-zA-Z < /dev/urandom  | head -c 10`
 }
 
 export_to_shells() {
+   verbose_message "exporting $1"
    shell_files=(bashrc zshrc cshrc profile)
    for shell_file in ${shell_files[*]}; do
-      echo "export $3$1=$2 >> ~/.$shell_file"
+      verbose_message "export $1=$2 >> ~/.$shell_file" 2
    done
 }
 
@@ -21,19 +35,25 @@ done
 DIR="$( cd -P "$( dirname $( dirname "$SOURCE") )" >/dev/null 2>&1 && pwd )"
 
 source $DIR/settings
-echo $SLAVE_INSTALL
+
+verbose_message "SLAVE INSTALL: $SLAVE_INSTALL"
+verbose_message "VERBOSITY: $VERBOSE"
 
 # Set some basic variables
 DISTRO_ID=`cat /etc/*-release | awk -F '=' '/^ID/ {print $2}'`
+verbose_message "DISTRO_ID: $DISTRO_ID"
 
+verbose_message ""
+verbose_message "Exporting envs: "
 export_to_shells DDF_DIR $DIR
 export_to_shells DDF_BIN $DIR/bin
-export_to_shells PATH "$DIR/bin:\$PATH"
 
-export_to_shells PATH "$DIR/own-bin/hosts:\$PATH"
-export_to_shells PATH "$DIR/own-bin/private:\$PATH"
+export_to_shells PATH "$DIR/own-bin/private:$DIR/own-bin/hosts:$DIR/bin:\$PATH"
 
+
+verbose_message ""
+verbose_message "Preparing packages: "
 # Install basic packages (multisystem)
 if [[ "$DISTRO_ID" == 'arch' ]]; then
-   echo "sudo pacman -Sy --noconfirm git python ansible"
+   verbose_message "sudo pacman -Sy --noconfirm git python ansible"
 fi

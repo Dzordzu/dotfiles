@@ -13,3 +13,7 @@ HOSTNAME=
 # connection with the master puppet node
 # and prepare system basics via ansible
 SLAVE_INSTALL=0
+
+# Output mode
+# Scale 0 (none), 1 (general), 2 (all)
+VERBOSE=1
