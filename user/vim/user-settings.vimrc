@@ -53,6 +53,12 @@ noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
 noremap <Leader>yt :YcmCompleter GetType<Enter>
 
 noremap <Leader><C-s> :w <Enter>
+noremap <Leader><C-q><C-s> :wq <Enter>
+noremap <Leader><C-q><C-q> :wqa <Enter>
+noremap <Leader><C-n> :NERDTree <Enter>
+
+xmap - :m -2 <Enter> v
+xmap + :m +1 <Enter> v
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
