@@ -9,3 +9,9 @@ class ${1:Name} {
 	$0
 }
 endsnippet
+
+snippet rel "Create relation" b
+${1:Object1} "${2:`!p snip.rv = t[1].lower()`}" ${3:---} "${5:`!p snip.rv = t[4].lower()`}" ${4:Object2} : ${6:Verb}
+endsnippet
+
+# 
