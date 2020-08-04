@@ -1,0 +1,1 @@
+ssh -A -t root@nova.wcss.wroc.pl ssh -A root@dwarf
