@@ -38,6 +38,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tarekbecker/vim-yaml-formatter'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
 " Plug 'nathanaelkane/vim-indent-guides'
 
@@ -48,7 +49,7 @@ Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'
 Plug 'vim-syntastic/syntastic' 
-
+ 
 " Theme
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
@@ -104,7 +105,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'ocaml/merlin'
 
 " Arduino
-" Plug 'stevearc/vim-arduino'
+Plug 'stevearc/vim-arduino'
 
 " R
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}

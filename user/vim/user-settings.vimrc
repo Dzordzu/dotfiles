@@ -30,6 +30,8 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
+let g:tex_flavor = "latex"
+
 set nocp
 filetype plugin on
 
@@ -53,8 +55,9 @@ noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
 noremap <Leader>yt :YcmCompleter GetType<Enter>
 
 noremap <Leader><C-s> :w <Enter>
-noremap <Leader><C-q><C-s> :wq <Enter>
-noremap <Leader><C-q><C-q> :wqa <Enter>
+noremap <Leader><C-q> :wq <Enter>
+noremap <Leader><C-q><C-q> :wq <Enter>
+noremap <Leader><C-q><C-a> :wqa <Enter>
 noremap <Leader><C-n> :NERDTree <Enter>
 
 xmap - :m -2 <Enter> v
@@ -73,5 +76,7 @@ function! PUMLSwitchFun() range
    silent! execute a:firstline . "," . a:lastline . "s/\\W\\+LEFT_GREATER_ORIG_PUML_SWITCH/ </g"
    silent! execute a:firstline . "," . a:lastline . "s/\\W\\+RIGHT_GREATER_ORIG_PUML_SWITCH/ >/g"
 endfunction
+
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
 command! -range PUMLSwitch <line1>,<line2> call PUMLSwitchFun()
