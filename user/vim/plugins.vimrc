@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+" Async jobs
+Plug 'prabirshrestha/async.vim'
 
 " HTML
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -102,7 +104,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'ocaml/merlin'
 
 " Arduino
-Plug 'stevearc/vim-arduino'
+" Plug 'stevearc/vim-arduino'
 
 " R
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
