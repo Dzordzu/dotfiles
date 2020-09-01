@@ -53,7 +53,7 @@ Plug 'dense-analysis/ale'
  
 " Theme
 Plug 'jacoborus/tender.vim'
-Plug 'sonph/onehalf'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'morhetz/gruvbox'
 
 " Git
@@ -68,6 +68,7 @@ Plug 'jpalardy/vim-slime'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
