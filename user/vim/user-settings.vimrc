@@ -12,7 +12,7 @@ set expandtab
 if (has("termguicolors"))
  set termguicolors
 endif
-silent! colorscheme tender
+silent! colorscheme onehalf
 
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
@@ -58,7 +58,11 @@ noremap <Leader><C-s> :w <Enter>
 noremap <Leader><C-q> :wq <Enter>
 noremap <Leader><C-q><C-q> :wq <Enter>
 noremap <Leader><C-q><C-a> :wqa <Enter>
-noremap <Leader><C-n> :NERDTree <Enter>
+noremap <Leader><C-n> :Ranger<Enter>
+noremap <Leader><C-n><C-n> :Ranger<Enter>
+noremap <Leader><C-n><C-v> :vsplit<Enter>:Ranger<Enter>
+noremap <Leader><C-n><C-s> :split<Enter>:Ranger<Enter>
+noremap <Leader><C-h> :ProjectRootCD<Enter>
 
 xmap - :m -2 <Enter> v
 xmap + :m +1 <Enter> v

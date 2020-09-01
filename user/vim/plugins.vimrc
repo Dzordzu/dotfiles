@@ -5,7 +5,6 @@ Plug 'prabirshrestha/async.vim'
 
 " HTML
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-"USES PYTHON2" Plug 'jaxbot/browserlink.vim'
 
 " CSS
 Plug 'cakebaker/scss-syntax.vim'
@@ -17,9 +16,11 @@ Plug 'docker/docker'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'dbakker/vim-projectroot'
+" Plug 'scrooloose/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Puppet
 Plug 'rodjek/vim-puppet' 
@@ -48,10 +49,11 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'
-Plug 'vim-syntastic/syntastic' 
+Plug 'dense-analysis/ale'
  
 " Theme
 Plug 'jacoborus/tender.vim'
+Plug 'sonph/onehalf'
 Plug 'morhetz/gruvbox'
 
 " Git

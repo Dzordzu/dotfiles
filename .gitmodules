@@ -1,0 +1,3 @@
+[submodule "user/ranger/plugins/ranger_devicons"]
+	path = user/ranger/plugins/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons.git
