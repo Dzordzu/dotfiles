@@ -56,7 +56,11 @@ trizen -Sy --noconfirm \
    antibody \
    oh-my-zsh-git \
    screenfetch \
-   neofetch
+   neofetch \
+   ripgrep \
+   ripgrep-all \
+   ranger \
+   fzf
 
 # Install tmux
 trizen -Sy --noconfirm \
