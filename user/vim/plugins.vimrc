@@ -74,6 +74,7 @@ Plug 'jpalardy/vim-slime'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Haskell
