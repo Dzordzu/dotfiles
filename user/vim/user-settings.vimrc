@@ -63,6 +63,7 @@ noremap <Leader><C-n> :Ranger<Enter>
 noremap <Leader><C-n><C-n> :Ranger<Enter>
 noremap <Leader><C-n><C-v> :vsplit<Enter>:Ranger<Enter>
 noremap <Leader><C-n><C-s> :split<Enter>:Ranger<Enter>
+noremap <Leader><C-n><C-t> :RangerNewTab<Enter>
 noremap <Leader><C-h> :ProjectRootCD<Enter>
 
 vmap - <Plug>MoveBlockDown
@@ -85,3 +86,7 @@ endfunction
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
 command! -range PUMLSwitch <line1>,<line2> call PUMLSwitchFun()
+
+" Reload files
+set autoread
+au FocusGained,BufEnter * :checktime
