@@ -65,8 +65,8 @@ noremap <Leader><C-n><C-v> :vsplit<Enter>:Ranger<Enter>
 noremap <Leader><C-n><C-s> :split<Enter>:Ranger<Enter>
 noremap <Leader><C-h> :ProjectRootCD<Enter>
 
-xmap - :m -2 <Enter> v
-xmap + :m +1 <Enter> v
+vmap - <Plug>MoveBlockDown
+vmap + <Plug>MoveBlockUp
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"

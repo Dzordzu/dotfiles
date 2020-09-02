@@ -1,5 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
+" General 
+Plug 'tpope/vim-abolish'
+Plug 'thaerkh/vim-workspace'
+Plug 'matze/vim-move'
+
 " Async jobs
 Plug 'prabirshrestha/async.vim'
 
