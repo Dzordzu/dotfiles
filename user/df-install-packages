@@ -1,30 +1,30 @@
 #!/bin/bash
 # Install alacritty 
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    alacritty \
    w3m
 
 # Install music player
-trizen -Sy --noconfirm \
-   mopidy-spotify \
-   mopidy-mpd \
-   mopidy-musicbox \
-   mopidy-youtube-git \
-   glava \
-   ncmpcpp \
-   cava 
+# yay --needed -Sy --noconfirm \
+#    mopidy-spotify \
+#    mopidy-mpd \
+#    mopidy-musicbox \
+#    mopidy-youtube-git \
+#    glava \
+#    ncmpcpp \
+#    cava 
 
 # Install browser 
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    qutebrowser
 
 # Install rofi
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    rofi-dmenu \
    bitwarden-rofi
 
 # Install i3
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    i3-gaps \
    feh \
    libevent \
@@ -35,13 +35,13 @@ trizen -Sy --noconfirm \
    xdotool
 
 # Install polybar
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    polybar \
    termsyn-font \
    ttf-font-awesome
 
 # Install vim
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    gvim \
    vim-plug \
    xclip \
@@ -50,7 +50,7 @@ trizen -Sy --noconfirm \
 npm install instant-markdown-d
 
 # Install zsh
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    zsh \
    ruby-colorls \
    antibody \
@@ -63,13 +63,13 @@ trizen -Sy --noconfirm \
    fzf
 
 # Install tmux
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    hstr-git \
    tmux \
    powerline
 
 # Network and minor
-trizen -Sy --noconfirm \
+yay --needed -Sy --noconfirm \
    nmap \
    bind-utils \
 
