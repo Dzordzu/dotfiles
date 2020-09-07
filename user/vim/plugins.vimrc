@@ -1,9 +1,15 @@
 call plug#begin('~/.vim/plugged')
 
+" General 
+Plug 'tpope/vim-abolish'
+Plug 'thaerkh/vim-workspace'
+Plug 'matze/vim-move'
+
+" Async jobs
+Plug 'prabirshrestha/async.vim'
 
 " HTML
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-"USES PYTHON2" Plug 'jaxbot/browserlink.vim'
 
 " CSS
 Plug 'cakebaker/scss-syntax.vim'
@@ -15,9 +21,11 @@ Plug 'docker/docker'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'dbakker/vim-projectroot'
+" Plug 'scrooloose/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Puppet
 Plug 'rodjek/vim-puppet' 
@@ -35,6 +43,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tarekbecker/vim-yaml-formatter'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kshenoy/vim-signature'
 " Plug 'nathanaelkane/vim-indent-guides'
 
@@ -44,10 +53,12 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'
-Plug 'vim-syntastic/syntastic' 
-
+Plug 'dense-analysis/ale'
+Plug 'vim-test/vim-test'
+ 
 " Theme
 Plug 'jacoborus/tender.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'morhetz/gruvbox'
 
 " Git
@@ -62,6 +73,7 @@ Plug 'jpalardy/vim-slime'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'

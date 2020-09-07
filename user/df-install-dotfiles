@@ -32,6 +32,9 @@ cp -rf $DIR/alacritty ~/.config
 cp -rf $DIR/tmux ~/.config
 mv ~/.config/tmux/.tmux.conf ~/.tmux.conf
 
+# Install tmux
+cp -rf $DIR/ranger ~/.config
+
 # Install zsh
 cp -rf $DIR/zsh ~/.config
 mv ~/.config/zsh/.zshrc ~/.zshrc

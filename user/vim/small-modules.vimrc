@@ -24,3 +24,6 @@ let g:arduino_dir = '/usr/share/arduino'
 
 "" SYNTASTIC
 let g:syntastic_yaml_checkers = ['yamllint']
+
+"" MOVE
+let g:move_key_modifier = 'C'
