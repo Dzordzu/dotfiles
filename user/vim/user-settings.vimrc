@@ -83,6 +83,13 @@ function! PUMLSwitchFun() range
    silent! execute a:firstline . "," . a:lastline . "s/\\W\\+RIGHT_GREATER_ORIG_PUML_SWITCH/ >/g"
 endfunction
 
+function! GitAuthorFun()
+   execute "!git blame -p -L " . line(".") . "," . line(".") . " " . @% . ' | grep "^author\(\-mail\)\? "' . " | awk '{ORS=\"\"; for(i=2;i<=NF;++i) print $i}'"
+
+   " " . " | awk 'match($0, /<(.+@.+\\.[0-9A-Za-z]+)/, a) {print a[1]}'"
+endfunction
+
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
 command! -range PUMLSwitch <line1>,<line2> call PUMLSwitchFun()
+command! -range GitAuthor call GitAuthorFun()
