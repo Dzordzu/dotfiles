@@ -27,9 +27,8 @@ Plug 'dbakker/vim-projectroot'
 " Plug 'scrooloose/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Puppet/Ansible
-Plug 'rodjek/vim-puppet'
-Plug 'erikzaadi/vim-ansible-yaml'
+" Puppet
+Plug 'rodjek/vim-puppet' 
 
 " YAML
 Plug 'pedrohdz/vim-yaml-folds'

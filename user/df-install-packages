@@ -4,6 +4,10 @@ yay --needed -Sy --noconfirm \
    alacritty \
    w3m
 
+yay --needed -Sy --noconfirm \
+   ansible \
+   ansible-lint
+
 # Install music player
 # yay --needed -Sy --noconfirm \
 #    mopidy-spotify \
