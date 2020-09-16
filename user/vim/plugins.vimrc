@@ -30,6 +30,9 @@ Plug 'dbakker/vim-projectroot'
 " Puppet
 Plug 'rodjek/vim-puppet' 
 
+" Ansible
+Plug 'pearofducks/ansible-vim'
+
 " YAML
 Plug 'pedrohdz/vim-yaml-folds'
 
