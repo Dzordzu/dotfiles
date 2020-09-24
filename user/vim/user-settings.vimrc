@@ -92,5 +92,4 @@ set autoread
 au FocusGained,BufEnter * :checktime
 
 " Faster jedi
-let g:pymode_rope = 0
 let g:jedi#completions_enabled = 0
