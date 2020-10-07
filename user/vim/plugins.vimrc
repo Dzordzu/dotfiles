@@ -58,6 +58,9 @@ Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'
 Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
+
+" Jinja
+Plug 'lepture/vim-jinja'
  
 " Theme
 Plug 'jacoborus/tender.vim'
