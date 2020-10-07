@@ -60,7 +60,7 @@ Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
 
 " Jinja
-Plug 'lepture/vim-jinja'
+Plug 'Glench/Vim-Jinja2-Syntax'
  
 " Theme
 Plug 'jacoborus/tender.vim'
