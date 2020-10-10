@@ -50,7 +50,8 @@ Plug 'kshenoy/vim-signature'
 
 " General langs
 Plug 'sheerun/vim-polyglot'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chiel92/vim-autoformat'
 Plug 'reedes/vim-wordy'
 Plug 'rhysd/vim-grammarous'

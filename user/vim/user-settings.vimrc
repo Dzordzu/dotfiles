@@ -46,14 +46,13 @@ set splitright
 command JSONFormatter %!python -m json.tool
 
 set foldmethod=syntax
-let g:polyglot_disabled = ['latex']
 
-noremap <silent> <Leader>yd :YcmCompleter GoToDefinition<Enter>
-noremap <silent> <Leader>yD :YcmCompleter GoToDeclaration<Enter>
-noremap <silent> <Leader>yi :YcmCompleter GoToInclude<Enter>
-noremap <Leader>yr :YcmCompleter GoToReferences<Enter>
-noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
-noremap <Leader>yt :YcmCompleter GetType<Enter>
+" noremap <silent> <Leader>yd :YcmCompleter GoToDefinition<Enter>
+" noremap <silent> <Leader>yD :YcmCompleter GoToDeclaration<Enter>
+" noremap <silent> <Leader>yi :YcmCompleter GoToInclude<Enter>
+" noremap <Leader>yr :YcmCompleter GoToReferences<Enter>
+" noremap <silent> <Leader>yf :YcmCompleter FixIt<Enter>
+" noremap <Leader>yt :YcmCompleter GetType<Enter>
 
 noremap <Leader><C-s> :w <Enter>
 noremap <Leader><C-q> :wq <Enter>
