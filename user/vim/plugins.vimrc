@@ -38,6 +38,9 @@ Plug 'pedrohdz/vim-yaml-folds'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" C#
+Plug 'OmniSharp/omnisharp-vim'
+
 
 " Visual
 Plug 'junegunn/goyo.vim'
