@@ -1,5 +1,16 @@
 #!/bin/bash
 
+if [[ "$1" == "--help" ]]; then
+   echo """
+ddf-update - Update repo with Dzordzu Dotfiles
+By default it uses the latest tag
+
+Available arguments:
+--help      Shows help
+--unstable  Git checkout latest version
+   """
+fi
+
 BRANCH=v1
 
 cd `ddf --dir`
