@@ -22,3 +22,5 @@ if [[ "$1" != '--unstable' ]]; then
    latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
    git checkout $latestTag &> /dev/null
 fi
+
+ansible-playbook -i ./inventories/user $DDF_PLAYBOOK --ask-become-pass
