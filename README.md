@@ -40,7 +40,6 @@ Requires `python` on a host
 ### Binaries
 
 #### ddf
-![TODO]( https://img.shields.io/badge/status-todo-red )
 
 Lists available binaries. Shows version.
 Shows dir with playbook
@@ -61,6 +60,7 @@ ddf-update --unstable
 ```
 
 #### ddf-topgrade
+![TODO]( https://img.shields.io/badge/status-todo-red )
 ```
 ddf-topgrade
 ddf-topgrade --add-git-repo /home/user/somerepo/
