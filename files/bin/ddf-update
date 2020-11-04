@@ -3,7 +3,7 @@
 BRANCH=v1
 
 cd `ddf --dir`
-git checkout $BRANCH >> /dev/null
+git checkout $BRANCH &> /dev/null
 git pull
 
 if [[ "$1" != '--unstable' ]]; then
