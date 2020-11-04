@@ -105,6 +105,7 @@ ddf-theme use light
 
 #### ddf-refresh
 ![TODO]( https://img.shields.io/badge/status-todo-red )
+
 Refresh system (reload i3 etc.)
 
 ```
@@ -112,6 +113,17 @@ ddf-refresh
 ddf-refresh --i3
 ddf-refresh --vim
 ddf-refresh --zsh
+```
+
+#### ddf-playbook
+![TODO]( https://img.shields.io/badge/status-todo-red )
+
+Choose playbook for ansible. If no option set, just prints the current playbook
+```
+ddf-playbook
+ddf-playbook --help
+ddf-playbook --list
+ddf-playbook --set <PLAYBOOOK>
 ```
 
 #### gpg-add
