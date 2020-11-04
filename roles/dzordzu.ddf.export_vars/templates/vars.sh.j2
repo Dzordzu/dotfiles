@@ -1,0 +1,11 @@
+# Dzordzu Dot Files
+# Export DDF_* variables
+# {{ ansible_managed }}
+
+{% for var in ddf_export_vars %}
+export DDF_{{var|upper}}={{ddf_export_vars[var]}}
+{% endfor %}
+
+export DDF_PLAYBOOK=/{{ (lookup('file', '/proc/self/cmdline') | regex_replace('\u0000',' ')).split()|select('match','^[a-z-_/]*[.]y[a]*ml')|list|first|basename }}
+
+# vim: ft=sh.jinja2

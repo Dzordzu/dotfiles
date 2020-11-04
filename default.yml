@@ -2,3 +2,4 @@
 - hosts: localhost
   roles:
     - dzordzu.ddf.binaries
+    - dzordzu.ddf.export_vars

@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  role_name: dzordzu.ddf.export_vars
+  author: Tomasz Durda
+  description: Export ddf vars
+
+  license: GPLv3
+
+  min_ansible_version: 2.9
+
+  galaxy_tags: []
+
+collections:
+  - ansible.posix

@@ -1,0 +1,11 @@
+---
+- name: Add bin dirs to PATH (global)
+  become: true
+  template:
+    src: vars.sh.j2
+    dest: /etc/profile.d/ddfvars.sh
+    mode: '0644'
+    owner: root
+    group: root
+
+# vim: ft=yaml.ansible
