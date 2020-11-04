@@ -2,7 +2,7 @@
 
 cd `ddf --dir`
 git pull
-git checkout --master
+git checkout master
 
 if [[ "$1" != '--unstable' ]]; then
    git fetch --tags
