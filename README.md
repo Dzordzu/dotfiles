@@ -114,6 +114,9 @@ ddf-refresh --vim
 ddf-refresh --zsh
 ```
 
+#### gpg-add
+Simple script that acts like `ssh-add`. Currently there is no option to specify key
+
 ## FAQ
 
 ### Why multiple binaries?
