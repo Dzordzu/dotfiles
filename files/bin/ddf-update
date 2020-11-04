@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd `ddf --dir`
+git pull
+git checkout --master
+
+if [[ "$1" != '--unstable' ]]; then
+   git fetch --tags
+   latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+   git checkout $latestTag
+fi
