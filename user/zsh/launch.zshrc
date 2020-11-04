@@ -16,6 +16,7 @@ fi
 
 export TERM="xterm-256color"
 export VAULT_ADDR='https://vault.dzordzu.pl'
+export WINEDEBUG=-all
 # Start with a fetch
 eval $(thefuck --alias)
 

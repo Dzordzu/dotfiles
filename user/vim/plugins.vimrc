@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-abolish'
 Plug 'thaerkh/vim-workspace'
 Plug 'matze/vim-move'
+Plug 'lambdalisue/suda.vim'
 
 " Async jobs
 Plug 'prabirshrestha/async.vim'
@@ -94,7 +95,8 @@ Plug 'https://github.com/lervag/vimtex'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'jtratner/vim-flavored-markdown'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " C++
 Plug 'rip-rip/clang_complete'

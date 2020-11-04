@@ -1,0 +1,1 @@
+echo '' | gpg --clearsign --pinentry-mode loopback

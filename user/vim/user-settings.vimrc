@@ -24,6 +24,9 @@ highlight Normal     guibg=#232627
 autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) .
             \ ' | xclip -selection clipboard')
 
+
+let g:mkdp_auto_start = 1
+
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_override_foldtext = 0
 let g:table_mode_corner='|'
@@ -93,3 +96,15 @@ au FocusGained,BufEnter * :checktime
 
 " Faster jedi
 let g:jedi#completions_enabled = 0
+
+" Let it flow: Coc
+noremap <silent> <Leader>cs :call CocActionAsync('showSignatureHelp') <CR>
+
+
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
