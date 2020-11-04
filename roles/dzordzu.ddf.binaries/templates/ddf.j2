@@ -1,0 +1,37 @@
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+
+if [[ "$1" == '--bin-dir' ]]; then
+   echo "$DIR"
+elif [[ "$1" == "--binaries" ]]; then
+   echo """
+{% for _ddf_bin in _ddf_binaries_list['files'] %}
+   {{ _ddf_bin['path'] | basename }}
+{% endfor %}
+   """
+elif [[ "$1" == "--dir" ]]; then
+   echo "{{ playbook_dir }}"
+elif [[ "$1" == '--version' ]]; then
+   echo '(unstable) 1.0.0'
+else
+   echo """
+ddf - Dzordzu Dotfiles
+
+Available arguments:
+--help      Shows help
+--dir       Shows an absolute path to the dir with the playbook
+--bin-dir   Shows an absolute path to the dir with the ddf binaries
+--binaries  Shows available ddf binaries
+--version   Display version of the ddf
+   """
+fi
+
+
+# vim: ft=sh.jinja2

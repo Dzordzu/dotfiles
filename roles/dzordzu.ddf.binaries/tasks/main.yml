@@ -1,0 +1,56 @@
+---
+- name: Add bin dirs to PATH (global)
+  become: true
+  vars:
+    _ddf_bin_dirs: "{{ ddf_global_bin_dirs }}"
+  template:
+    src: bins.sh.j2
+    dest: /etc/profile.d/ddfbins.sh
+    mode: '0644'
+    owner: root
+    group: root
+
+- name: Create .ddf dir
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.ddf"
+    state: directory
+    mode: '0750'
+
+- name: Add bin dirs to PATH (user)
+  become: false
+  vars:
+    _ddf_bin_dirs: "{{ ddf_user_bin_dirs }}"
+  template:
+    src: bins.sh.j2
+    dest: "{{ lookup('env', 'HOME') }}/.ddf/ddfbins.sh"
+    mode: '0644'
+
+- name: Copy binaries defined in repo dir (global)
+  become: true
+  ansible.posix.synchronize:
+    src: "{{ playbook_dir }}/files/bin/"
+    dest: /usr/local/bin/
+  delegate_to: "{{ inventory_hostname }}"
+
+- name: Copy binaries defined in repo dir (user)
+  become: false
+  ansible.posix.synchronize:
+    src: "{{ playbook_dir }}/files/userbin/"
+    dest: "{{ lookup('env', 'HOME') }}/.ddf/bin/"
+    archive: false
+  delegate_to: "{{ inventory_hostname }}"
+
+- name: Get list of ddf binaries
+  become: true
+  find:
+    paths: "{{ playbook_dir }}/files/bin"
+  register: _ddf_binaries_list
+
+- name: Create ddf command
+  become: true
+  template:
+    src: ddf.j2
+    dest: /usr/local/bin/ddf
+    mode: '755'
+
+# vim: ft=yaml.ansible
