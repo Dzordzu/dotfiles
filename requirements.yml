@@ -1,6 +1,7 @@
 ---
 roles:
   - src: bertvv.hosts
+  - src: kewlfft.aur
 
 collections:
   - ansible.posix

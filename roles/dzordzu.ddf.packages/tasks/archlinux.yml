@@ -1,0 +1,221 @@
+---
+
+- name: Install yay and trizen
+  become: false
+  aur:
+    name:
+      - trizen
+      - yay
+
+- name: Install basic languages
+  become: false
+  aur:
+    name:
+      - python
+      - r
+      - scala
+      - ghc
+      - stack
+      - cabal-install
+      - ruby
+      - perl
+      - scons
+      - dotnet-sdk-bin
+      - dotnet-runtime-bin
+      - cmake
+      - clang
+      - bison
+      - ocaml
+      - valgrind
+      - gdb
+      - go
+      - ninja
+      - py3status
+
+- name: Install fonts
+  become: false
+  aur:
+    name:
+      - terminus-font-ttf
+      - termsyn-font
+      - ttf-dejavu
+      - ttf-font-awesome
+      - ttf-hack
+      - ttf-hanazono
+      - ttf-liberation
+      - ttf-roboto
+      - cantarell-fonts
+      - fontawesome.sty
+      - gsfonts
+      - nerd-fonts-complete
+      - noto-fonts
+      - otf-font-awesome
+      - otf-ipafont
+      - terminus-font
+
+- name: Install common linux stuff
+  become: false
+  aur:
+    name:
+      - acl
+      - alsa-utils
+      - bluez
+      - bluedevil
+      - bluez-utils
+      - openssh
+      - nfs-utils
+      - networkmanager
+      - networkmanager-openconnect
+      - networkmanager-openvpn
+      - networkmanager-qt
+      - networkmanager-vpnc
+      - nm-connection-editor
+      - obexftp
+      - pulseaudio
+      - pulseaudio-alsa
+      - pulseaudio-bluetooth
+      - pulseaudio-equalizer
+      - pulseaudio-qt
+      - quota-tools
+
+- name: Some win$hiet stuff
+  become: false
+  aur:
+    name: ntfs-3g
+
+- name: Install docker
+  become: false
+  aur:
+    name:
+      - docker
+      - docker-compose
+      - lazydocker
+
+- name: Install basic tools
+  become: false
+  aur:
+    name:
+      - sed
+      - rename
+      - rsync
+      - screen
+      - bind
+      - openldap
+      - nmap
+      - pavucontrol
+      - pv
+      - pwgen
+
+- name: Install cli tools
+  become: false
+  aur:
+    name:
+      - zsh
+      - neovim
+      - gvim
+      - vim
+      - nano
+      - ranger
+      - fzf
+      - alacritty
+      - tmux
+      - ripgrep
+      - antibody
+      - bat
+      - neofetch
+      - gotop
+      - unimatrix
+
+- name: Install archive tools
+  become: false
+  aur:
+    name:
+      - p7zip
+      - rar
+      - gzip
+      - bzip2
+      - zip
+
+- name: Install GUI vim-like tools
+  become: false
+  aur:
+    name:
+      - qutebrowser
+      - zathura
+      - vimiv
+      - rofi
+      - rofi-dmenu
+
+- name: Install Arduino libs
+  become: false
+  aur:
+    name:
+      - arduino
+      - arduino-avr-core
+      - arduino-cli
+
+- name: Install software for Dzordzu Services
+  become: false
+  aur:
+    name:
+      - element-desktop
+      - element-web
+      - nextcloud-client
+      - bitwarden-bin
+      - bitwarden-rofi-git
+      - bitwarden-cli
+
+- name: Install basic graphics software
+  become: false
+  aur:
+    name:
+      - gimp
+      - inkscape
+      - pencil
+
+- name: Install basic software for common usage
+  become: false
+  aur:
+    name:
+      - chromium
+      - firefox
+      - xsane
+      - peek
+
+- name: Install some 'hacking' stuff
+  become: false
+  aur:
+    name:
+      - ghidra
+      - ropgadget
+      - wireshark-cli
+      - wireshark-qt
+
+- name: Install latex
+  become: false
+  aur:
+    name:
+      - latex-pdfpages
+      - texinfo
+      - biber
+      - texlive-most
+      - texlive-lang
+      - texlive-langextra
+      - texlive-bin
+      - texlive-core
+
+- name: Install music stuff
+  become: false
+  aur:
+    name:
+      - cava
+      - mopidy
+      - mopidy-mpd
+      - mopidy-musicbox
+      - mopidy-simple-webclient
+      - mopidy-spotify
+      - mopidy-youtube-git
+      - youtube-dl
+      - youtube-dlc
+
+# vim: ft=yaml.ansible

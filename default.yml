@@ -3,3 +3,4 @@
   roles:
     - dzordzu.ddf.binaries
     - dzordzu.ddf.export_vars
+    - dzordzu.ddf.packages

@@ -1,0 +1,6 @@
+---
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'Archlinux'
+  include_tasks: "archlinux.yml"
+
+# vim: ft=yaml.ansible
