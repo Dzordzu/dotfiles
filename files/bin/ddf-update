@@ -1,8 +1,10 @@
 #!/bin/bash
 
+BRANCH=v1
+
 cd `ddf --dir`
+git checkout $BRANCH >> /dev/null
 git pull
-git checkout master
 
 if [[ "$1" != '--unstable' ]]; then
    git fetch --tags
