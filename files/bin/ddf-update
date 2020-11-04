@@ -9,6 +9,7 @@ Available arguments:
 --help      Shows help
 --unstable  Git checkout latest version
    """
+   exit 0
 fi
 
 BRANCH=v1
