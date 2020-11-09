@@ -108,3 +108,5 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+let g:livepreview_previewer = 'zathura'
