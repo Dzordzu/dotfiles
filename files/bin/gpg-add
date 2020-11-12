@@ -1,3 +1,19 @@
 #!/bin/bash
 
+if [[ "$1" == "--help" ]]; then
+   echo """
+gpg-add - Simple wrapper over gpg
+
+Available arguments:
+--help      Shows help
+--list      List secret keys that can be added
+   """
+   exit 0
+fi
+
+if [[ "$1" == "--list" ]]; then
+   gpg --list-secret-keys
+   exit 0
+fi
+
 echo '' | gpg --clearsign --pinentry-mode loopback
