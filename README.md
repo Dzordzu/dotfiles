@@ -40,16 +40,28 @@ Requires `python` on a host
 ### Binaries
 
 #### ddf
+![INCOMPLETE]( https://img.shields.io/badge/status-incomplete-yellow)
+![Missing shortands]( https://img.shields.io/badge/missing-shortands-red)
 
+General ddf informations
 Lists available binaries. Shows version.
 Shows dir with playbook
 
 ```
 ddf --version
+ddf -v
+
 ddf --dir
+ddf -d
+
 ddf --bin-dir
+ddf -bd
+
 ddf --binaries
+ddf -b
+
 ddf --help
+ddf -h
 ```
 
 #### ddf-update
@@ -83,7 +95,7 @@ ddf-path remove /home/user/bin
 Manages packages using proper manager.
 Additionally adds them to repo
 Use `--passive` flag to prevent tool from doing action on host
-(it will be added/removed only from repo)
+(it will be added/removed only to/from repo)
 ```
 ddf-package add vim
 ddf-package list
@@ -126,8 +138,67 @@ ddf-playbook --list
 ddf-playbook --set <PLAYBOOOK>
 ```
 
+#### ddf-project
+![TODO]( https://img.shields.io/badge/status-todo-red )
+
+Create project from template, remember project location, list available projects
+
+```
+ddf-project new <template-name> --params <parameters>
+ddf-project new <template-name> --params-file <path>
+ddf-project list
+ddf-project list --template <template-name>
+ddf-project remember <path> # Interactive mode
+ddf-project remember --id <project id> --path <path> --description <desc> --template <template-name>
+ddf-project forget <path>
+ddf-project forget -p <path>
+ddf-project forget -i <project id>
+ddf-project --help
+ddf-project manage --add-author
+ddf-project manage --build
+ddf-project manage --run
+```
+
 #### gpg-add
 Simple script that acts like `ssh-add` but for gpg. Currently there is no option to specify key
+
+## Planned commands
+### Misc
+
+#### ddf-infra
+![Planned]( https://img.shields.io/badge/status-planned-blue)
+
+```
+ddf-infra new auth
+ddf-infra new identity-management
+ddf-infra new service
+ddf-infra new storage
+ddf-infra new monitoring
+ddf-infra new --planned <plan id>
+
+ddf-infra remove <id>
+ddf-infra status
+
+ddf-infra plan new
+ddf-infra plan remove
+ddf-infra plan status
+
+ddf-infra connect
+ddf-infra disconnect
+ddf-infra --help
+```
+
+### ddf-de2sert
+#### ddf-cherry
+
+Integration with cherry-cli. Automatically associate tasks with certain project
+
+```
+ddf-cherry configure
+ddf-cherry new <task>
+ddf-cherry remove <task>
+ddf-cherry status <task>
+```
 
 ## FAQ
 
