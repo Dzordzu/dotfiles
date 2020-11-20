@@ -10,6 +10,11 @@
     owner: root
     group: root
 
+- name: Remove all gpg-add script
+  file:
+    path: ~/.config/zsh/project-scripts/gpg-add
+    state: absent
+
 - name: Create .ddf dir
   file:
     path: "{{ lookup('env', 'HOME') }}/.ddf"
