@@ -26,7 +26,7 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 
 # ZSH config
-alias ls='colorls -sd'
+alias ls='colorls --sd'
 #alias ls='ls --color=auto'
 alias v='nvim'
 alias dwarf='ssh root@10.26.27.71'
@@ -43,7 +43,7 @@ setopt MENU_COMPLETE
 
 
 export PATH=$HOME/.npm/bin:$PATH
-export PATH=$DF_DIR:$PATH 
+export PATH=$DF_DIR:$PATH
 export PATH=$HOME/.config/zsh/project-scripts:$PATH 
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH 
 export I3SOCK=$(i3 --get-socketpath)
