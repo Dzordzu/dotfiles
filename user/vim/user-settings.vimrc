@@ -25,7 +25,7 @@ autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) .
             \ ' | xclip -selection clipboard')
 
 
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
 
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_override_foldtext = 0
