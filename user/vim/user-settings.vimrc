@@ -110,3 +110,5 @@ else
 endif
 
 let g:livepreview_previewer = 'zathura'
+
+let g:virtualenv_auto_activate = 1
