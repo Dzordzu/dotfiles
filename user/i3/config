@@ -261,3 +261,4 @@ exec_always "for dev in $($x_touchpad); do xinput disable $dev; done"
 
 
 exec_always xrandr --output HDMI-A-0 --auto --above eDP
+exec --no-startup-id /usr/lib/pam_kwallet_init
