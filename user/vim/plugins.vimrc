@@ -127,5 +127,7 @@ Plug 'stevearc/vim-arduino'
 " R
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 
+" OCL
+Plug 'arteymix/vim-ocl'
 
 call plug#end()
