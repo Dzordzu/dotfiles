@@ -82,6 +82,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'alfredodeza/pytest.vim'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
