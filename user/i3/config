@@ -34,7 +34,7 @@ bindsym $mod+Return exec alacritty
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -line-padding 4 -padding 25
-bindsym $mod+s exec --no-startup-id "rofi -show drun -run-command 'gksudo {cmd}'"
+bindsym $mod+s exec rofi -show drun -run-command 'gksudo {cmd}'
 
 bindsym $mod+e exec rofi -show run -line-padding 4 -padding 25
 bindsym $mod+r exec "bwmenu --auto-lock 10800 -c 10 &"
