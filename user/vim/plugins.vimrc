@@ -112,6 +112,7 @@ Plug 'cespare/vim-toml'
 " Tmux
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 " Jenkins
 Plug 'martinda/Jenkinsfile-vim-syntax'
