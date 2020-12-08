@@ -29,7 +29,7 @@ let g:syntastic_yaml_checkers = ['yamllint']
 let g:move_key_modifier = 'C'
 
 """ VIM-TEST
-let test#strategy = let test#strategy = {
+let test#strategy = {
   \ 'nearest': 'vimux',
   \ 'file':    'dispatch',
   \ 'suite':   'vimux',
