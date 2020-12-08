@@ -31,6 +31,6 @@ let g:move_key_modifier = 'C'
 """ VIM-TEST
 let test#strategy = {
   \ 'nearest': 'vimux',
-  \ 'file':    'dispatch',
+  \ 'file':    'neovim',
   \ 'suite':   'vimux',
 \}
