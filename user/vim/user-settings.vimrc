@@ -69,6 +69,8 @@ noremap <Leader><C-n><C-s> :split<Enter>:Ranger<Enter>
 noremap <Leader><C-n><C-t> :RangerNewTab<Enter>
 noremap <Leader><C-h> :ProjectRootCD<Enter>
 
+noremap <Leader><C-m> :MarkdownPreview
+
 vmap - <Plug>MoveBlockDown
 vmap + <Plug>MoveBlockUp
 
