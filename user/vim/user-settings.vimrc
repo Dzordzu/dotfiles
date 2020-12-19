@@ -112,3 +112,8 @@ endif
 let g:livepreview_previewer = 'zathura'
 
 let g:virtualenv_auto_activate = 1
+
+let g:openbrowser_browser_commands = [
+\   {'name': 'xdg-open',
+\    'args': ['qutebrowser', '{uri}']}
+\]
