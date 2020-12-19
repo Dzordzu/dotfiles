@@ -79,11 +79,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let &runtimepath.=',~/.config/vim'
 
 function! PUMLSwitchFun() range
-   silent execute a:firstline . "," . a:lastline . "s/\\(\\w\\+\\) \\(\"\\w\\+\"\\) \\(\\%([\\.\\-]\\|left\\|up\\|down\\|right\\)\\+\\) \\(\"\\w\\+\"\\) \\(\\w\\+\\)/\\5 \\4 \\3 \\2 \\1/g"
-   silent! execute a:firstline . "," . a:lastline . "s/: \\(.*\\)>\\W*$/: \\1 LEFT_GREATER_ORIG_PUML_SWITCH"
-   silent! execute a:firstline . "," . a:lastline . "s/: \\(.*\\)<\\W*$/: \\1 RIGHT_GREATER_ORIG_PUML_SWITCH"
-   silent! execute a:firstline . "," . a:lastline . "s/\\W\\+LEFT_GREATER_ORIG_PUML_SWITCH/ </g"
-   silent! execute a:firstline . "," . a:lastline . "s/\\W\\+RIGHT_GREATER_ORIG_PUML_SWITCH/ >/g"
+   silent execute a:firstline . "," . a:lastline . 's/\(\w\+\) \("\w\+"\) \(\%([\.\-]\|left\|up\|down\|right\)\+\) \("\w\+"\) \(\w\+\)/\5 \4 \3 \2 \1/g'
+   silent! execute a:firstline . "," . a:lastline . 's/: \(.*\)>\W*$/: \1 LEFT_GREATER_ORIG_PUML_SWITCH'
+   silent! execute a:firstline . "," . a:lastline . 's/: \(.*\)<\W*$/: \1 RIGHT_GREATER_ORIG_PUML_SWITCH'
+   silent! execute a:firstline . "," . a:lastline . 's/\W\+LEFT_GREATER_ORIG_PUML_SWITCH/ </g'
+   silent! execute a:firstline . "," . a:lastline . 's/\W\+RIGHT_GREATER_ORIG_PUML_SWITCH/ >/g'
 endfunction
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
