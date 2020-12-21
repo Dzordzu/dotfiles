@@ -34,3 +34,6 @@ let test#strategy = {
   \ 'file':    'neovim',
   \ 'suite':   'vimux',
 \}
+
+""" OMNISHARP
+let g:ale_linters = { 'cs': ['OmniSharp']}
