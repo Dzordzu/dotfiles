@@ -35,5 +35,5 @@ let test#strategy = {
   \ 'suite':   'vimux',
 \}
 
-""" OMNISHARP
+""" OMNISHARP/ALE
 let g:ale_linters = { 'cs': ['OmniSharp']}
