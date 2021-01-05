@@ -71,6 +71,8 @@ noremap <Leader><C-h> :ProjectRootCD<Enter>
 
 noremap <Leader><C-m> :MarkdownPreview<Enter>
 
+noremap <Leader><C-r> :OmniSharpRestartServer<Enter>
+
 vmap - <Plug>MoveBlockDown
 vmap + <Plug>MoveBlockUp
 
