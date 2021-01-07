@@ -4,6 +4,8 @@
 syntax on
 set number
 
+set hidden
+
 "" tab size
 set tabstop=3
 set shiftwidth=3
