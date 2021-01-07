@@ -46,8 +46,9 @@ export PATH=$HOME/.npm/bin:$PATH
 export PATH=$DF_DIR:$PATH
 export PATH=$HOME/.config/zsh/project-scripts:$PATH 
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH 
+export PATH=/home/dzordzu/.dotnet/tools:$PATH
 export I3SOCK=$(i3 --get-socketpath)
 # alias start_idf='. /opt/esp-idf-sdk/export.sh; IDF_PATH=~dzordzu/.esp/ESP8266_RTOS_SDK'
 
 
-PATH=/home/dzordzu/.visual-paradigm-16/bin:$PATH
+export PATH=/home/dzordzu/.visual-paradigm-16/bin:$PATH
