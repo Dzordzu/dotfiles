@@ -38,7 +38,8 @@ alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings
 alias mopir='systemctl --user restart mopidy.service'
 
 alias mux='tmuxinator'
-alias muxt='tmuxinator stop'
+alias muxs='tmuxinator start' #mux terminate
+alias muxt='tmuxinator stop' #mux terminate
 alias muxl='tmuxinator list'
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
