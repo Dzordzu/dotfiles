@@ -39,6 +39,7 @@ alias mopir='systemctl --user restart mopidy.service'
 
 alias mux='tmuxinator'
 alias muxt='tmuxinator stop'
+alias muxl='tmuxinator list'
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE
