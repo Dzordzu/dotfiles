@@ -8,6 +8,8 @@ setxkbmap pl
 # Constants
 # ZSH_THEME="cobalt2"
 
+setopt completealiases
+
 # Autocompletion
 zstyle :compinstall filename '/home/dzordzu/.zshrc'
 autoload -Uz compinit
