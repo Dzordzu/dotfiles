@@ -37,6 +37,9 @@ alias gu='git ls-files --others --exclude-standard'
 alias ncmpcpp='ncmpcpp -c ~/.config/ncmpcpp/config -b ~/.config/ncmpcpp/bindings'
 alias mopir='systemctl --user restart mopidy.service'
 
+alias mux='tmuxinator'
+alias muxt='tmuxinator stop'
+
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 setopt MENU_COMPLETE
 
