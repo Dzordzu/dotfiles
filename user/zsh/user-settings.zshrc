@@ -8,15 +8,13 @@ setxkbmap pl
 # Constants
 # ZSH_THEME="cobalt2"
 
-setopt completealiases
-
 # Autocompletion
 zstyle :compinstall filename '/home/dzordzu/.zshrc'
 autoload -Uz compinit
 compinit
 
 setopt autocd
-setopt COMPLETE_ALIASES
+# setopt COMPLETE_ALIASES
 
 # SSH agent auto add
 PS1='[\u@\h \W]\$ '
@@ -59,3 +57,5 @@ export I3SOCK=$(i3 --get-socketpath)
 
 
 export PATH=/home/dzordzu/.visual-paradigm-16/bin:$PATH
+
+unsetopt complete_aliases
