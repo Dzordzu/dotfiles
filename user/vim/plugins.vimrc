@@ -134,4 +134,7 @@ Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 " OCL
 Plug 'arteymix/vim-ocl'
 
+" Cypher
+Plug 'neo4j-contrib/cypher-vim-syntax'
+
 call plug#end()
