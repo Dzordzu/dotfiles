@@ -12,6 +12,10 @@ set shiftwidth=3
 set expandtab
 set cursorline
 
+"" per project local config
+set exrc
+set secure
+
 if (has("termguicolors"))
  set termguicolors
 endif
@@ -123,3 +127,4 @@ let g:openbrowser_browser_commands = [
 \   {'name': 'xdg-open',
 \    'args': ['qutebrowser', '{uri}']}
 \]
+

@@ -179,7 +179,7 @@ mode "system" {
 
         bindsym m exec "for dev in $($x_mouse); do xinput disable $dev; done"
         bindsym Shift+m exec "for dev in $($x_mouse); do xinput enable $dev; done"
-         
+
         bindsym p exec "CURR_IP=$(curl ifconfig.me) && notify-send 'IP copied' $CURR_IP && echo $CURR_IP | xclip -sel clipboard"
 
         bindsym Return mode "default"
