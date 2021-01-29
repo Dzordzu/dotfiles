@@ -137,4 +137,7 @@ Plug 'arteymix/vim-ocl'
 " Cypher
 Plug 'neo4j-contrib/cypher-vim-syntax'
 
+" Local .vimrc
+Plug 'MarcWeber/vim-addon-local-vimrc'
+
 call plug#end()
