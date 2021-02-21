@@ -3,7 +3,7 @@
 TMUX_STARTED=~/.tmux-started.new-session
 
 if ! tmux info &> /dev/null; then
-   touch TMUX_STARTED
+   touch $TMUX_STARTED
    exec tmux
  elif command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
    exec tmux
@@ -13,10 +13,10 @@ fi
 if [[ -f "$TMUX_STARTED" ]]; then
    rm ~/.tmux-started.new-session
    neofetch
+   echo "New tmux session!"
 fi
 
 {% endif %}
-
 
 {#
 vim: ft=zsh.jinja2

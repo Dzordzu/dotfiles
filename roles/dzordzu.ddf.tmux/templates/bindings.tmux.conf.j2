@@ -1,0 +1,60 @@
+# Vim keys
+setw -g mode-keys vi
+setw -g status-keys vi
+
+bind -T copy-mode-vi -r v   send -X begin-selection     # Begin selection in copy mode.
+bind -T copy-mode-vi -r C-v send -X rectangle-toggle    # Begin selection in copy mode.
+bind -T copy-mode-vi -r y   send -X copy-selection      # Yank selection in copy mode.
+
+# Better splitting
+bind v split-window -h
+bind s split-window -v
+
+# Use Alt-X to close current window and even better splitting
+# bind -n M-x killp
+bind -n M-s split-window -v -c "#{pane_current_path}"
+bind -n M-v split-window -h -c "#{pane_current_path}"
+
+# Better new window
+bind -n M-c new-window -c "#{pane_current_path}"\; display-message "New window"
+
+# Better window moving
+bind -n M-w next-window \; display-message "Next window"
+bind -n M-W previous-window \; display-message "Previous window"
+
+# Better session management
+bind -n M-e switch-client -n \; refresh-client -S \; display-message 'Next session'
+bind -n M-E switch-client -p \; refresh-client -S \; display-message 'Previous session'
+
+# Lets refresh our tmux
+bind -n M-r source-file ~/.tmux.conf \; display-message "Reloaded tmux"
+
+# Use Alt-arrow keys without prefix key to resize panes
+bind -n M-Left resize-pane -L
+bind -n M-Right resize-pane -R
+bind -n M-Up resize-pane -U
+bind -n M-Down resize-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+
+# Windows change should be changed ;) (see Better splitting)
+bind -n M-/ choose-tree -Zs
+
+bind Z set status off
+bind X set status on
+
+# Reload tmux config
+bind r source-file ~/.tmux.conf
+
+# Alt-S - synchronize panes even faster!
+bind -n M-S set-window-option synchronize-panes
+
+# Better pane movement
+bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
+bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
+
+{#
+vim: ft=tmux.jinja2
+#}
