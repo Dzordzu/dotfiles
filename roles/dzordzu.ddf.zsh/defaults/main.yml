@@ -11,6 +11,8 @@ ddf_zsh_plugins:
 
 ddf_zsh_auto_tmux: true
 
+ddf_zsh_v_alias: nvim
+
 ddf_zsh_path:
   - $HOME/.npm/bin
   - $HOME/.config/zsh/project-scripts
