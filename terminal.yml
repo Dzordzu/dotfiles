@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - dzordzu.ddf.vim
+    - dzordzu.ddf.zsh
+    - dzordzu.ddf.tmux
