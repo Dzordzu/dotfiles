@@ -42,9 +42,9 @@
     - name: Copy ultisnips to vim
       copy:
         src: "{{ playbook_dir }}/files/UltiSnips"
-        dest: ~/.config/vim/UltiSnips
+        dest: ~/.config/vim
 
     - name: Link ultisnips to nvim
       copy:
         src: "{{ playbook_dir }}/files/UltiSnips"
-        dest: ~/.config/nvim/UltiSnips
+        dest: ~/.config/nvim
