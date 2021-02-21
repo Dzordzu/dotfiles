@@ -3,13 +3,46 @@
   when: ansible_distribution == 'Archlinux'
   include_tasks: "archlinux.yml"
 
+- name: Create user dir ~/.config/vim
+  file:
+    path: ~/.config/vim
+    state: directory
+
+- name: Create main.vimrc file
+  file:
+    path: ~/.config/vim/main.vimrc
+    state: touch
+
 - name: Install configuration
-  tags:
-    - "rc"
   template:
     src: vimrc.j2
-    dest: ~/futurevim
+    dest: ~/.vimrc
     mode: '0644'
+  tags:
+    - "rc"
 
+- name: Create user dir ~/.config/nvim
+  file:
+    path: ~/.config/nvim
+    state: directory
+
+- name: Create main.vimrc file
+  file:
+    path: ~/.config/nvim/init.vim
+    state: touch
+
+
+- name: Install configuration
+  template:
+    src: vimrc.j2
+    dest: ~/.config/nvim/init.vim
+    mode: '0644'
+  tags:
+    - "rc"
+
+- name: Install vim plugins
+  command: "vim -c :PlugUpdate -c :qa"
+  tags:
+    - "updates"
 
 # vim: ft=yaml.ansible

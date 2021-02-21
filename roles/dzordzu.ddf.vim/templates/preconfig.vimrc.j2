@@ -7,6 +7,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" XClip
+autocmd VimLeave * call system('echo -n ' . shellescape(getreg('+')) .
+            \ ' | xclip -selection clipboard')
+
 
 function! PUMLSwitchFun() range
    silent execute a:firstline . "," . a:lastline . 's/\(\w\+\) \("[0-9a-zA-Z \.*]\+"\) \(\%([\.\-]\|left\|up\|down\|right\)\+\) \("[0-9a-zA-Z \.*]\+"\) \(\w\+\)/\5 \4 \3 \2 \1/g'
