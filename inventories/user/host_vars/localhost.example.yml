@@ -1,0 +1,6 @@
+---
+
+ddf_user_bin_dirs:
+  - ~/.ddf/bin/
+
+ddf_ultisnips_force: true
