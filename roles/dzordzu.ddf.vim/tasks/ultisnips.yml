@@ -7,9 +7,19 @@
     src: "{{ item }}"
     dest: "{{ playbook_dir }}/files/UltiSnips/
     {{ item | basename | regex_replace('\\.j2$', '') }}"
-  tags:
-    - "rc"
 
+
+- name: Remove old ultisnips (vim)
+  when: ddf_ultisnips_force
+  file:
+    state: absent
+    path: ~/.config/nvim/UltiSnips
+
+- name: Remove old ultisnips (nvim)
+  when: ddf_ultisnips_force
+  file:
+    state: absent
+    path: ~/.config/vim/UltiSnips
 
 - name: Link ultisnips
   when: ddf_ultisnips_behaviour == 'link'
@@ -17,13 +27,13 @@
     - name: Link ultisnips to vim
       file:
         state: link
-        src: "{{ playbook_dir }}/files/Ultisnips"
+        src: "{{ playbook_dir }}/files/UltiSnips"
         dest: ~/.config/vim/UltiSnips
 
-    - name: Link ultisnips to nim
+    - name: Link ultisnips to nvim
       file:
         state: link
-        src: "{{ playbook_dir }}/files/Ultisnips"
+        src: "{{ playbook_dir }}/files/UltiSnips"
         dest: ~/.config/nvim/UltiSnips
 
 - name: Copy ultisnips
@@ -31,11 +41,10 @@
   block:
     - name: Copy ultisnips to vim
       copy:
-        src: "{{ playbook_dir }}/files/Ultisnips"
+        src: "{{ playbook_dir }}/files/UltiSnips"
         dest: ~/.config/vim/UltiSnips
 
-    - name: Link ultisnips to nim
-      file:
-        state: link
-        src: "{{ playbook_dir }}/files/Ultisnips"
+    - name: Link ultisnips to nvim
+      copy:
+        src: "{{ playbook_dir }}/files/UltiSnips"
         dest: ~/.config/nvim/UltiSnips

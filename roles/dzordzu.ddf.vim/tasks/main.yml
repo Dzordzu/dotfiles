@@ -46,7 +46,11 @@
     - "updates"
 
 - name: UltiSnips update
-  include_tasks: "ultisnips.yml"
+  include_tasks:
+    file: "ultisnips.yml"
+    apply:
+      tags:
+        - "rc"
   tags:
     - "rc"
 

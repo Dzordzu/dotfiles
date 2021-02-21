@@ -1,7 +1,7 @@
 ---
 
 ddf_ultisnips_behaviour: link
-ddf_ultisnips_force: true
+ddf_ultisnips_force: false
 
 ddf_vim_plugins:
   # General plugins
