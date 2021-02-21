@@ -1,0 +1,12 @@
+snippet common "Adds common docker-compose structure" b
+version: '3'
+services: 
+	${1:service'}:
+		image: ${2:image}
+		ports:
+			- ${3:80:80}
+		volumes:
+			- ${4:/path/to/volume:XX}
+		environment:
+			- ${5:VAR=XXX}
+endsnippet

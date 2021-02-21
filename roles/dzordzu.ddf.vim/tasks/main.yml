@@ -45,4 +45,10 @@
   tags:
     - "updates"
 
+- name: UltiSnips update
+  include_tasks: "ultisnips.yml"
+  tags:
+    - "rc"
+
+
 # vim: ft=yaml.ansible

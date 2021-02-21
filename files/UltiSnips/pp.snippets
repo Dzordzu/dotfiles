@@ -1,0 +1,9 @@
+snippet ce_server_new "Add new CREAMCE server" 
+{
+    server : ${1:lcg-voms.cern.ch},
+    port : ${2:15003},
+    dn : "${3:/DC=ch/DC=cern/OU=computers/CN=lcg-voms.cern.ch}",
+    ca_dn : "${4:/DC=ch/DC=cern/CN=CERN Trusted Certification Authority}"
+},
+$0
+endsnippet

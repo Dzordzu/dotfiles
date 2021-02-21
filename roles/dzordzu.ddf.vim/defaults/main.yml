@@ -1,5 +1,8 @@
 ---
 
+ddf_ultisnips_behaviour: link
+ddf_ultisnips_force: true
+
 ddf_vim_plugins:
   # General plugins
   - 'tpope/vim-abolish'

@@ -1,0 +1,41 @@
+---
+
+- name: Create ultisnips
+  with_fileglob:
+    - templates/ultisnips/*.snippets.j2
+  template:
+    src: "{{ item }}"
+    dest: "{{ playbook_dir }}/files/UltiSnips/
+    {{ item | basename | regex_replace('\\.j2$', '') }}"
+  tags:
+    - "rc"
+
+
+- name: Link ultisnips
+  when: ddf_ultisnips_behaviour == 'link'
+  block:
+    - name: Link ultisnips to vim
+      file:
+        state: link
+        src: "{{ playbook_dir }}/files/Ultisnips"
+        dest: ~/.config/vim/UltiSnips
+
+    - name: Link ultisnips to nim
+      file:
+        state: link
+        src: "{{ playbook_dir }}/files/Ultisnips"
+        dest: ~/.config/nvim/UltiSnips
+
+- name: Copy ultisnips
+  when: ddf_ultisnips_behaviour == "copy"
+  block:
+    - name: Copy ultisnips to vim
+      copy:
+        src: "{{ playbook_dir }}/files/Ultisnips"
+        dest: ~/.config/vim/UltiSnips
+
+    - name: Link ultisnips to nim
+      file:
+        state: link
+        src: "{{ playbook_dir }}/files/Ultisnips"
+        dest: ~/.config/nvim/UltiSnips

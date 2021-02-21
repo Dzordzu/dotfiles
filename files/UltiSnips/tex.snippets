@@ -1,0 +1,141 @@
+###################
+# Contexts
+###################
+global !p
+texMathZones = ['texMathZone'+x for x in ['A', 'AS', 'B', 'BS', 'C',
+'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS',
+'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z']]
+
+texIgnoreMathZones = ['texMathText']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(
+            i for i in reversed(synstackids)
+            if i in texIgnoreMathZoneIds or i in texMathZoneIds
+        )
+		return first != ignore
+	except StopIteration:
+		return False
+endglobal
+
+
+
+###################
+# Beggining
+###################
+snippet article "Generate article" b
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{${1:Title}}
+\author{${2:Author}}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+$0
+
+\end{document}
+
+endsnippet
+
+
+###################
+# Minimal change
+###################
+snippet dm "Math" wA
+\[
+$1
+.\] $0
+endsnippet
+
+snippet * "Convert to cdot"
+\\cdot $0
+endsnippet
+
+snippet nl "Newline"
+\\newline
+endsnippet
+
+snippet int "Integral"
+\\int_{$1}^{$2}$0
+endsnippet
+
+snippet "pow$" "Description" rA
+^2
+endsnippet
+
+
+context "math()"
+snippet sq "^2" iA
+^2
+endsnippet
+
+context "math()"
+snippet cb "^3" iA
+^3
+endsnippet
+
+context "math()"
+snippet Tm "Translated Matrix" iA
+^{T}$0
+endsnippet
+
+context "math()"
+snippet to "superscript" iA
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet matrix "matrix" i
+\begin{pmatrix}
+${1:a}_{1,1} & $1_{1,2} & \cdots & $1_{1,$2} \\\\
+$1_{2,1} & $1_{2,2} & \cdots & $1_{2,$2} \\\\
+\vdots  & \vdots  & \ddots & \vdots  \\\\
+$1_{$3,1} & $1_{$3,2} & \cdots & $1_{${3:Size y},${2:Size x}}
+\end{pmatrix}
+$0
+endsnippet
+
+snippet "(\w+)br$" "Add bar" r
+
+endsnippet
+###################
+# Fractions
+###################
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 1000
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+

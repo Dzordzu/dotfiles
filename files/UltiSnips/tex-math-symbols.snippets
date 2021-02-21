@@ -1,0 +1,624 @@
+###################
+# Contexts
+###################
+global !p
+texMathZones = ['texMathZone'+x for x in ['A', 'AS', 'B', 'BS', 'C',
+'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS',
+'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z']]
+
+texIgnoreMathZones = ['texMathText']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(
+            i for i in reversed(synstackids)
+            if i in texIgnoreMathZoneIds or i in texMathZoneIds
+        )
+		return first != ignore
+	except StopIteration:
+		return False
+endglobal
+
+context "math()"
+snippet alpha "\alpha" A
+\alpha
+endsnippet
+
+context "math()"
+snippet Alpha "\Alpha" A
+\Alpha
+endsnippet
+
+context "math()"
+snippet upalpha "\upalpha" A
+\upalpha
+endsnippet
+
+context "math()"
+snippet Upalpha "\Upalpha" A
+\Upalpha
+endsnippet
+
+context "math()"
+snippet beta "\beta" A
+\beta
+endsnippet
+
+context "math()"
+snippet Beta "\Beta" A
+\Beta
+endsnippet
+
+context "math()"
+snippet upbeta "\upbeta" A
+\upbeta
+endsnippet
+
+context "math()"
+snippet Upbeta "\Upbeta" A
+\Upbeta
+endsnippet
+
+context "math()"
+snippet gamma "\gamma" A
+\gamma
+endsnippet
+
+context "math()"
+snippet Gamma "\Gamma" A
+\Gamma
+endsnippet
+
+context "math()"
+snippet upgamma "\upgamma" A
+\upgamma
+endsnippet
+
+context "math()"
+snippet Upgamma "\Upgamma" A
+\Upgamma
+endsnippet
+
+
+context "math()"
+snippet delta "\delta" A
+\delta
+endsnippet
+
+context "math()"
+snippet Delta "\Delta" A
+\Delta
+endsnippet
+
+context "math()"
+snippet updelta "\updelta" A
+\updelta
+endsnippet
+
+context "math()"
+snippet Updelta "\Updelta" A
+\Updelta
+endsnippet
+
+context "math()"
+snippet epsilon "\epsilon" A
+\epsilon
+endsnippet
+
+context "math()"
+snippet Epsilon "\Epsilon" A
+\Epsilon
+endsnippet
+
+context "math()"
+snippet upepsilon "\upepsilon" A
+\upepsilon
+endsnippet
+
+context "math()"
+snippet Upepsilon "\Upepsilon" A
+\Upepsilon
+endsnippet
+
+context "math()"
+snippet zeta "\zeta" A
+\zeta
+endsnippet
+
+context "math()"
+snippet Zeta "\Zeta" A
+\Zeta
+endsnippet
+
+context "math()"
+snippet upzeta "\upzeta" A
+\upzeta
+endsnippet
+
+context "math()"
+snippet Upzeta "\Upzeta" A
+\Upzeta
+endsnippet
+
+context "math()"
+snippet eta "\eta" A
+\eta
+endsnippet
+
+context "math()"
+snippet Eta "\Eta" A
+\Eta
+endsnippet
+
+context "math()"
+snippet upeta "\upeta" A
+\upeta
+endsnippet
+
+context "math()"
+snippet Upeta "\Upeta" A
+\Upeta
+endsnippet
+
+context "math()"
+snippet theta "\theta" A
+\theta
+endsnippet
+
+context "math()"
+snippet Theta "\Theta" A
+\Theta
+endsnippet
+
+context "math()"
+snippet uptheta "\uptheta" A
+\uptheta
+endsnippet
+
+context "math()"
+snippet Uptheta "\Uptheta" A
+\Uptheta
+endsnippet
+
+context "math()"
+snippet iota "\iota" A
+\iota
+endsnippet
+
+context "math()"
+snippet Iota "\Iota" A
+\Iota
+endsnippet
+
+context "math()"
+snippet upiota "\upiota" A
+\upiota
+endsnippet
+
+context "math()"
+snippet Upiota "\Upiota" A
+\Upiota
+endsnippet
+
+context "math()"
+snippet kappa "\kappa" A
+\kappa
+endsnippet
+
+context "math()"
+snippet Kappa "\Kappa" A
+\Kappa
+endsnippet
+
+context "math()"
+snippet upkappa "\upkappa" A
+\upkappa
+endsnippet
+
+context "math()"
+snippet Upkappa "\Upkappa" A
+\Upkappa
+endsnippet
+
+context "math()"
+snippet lambda "\lambda" A
+\lambda
+endsnippet
+
+context "math()"
+snippet Lambda "\Lambda" A
+\Lambda
+endsnippet
+
+context "math()"
+snippet uplambda "\uplambda" A
+\uplambda
+endsnippet
+
+context "math()"
+snippet Uplambda "\Uplambda" A
+\Uplambda
+endsnippet
+
+context "math()"
+snippet mu "\mu" A
+\mu
+endsnippet
+
+context "math()"
+snippet Mu "\Mu" A
+\Mu
+endsnippet
+
+context "math()"
+snippet upmu "\upmu" A
+\upmu
+endsnippet
+
+context "math()"
+snippet Upmu "\Upmu" A
+\Upmu
+endsnippet
+
+context "math()"
+snippet nu "\nu" A
+\nu
+endsnippet
+
+context "math()"
+snippet Nu "\Nu" A
+\Nu
+endsnippet
+
+context "math()"
+snippet upnu "\upnu" A
+\upnu
+endsnippet
+
+context "math()"
+snippet Upnu "\Upnu" A
+\Upnu
+endsnippet
+
+context "math()"
+snippet xi "\xi" A
+\xi
+endsnippet
+
+context "math()"
+snippet Xi "\Xi" A
+\Xi
+endsnippet
+
+context "math()"
+snippet upxi "\upxi" A
+\upxi
+endsnippet
+
+context "math()"
+snippet Upxi "\Upxi" A
+\Upxi
+endsnippet
+
+context "math()"
+snippet pi "\pi" A
+\pi
+endsnippet
+
+context "math()"
+snippet Pi "\Pi" A
+\Pi
+endsnippet
+
+context "math()"
+snippet uppi "\uppi" A
+\uppi
+endsnippet
+
+context "math()"
+snippet Uppi "\Uppi" A
+\Uppi
+endsnippet
+
+context "math()"
+snippet rho "\rho" A
+\rho
+endsnippet
+
+context "math()"
+snippet Rho "\Rho" A
+\Rho
+endsnippet
+
+context "math()"
+snippet uprho "\uprho" A
+\uprho
+endsnippet
+
+context "math()"
+snippet Uprho "\Uprho" A
+\Uprho
+endsnippet
+
+context "math()"
+snippet sigma "\sigma" A
+\sigma
+endsnippet
+
+context "math()"
+snippet Sigma "\Sigma" A
+\Sigma
+endsnippet
+
+context "math()"
+snippet upsigma "\upsigma" A
+\upsigma
+endsnippet
+
+context "math()"
+snippet Upsigma "\Upsigma" A
+\Upsigma
+endsnippet
+
+context "math()"
+snippet tau "\tau" A
+\tau
+endsnippet
+
+context "math()"
+snippet Tau "\Tau" A
+\Tau
+endsnippet
+
+context "math()"
+snippet uptau "\uptau" A
+\uptau
+endsnippet
+
+context "math()"
+snippet Uptau "\Uptau" A
+\Uptau
+endsnippet
+
+context "math()"
+snippet upsilon "\upsilon" A
+\upsilon
+endsnippet
+
+context "math()"
+snippet Upsilon "\Upsilon" A
+\Upsilon
+endsnippet
+
+context "math()"
+snippet upupsilon "\upupsilon" A
+\upupsilon
+endsnippet
+
+context "math()"
+snippet Upupsilon "\Upupsilon" A
+\Upupsilon
+endsnippet
+
+context "math()"
+snippet phi "\phi" A
+\phi
+endsnippet
+
+context "math()"
+snippet Phi "\Phi" A
+\Phi
+endsnippet
+
+context "math()"
+snippet upphi "\upphi" A
+\upphi
+endsnippet
+
+context "math()"
+snippet Upphi "\Upphi" A
+\Upphi
+endsnippet
+
+context "math()"
+snippet chi "\chi" A
+\chi
+endsnippet
+
+context "math()"
+snippet Chi "\Chi" A
+\Chi
+endsnippet
+
+context "math()"
+snippet upchi "\upchi" A
+\upchi
+endsnippet
+
+context "math()"
+snippet Upchi "\Upchi" A
+\Upchi
+endsnippet
+
+context "math()"
+snippet psi "\psi" A
+\psi
+endsnippet
+
+context "math()"
+snippet Psi "\Psi" A
+\Psi
+endsnippet
+
+context "math()"
+snippet uppsi "\uppsi" A
+\uppsi
+endsnippet
+
+context "math()"
+snippet Uppsi "\Uppsi" A
+\Uppsi
+endsnippet
+
+context "math()"
+snippet omega "\omega" A
+\omega
+endsnippet
+
+context "math()"
+snippet Omega "\Omega" A
+\Omega
+endsnippet
+
+context "math()"
+snippet upomega "\upomega" A
+\upomega
+endsnippet
+
+context "math()"
+snippet Upomega "\Upomega" A
+\Upomega
+endsnippet
+
+
+
+
+context "math()"
+snippet int "Integral"
+\\int_{ $1 }^{ $2 }$0
+endsnippet
+
+context "math()"
+snippet sq "^2" iA
+^2
+endsnippet
+
+context "math()"
+snippet cb "^3" iA
+^3
+endsnippet
+
+context "math()"
+snippet Tm "Translated Matrix" iA
+^{T}$0
+endsnippet
+
+context "math()"
+snippet to "superscript" iA
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet matrix "matrix" iA
+\begin{pmatrix}
+${1:a}_{1,1} & $1_{1,2} & \cdots & $1_{1,$2} \\\\
+$1_{2,1} & $1_{2,2} & \cdots & $1_{2,$2} \\\\
+\vdots  & \vdots  & \ddots & \vdots  \\\\
+$1_{$3,1} & $1_{$3,2} & \cdots & $1_{${3:Size y},${2:Size x}}
+\end{pmatrix}$0
+endsnippet
+
+context "math()"
+snippet vec "vector" iA
+\begin{pmatrix}
+${1:a}_{1} \\\\
+$1_{2} \\\\
+\vdots \\\\
+$1_{${2:Size}}
+\end{pmatrix}$0
+endsnippet
+
+
+context "math()"
+snippet all "\forall" iA 
+\forall
+endsnippet
+
+context "math()"
+snippet nabla "\nabla" iA 
+\nabla
+endsnippet
+
+context "math()"
+snippet iff "\iff" iA 
+\iff
+endsnippet
+
+context "math()"
+snippet implies "\implies" iA 
+\implies
+endsnippet
+
+context "math()"
+snippet neg "\neg" iA 
+\neg
+endsnippet
+
+context "math()"
+snippet exists "\exists" iA 
+\exists
+endsnippet
+
+context "math()"
+snippet geq "geq" iA 
+\geq
+endsnippet
+
+context "math()"
+snippet gt "gt" iA 
+\gt
+endsnippet
+
+context "math()"
+snippet leq "leq" iA 
+\leq
+endsnippet
+
+context "math()"
+snippet less "less" iA 
+\less
+endsnippet
+
+context "math()"
+snippet lor "or" iA 
+\lor
+endsnippet
+
+context "math()"
+snippet land "and" iA 
+\land
+endsnippet
+
+
+context "math()"
+snippet // "Fraction" iA
+\\frac{ $1 }{ $2 }$0
+endsnippet
+
+context "math()"
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{ `!p snip.rv = match.group(1)` }{ $1 }$0
+endsnippet
+
+priority 1000
+context "math()"
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{ " + stripped[i+1:-1] + " }"
+`{ $1 }$0
+endsnippet
+

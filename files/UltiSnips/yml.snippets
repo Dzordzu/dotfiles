@@ -1,0 +1,24 @@
+snippet ver "Version" b
+version: ${1:3.4}
+$0
+endsnippet
+
+snippet compose "Docker compose standard style" b
+version: '${1:3.4}'
+services: 
+	${2:Service name}:
+		image: ${3: Image name}
+		ports: 
+			- ${4:8000:8080}
+endsnippet
+
+
+snippet composeb "Docker compose standard style" b
+version: '${1:3.4}'
+services: 
+	${2:Service name}:
+		build: 
+		image: ${3: Image name}
+		ports: 
+			- ${4:8000:8080}
+endsnippet
