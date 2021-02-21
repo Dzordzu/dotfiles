@@ -1,4 +1,12 @@
+/*
+
 !.gitignore
-!*.example
-!*.example.yml
-./*
+!user/
+
+user/*
+!user/hosts.example
+!user/host_vars/
+
+user/host_vars/*
+!user/host_vars/localhost.example.yml
+
