@@ -1,0 +1,30 @@
+noremap <Leader><C-s> :w <Enter>
+noremap <Leader><C-q> :wq <Enter>
+noremap <Leader><C-q><C-q> :wq <Enter>
+noremap <Leader><C-q><C-a> :wqa <Enter>
+noremap <Leader><C-n> :Ranger<Enter>
+noremap <Leader><C-n><C-n> :Ranger<Enter>
+noremap <Leader><C-n><C-v> :vsplit<Enter>:Ranger<Enter>
+noremap <Leader><C-n><C-s> :split<Enter>:Ranger<Enter>
+noremap <Leader><C-n><C-t> :RangerNewTab<Enter>
+noremap <Leader><C-h> :ProjectRootCD<Enter>
+
+
+noremap <Leader><C-m> :MarkdownPreview<Enter>
+noremap <Leader><C-r> :OmniSharpRestartServer<Enter>
+
+vmap - <Plug>MoveBlockDown
+vmap + <Plug>MoveBlockUp
+
+noremap <silent> <Leader>cs :call CocActionAsync('showSignatureHelp') <CR>
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+{#
+vim: ft=vim.jinja2
+#}

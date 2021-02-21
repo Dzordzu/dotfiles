@@ -1,0 +1,24 @@
+
+call plug#begin('~/.vim/plugged')
+
+{% for plugin in ddf_vim_plugins %}
+{% if plugin is mapping %}
+{% if 'name' in plugin %}
+{% if 'params' in plugin %}
+Plug '{{ plugin.name }}', {{ plugin.params }}
+{% else %}
+Plug '{{ plugin.name }}'
+{% endif %}
+{% endif %}
+{% elif plugin is string %}
+Plug '{{ plugin }}'
+{% else %}
+" Unknown type {{ plugin | type_debug }}
+{% endif %}
+{% endfor %}
+
+call plug#end()
+
+{#
+vim: ft=vim.jinja2
+#}

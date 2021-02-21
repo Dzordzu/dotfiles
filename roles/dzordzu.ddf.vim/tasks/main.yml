@@ -1,0 +1,15 @@
+---
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'Archlinux'
+  include_tasks: "archlinux.yml"
+
+- name: Install configuration
+  tags:
+    - "rc"
+  template:
+    src: vimrc.j2
+    dest: ~/futurevim
+    mode: '0644'
+
+
+# vim: ft=yaml.ansible

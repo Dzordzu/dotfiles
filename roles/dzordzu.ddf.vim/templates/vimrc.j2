@@ -1,0 +1,26 @@
+"" {{ ansible_managed }}
+"" DO NOT CHANGE THIS FILE
+"" If you want to test your settings, before applying them
+""    to the persistent config
+""    try using ~/.config/vim/main.vimrc
+
+{% include 'preconfig.vimrc.j2' ignore missing %}
+
+{% include 'plugins.vimrc.j2' ignore missing %}
+{% include 'plugin_specific.vimrc.j2' ignore missing %}
+
+{% include 'options.vimrc.j2' ignore missing %}
+{% include 'variables.vimrc.j2' ignore missing %}
+{% include 'mappings.vimrc.j2' ignore missing %}
+{% include 'navigation.vimrc.j2' ignore missing %}
+{% include 'style.vimrc.j2' ignore missing %}
+{% include 'commands.vimrc.j2' ignore missing %}
+
+{% include 'postconfig.vimrc.j2' ignore missing %}
+
+so ~/.config/vim/main.vimrc
+
+
+{#
+vim: ft=vim.ansible
+#}

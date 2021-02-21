@@ -1,0 +1,142 @@
+---
+
+ddf_vim_plugins:
+  # General plugins
+  - 'tpope/vim-abolish'
+  - 'tpope/vim-repeat'
+  - 'lambdalisue/suda.vim'
+  - 'thaerkh/vim-workspace'
+
+  # Async jobs
+  - 'prabirshrestha/async.vim'
+
+  # HTML
+  - name: 'rstacruz/sparkup'
+    params: {'rtp': 'vim/'}
+
+  # CSS
+  - 'cakebaker/scss-syntax.vim'
+
+  # Docker
+  - 'docker/docker'
+
+  # Files and motion
+  - 'tpope/vim-surround'
+  - 'easymotion/vim-easymotion'
+  - 'ctrlpvim/ctrlp.vim'
+  - 'francoiscabrol/ranger.vim'
+  - 'rbgrouleff/bclose.vim'
+  - 'dbakker/vim-projectroot'
+
+  # Puppet
+  - 'rodjek/vim-puppet'
+
+  # YAML
+  - 'pedrohdz/vim-yaml-folds'
+
+
+  # Snippets
+  - 'SirVer/ultisnips'
+  - 'honza/vim-snippets'
+
+  # C#
+  - 'OmniSharp/omnisharp-vim'
+
+  # Visual
+  - 'junegunn/goyo.vim'
+  - 'itchyny/lightline.vim'
+  - 'dhruvasagar/vim-table-mode'
+  - 'tarekbecker/vim-yaml-formatter'
+  - 'ryanoasis/vim-devicons'
+  - 'kshenoy/vim-signature'
+
+  # General langs
+  - 'sheerun/vim-polyglot'
+  - 'chiel92/vim-autoformat'
+  - 'reedes/vim-wordy'
+  - 'rhysd/vim-grammarous'
+  - 'dense-analysis/ale'
+  - name: 'vim-test/vim-test'
+  - name: 'neoclide/coc.nvim'
+    params: {'branch': 'release'}
+
+  # Theme
+  - 'jacoborus/tender.vim'
+  - 'morhetz/gruvbox'
+  - name: 'sonph/onehalf'
+    params: {'rtp': 'vim'}
+
+  # Git
+  - 'airblade/vim-gitgutter'
+  - 'tpope/vim-fugitive'
+
+  # Nginx
+  - 'chr4/nginx.vim'
+
+  # REPL
+  - 'jpalardy/vim-slime'
+
+  # Python
+  - 'davidhalter/jedi-vim'
+  - 'deoplete-plugins/deoplete-jedi'
+  - 'jmcantrell/vim-virtualenv'
+  - 'alfredodeza/pytest.vim'
+  - name: 'numirias/semshi'
+    params: {'do': ':UpdateRemotePlugins'}
+
+  # Haskell
+  - 'neovimhaskell/haskell-vim'
+
+  # Latex and UML
+  - 'aklt/plantuml-syntax'
+  - 'weirongxu/plantuml-previewer.vim'
+  - 'tyru/open-browser.vim'
+  - 'https://github.com/lervag/vimtex'
+  - name: 'xuhdev/vim-latex-live-preview'
+    params: {'for': 'tex'}
+
+  # Markdown
+  - 'godlygeek/tabular'
+  - 'plasticboy/vim-markdown'
+  - 'jtratner/vim-flavored-markdown'
+  - name: 'iamcco/markdown-preview.nvim'
+    params: "{'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}"
+
+  # C++
+  - 'rip-rip/clang_complete'
+  - 'vhdirk/vim-cmake'
+  - 'richq/vim-cmake-completion'
+
+
+  # TOML
+  - 'cespare/vim-toml'
+
+  # Tmux
+  - 'tmux-plugins/vim-tmux'
+  - 'christoomey/vim-tmux-navigator'
+  - 'benmills/vimux'
+
+  # Jenkins
+  - 'martinda/Jenkinsfile-vim-syntax'
+
+  # Scala
+  - 'derekwyatt/vim-scala'
+
+  # Ocaml
+  - 'ocaml/merlin'
+
+  # Arduino
+  - 'stevearc/vim-arduino'
+
+  # R
+  - name: 'jalvesaq/Nvim-R'
+    params: {'branch': 'stable'}
+
+  # OCL
+  - 'arteymix/vim-ocl'
+
+  # Cypher
+  - 'neo4j-contrib/cypher-vim-syntax'
+
+  # Local .vimrc
+  - 'MarcWeber/vim-addon-local-vimrc'

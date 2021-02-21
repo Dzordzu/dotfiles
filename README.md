@@ -37,6 +37,12 @@ Requires `python` on a host
 1. Install requirements `ansible-galaxy install -r requirements.yml`
 2. Run default playbook `ansible-playbook -i inventories/user default.yml --ask-become-pass`
 
+#### Tags
+
+| Name | Description          |
+|------|----------------------|
+| `rc` | Replace config files |
+
 ### Binaries
 
 #### ddf

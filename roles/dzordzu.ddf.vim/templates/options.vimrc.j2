@@ -1,0 +1,31 @@
+syntax on
+set number
+
+set hidden
+
+"" tab size
+set tabstop=3
+set shiftwidth=3
+set expandtab
+set cursorline
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+set nocp
+filetype plugin on
+
+set splitbelow
+set splitright
+
+set foldmethod=syntax
+
+" Reload files
+set autoread
+au FocusGained,BufEnter * :checktime
+
+
+{#
+vim: ft=vim.jinja2
+#}

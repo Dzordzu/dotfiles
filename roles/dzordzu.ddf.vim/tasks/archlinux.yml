@@ -1,0 +1,28 @@
+---
+
+- name: Install vim(s)
+  become: false
+  aur:
+    name:
+      - neovim
+      - gvim
+      - vim
+
+- name: Install file navigation tools
+  become: false
+  aur:
+    name:
+      - ranger
+      - fzf
+      - tmux
+      - ripgrep
+
+- name: Install Arduino libs
+  become: false
+  aur:
+    name:
+      - arduino
+      - arduino-avr-core
+      - arduino-cli
+
+# vim: ft=yaml.ansible
