@@ -1,0 +1,10 @@
+
+{% for plugin in ddf_tmux_plugins %}
+set -g @plugin '{{ plugin }}'
+{% endfor %}
+
+run '~/.tmux/plugins/tpm/tpm'
+
+{#
+vim: ft=tmux.jinja2
+#}

@@ -1,0 +1,10 @@
+---
+
+- name: Install tmux
+  become: false
+  aur:
+    name:
+      - tmux
+      - tmuxinator
+
+# vim: ft=yaml.ansible

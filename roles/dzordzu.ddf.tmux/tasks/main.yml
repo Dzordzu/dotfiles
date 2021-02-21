@@ -1,0 +1,34 @@
+---
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'Archlinux'
+  include_tasks: "archlinux.yml"
+
+- name: Create user dir ~/.config/tmux
+  file:
+    path: ~/.config/tmux
+    state: directory
+
+- name: Create main.tmux.conf file
+  file:
+    path: ~/.config/tmux/main.tmux.conf
+    state: touch
+
+- name: Install configuration
+  template:
+    src: tmux.conf.j2
+    dest: ~/.tmux.conf
+    mode: '0644'
+  tags:
+    - "rc"
+
+- name: Create user dir ~/.tmux/plugins
+  file:
+    path: ~/.tmux/plugins
+    state: directory
+
+- name: Install TPM
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+
+# vim: ft=yaml.ansible

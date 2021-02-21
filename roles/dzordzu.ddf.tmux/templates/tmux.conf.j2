@@ -1,0 +1,20 @@
+#  {{ ansible_managed }}
+#  DO NOT CHANGE THIS FILE
+#  If you want to test your settings, before applying them
+#     to the persistent config
+#     try using ~/.config/tmux/main.tmux.conf
+
+{% include 'preconfig.tmux.conf.j2' %}
+{% include 'seamless.tmux.conf.j2' %}
+{% include 'style.tmux.conf.j2' %}
+{% include 'bindings.tmux.conf.j2' %}
+{% include 'options.tmux.conf.j2' %}
+{% include 'nested.tmux.conf.j2' %}
+{% include 'plugins.tmux.conf.j2' %}
+{% include 'postconfig.tmux.conf.j2' %}
+
+source ~/.config/tmux/main.tmux.conf
+
+{#
+vim: ft=tmux.jinja2
+#}
