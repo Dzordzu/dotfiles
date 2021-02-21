@@ -17,5 +17,5 @@ ddf_zsh_path:
   - $HOME/.npm/bin
   - $HOME/.config/zsh/project-scripts
   - $HOME/.gem/ruby/2.7.0/bin
-  - /home/dzordzu/.dotnet/tools
-  - /home/dzordzu/.visual-paradigm-16/bin
+  - $HOME/.dotnet/tools
+  - $HOME/.visual-paradigm-16/bin

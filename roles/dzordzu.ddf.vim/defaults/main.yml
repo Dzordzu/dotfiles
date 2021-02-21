@@ -9,6 +9,7 @@ ddf_vim_plugins:
   - 'tpope/vim-repeat'
   - 'lambdalisue/suda.vim'
   - 'thaerkh/vim-workspace'
+  - 'matze/vim-move'
 
   # Async jobs
   - 'prabirshrestha/async.vim'
