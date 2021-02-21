@@ -1,2 +1,13 @@
 ---
-ddf_export_vars: {}
+
+ddf_export_vars:
+   PLAYBOOK: "{{(
+      lookup('file', '/proc/self/cmdline')
+      | regex_replace('\u0000',' ')).split()
+      | select('match','^[a-z-_/]*[.]y[a]*ml')
+      | list
+      | first
+      | basename
+   }}"
+   PLAYBOOK_DIR: "{{ playbook_dir }}"
+   TEST: "OK"

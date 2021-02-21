@@ -1,0 +1,18 @@
+# Start fuck with a fetch
+eval $(thefuck --alias)
+
+# Keyboard laout
+setxkbmap -layout {{ddf_zsh_keyboard_layout}}
+
+# Autocompletion
+zstyle :compinstall filename '/home/dzordzu/.zshrc'
+autoload -Uz compinit
+compinit
+
+setopt MENU_COMPLETE
+setopt autocd
+unsetopt complete_aliases
+
+{#
+vim: ft=zsh.jinja2
+#}

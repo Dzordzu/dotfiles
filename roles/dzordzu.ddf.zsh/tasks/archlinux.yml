@@ -1,0 +1,23 @@
+---
+
+- name: Install zsh
+  become: false
+  aur:
+    name:
+      - zsh
+      - antibody
+
+- name: Install basic cli stuff
+  become: false
+  aur:
+    name:
+      - fzf
+      - ripgrep
+      - unimatrix
+      - neofetch
+      - gotop
+      - ranger
+      - bat
+
+
+# vim: ft=yaml.ansible

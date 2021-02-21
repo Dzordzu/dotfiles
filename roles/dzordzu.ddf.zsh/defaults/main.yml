@@ -1,0 +1,19 @@
+---
+
+ddf_zsh_keyboard_layout: pl
+
+ddf_zsh_plugins:
+  - romkatv/powerlevel10k
+  - zsh-users/zsh-autosuggestions
+  - zsh-users/zsh-syntax-highlighting
+  - zsh-users/zsh-completions
+  - RobSis/zsh-completion-generator
+
+ddf_zsh_auto_tmux: true
+
+ddf_zsh_path:
+  - $HOME/.npm/bin
+  - $HOME/.config/zsh/project-scripts
+  - $HOME/.gem/ruby/2.7.0/bin
+  - /home/dzordzu/.dotnet/tools
+  - /home/dzordzu/.visual-paradigm-16/bin

@@ -1,0 +1,27 @@
+#  {{ ansible_managed }}
+#  DO NOT CHANGE THIS FILE
+#  If you want to test your settings, before applying them
+#     to the persistent config
+#     try using ~/.config/zsh/main.zshrc
+
+{% include 'preconfig.zshrc.j2' %}
+{% include 'style.zshrc.j2' %}
+{% include 'ohmyzsh.zshrc.j2' %}
+{% include 'plugins.zshrc.j2' %}
+{% include 'history.zshrc.j2' %}
+{% include 'user_settings.zshrc.j2' %}
+{% include 'exports.zshrc.j2' %}
+{% include 'aliases.zshrc.j2' %}
+{% include 'postconfig.zshrc.j2' %}
+
+
+if [ -f ~/.config/zsh/main.zshrc ]; then
+    source ~/.config/zsh/main.zshrc
+else
+    print "404: ~/.config/zsh/main.zshrc not found."
+fi
+
+
+{#
+vim: ft=zsh.jinja2
+#}

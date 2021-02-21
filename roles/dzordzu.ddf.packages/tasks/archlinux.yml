@@ -110,21 +110,9 @@
   become: false
   aur:
     name:
-      - zsh
-      - neovim
-      - gvim
-      - vim
       - nano
-      - ranger
-      - fzf
       - alacritty
       - tmux
-      - ripgrep
-      - antibody
-      - bat
-      - neofetch
-      - gotop
-      - unimatrix
 
 - name: Install archive tools
   become: false

@@ -1,0 +1,13 @@
+export KEYTIMEOUT=1
+export TERMINAL=alacritty
+export EDITOR=vim
+
+export I3SOCK=$(i3 --get-socketpath)
+
+{% for path in ddf_zsh_path %}
+export PATH={{path}}:$PATH
+{% endfor %}
+
+{#
+vim: ft=zsh.jinja2
+#}

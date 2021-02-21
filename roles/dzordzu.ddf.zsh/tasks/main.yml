@@ -1,0 +1,32 @@
+---
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'Archlinux'
+  include_tasks: "archlinux.yml"
+
+- name: Create user dir ~/.config/vim
+  file:
+    path: ~/.config/zsh
+    state: directory
+
+- name: Create main.zshrc file
+  file:
+    path: ~/.config/zsh/main.zshrc
+    state: touch
+
+- name: Create ~/.zsh_plugins.txt
+  template:
+    src: plugins.j2
+    dest: ~/.zsh_plugins.txt
+    mode: '0644'
+  tags:
+    - "rc"
+
+- name: Install configuration
+  template:
+    src: zshrc.j2
+    dest: ~/.zshrc
+    mode: '0644'
+  tags:
+    - "rc"
+
+# vim: ft=yaml.ansible
