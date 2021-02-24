@@ -1,11 +1,9 @@
 # Use vim bindings
 export EDITOR=/bin/nvim
-bindkey -v
 
 ## ESC + v as vim edit
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
 
 
 function my-partial-accept {
@@ -13,7 +11,6 @@ function my-partial-accept {
 }
 
 zle -N my-partial-accept
-bindkey -v '^p' my-partial-accept
 
 
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
@@ -24,7 +21,6 @@ ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
 		vi-add-eol
       down-history
 )
-bindkey '^n' autosuggest-accept
 
 
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
