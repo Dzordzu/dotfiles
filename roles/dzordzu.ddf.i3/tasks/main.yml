@@ -1,0 +1,23 @@
+---
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'Archlinux'
+  include_tasks: "archlinux.yml"
+
+- name: Create user dir ~/.config/i3
+  file:
+    path: ~/.config/i3
+    state: directory
+
+- name: Install xinit
+  copy:
+    content: "exec i3"
+    dest: ~/.xinitrc
+    force: no
+
+- name: Create ~/.config/i3/config
+  template:
+    src: config.j2
+    dest: ~/.config/i3/config
+    mode: '0644'
+  tags:
+    - "rc"

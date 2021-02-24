@@ -1,0 +1,9 @@
+---
+
+ddf_i3_modes:
+  - name: 'launch'
+    binding: '$mod+Shift+l'
+  - name: 'key'
+    binding: '$mod+Shift+k'
+  - name: 'system'
+    binding: '$mod+Shift+s'
