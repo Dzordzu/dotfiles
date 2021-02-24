@@ -1,0 +1,18 @@
+
+bindkey -v
+
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+
+# Reversed history search
+bindkey '^K' history-incremental-search-backward
+bindkey "\C-r" hh-start-search     # bind hh to Ctrl-r (for Vi mode check doc)
+
+## ESC + v as vim edit
+bindkey -M vicmd v edit-command-line
+bindkey -v '^p' my-partial-accept
+
+bindkey '^n' autosuggest-accept
+
+{#
+vim: ft=zsh.jinja2
+#}

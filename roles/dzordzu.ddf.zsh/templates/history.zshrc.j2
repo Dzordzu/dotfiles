@@ -2,8 +2,7 @@ export HISTFILE=~/.histfile
 export HISTSIZE=3000
 export SAVEHIST=2500
 
-# Reversed history search
-bindkey '^K' history-incremental-search-backward
+echo ":))))"
 
 export HSTR_CONFIG=hicolor,blacklist
 export HH_CONFIG=hicolor,blacklist         # get more colors
@@ -17,7 +16,6 @@ hh-start-search() {
     zle accept-line
 }
 zle -N hh-start-search
-bindkey "\C-r" hh-start-search     # bind hh to Ctrl-r (for Vi mode check doc)
 
 {#
 vim: ft=zsh.jinja2
