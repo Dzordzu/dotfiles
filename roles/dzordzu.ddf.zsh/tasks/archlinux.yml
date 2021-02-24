@@ -18,6 +18,7 @@
       - gotop
       - ranger
       - bat
+      - feh
 
 
 # vim: ft=yaml.ansible

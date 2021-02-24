@@ -1,0 +1,14 @@
+#  {{ ansible_managed }}
+#  DO NOT CHANGE THIS FILE
+
+{% include 'preconfig.config.j2' ignore missing %}
+{% include 'bindings.config.j2' ignore missing %}
+{% include 'workspace.config.j2' ignore missing %}
+{% include 'music.config.j2' ignore missing %}
+{% include 'modes.config.j2' ignore missing %}
+{% include 'style.config.j2' ignore missing %}
+{% include 'startup.config.j2' ignore missing %}
+
+{#
+vim: ft=i3config.jinja2
+#}

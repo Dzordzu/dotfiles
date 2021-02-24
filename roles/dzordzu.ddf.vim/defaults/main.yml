@@ -144,3 +144,6 @@ ddf_vim_plugins:
 
   # Local .vimrc
   - 'MarcWeber/vim-addon-local-vimrc'
+
+  # i3 config
+  - 'mboughaba/i3config.vim'

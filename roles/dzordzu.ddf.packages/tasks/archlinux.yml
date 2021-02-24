@@ -131,8 +131,6 @@
       - qutebrowser
       - zathura
       - vimiv
-      - rofi
-      - rofi-dmenu
 
 - name: Install Arduino libs
   become: false
