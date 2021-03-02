@@ -11,9 +11,8 @@
 
 - name: Install configuration
   template:
-    src: alacritty.conf.j2
+    src: alacritty.yaml.j2
     dest: ~/.config/alacritty/alacritty.yml
     mode: '0644'
   tags:
     - "rc"
-
