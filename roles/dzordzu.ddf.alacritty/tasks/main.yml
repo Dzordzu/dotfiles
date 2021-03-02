@@ -1,0 +1,19 @@
+---
+
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'ArchLinux'
+  include_tasks: "archlinux.yml"
+
+- name: Create dir ~/.config/alacritty
+  file:
+    path: ~/.config/alacritty
+    state: directory
+
+- name: Install configuration
+  template:
+    src: alacritty.conf.j2
+    dest: ~/.config/alacritty/alacritty.yml
+    mode: '0644'
+  tags:
+    - "rc"
+
