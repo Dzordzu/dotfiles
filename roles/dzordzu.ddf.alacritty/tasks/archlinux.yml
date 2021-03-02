@@ -1,0 +1,7 @@
+---
+
+- name: Install alacritty
+  become: false
+  aur:
+    name:
+      - alacritty

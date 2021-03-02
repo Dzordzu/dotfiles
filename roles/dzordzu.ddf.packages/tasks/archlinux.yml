@@ -111,7 +111,6 @@
   aur:
     name:
       - nano
-      - alacritty
       - tmux
 
 - name: Install archive tools

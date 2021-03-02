@@ -1,10 +1,11 @@
 ---
 - hosts: localhost
   roles:
-    - dzordzu.ddf.i3
+#      - dzordzu.ddf.i3
 #      - dzordzu.ddf.binaries
 #      - dzordzu.ddf.export_vars
 #      - dzordzu.ddf.packages
 #      - dzordzu.ddf.vim
 #      - dzordzu.ddf.zsh
 #      - dzordzu.ddf.tmux
+     - dzordzu.ddf.alacritty
