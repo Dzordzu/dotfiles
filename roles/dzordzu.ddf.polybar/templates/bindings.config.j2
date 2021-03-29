@@ -1,0 +1,87 @@
+
+#####################
+## Common bindings ##
+#####################
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+
+# start rofi-dmenu (a program launcher)
+bindsym $mod+d exec rofi -show drun -show-icons -line-padding 4 -padding 25
+bindsym $mod+Shift+d exec rofi -show drun -run-command 'gksudo {cmd}'
+bindsym $mod+e exec rofi -show run -line-padding 4 -padding 25
+
+# Start bitwarden
+bindsym $mod+r exec "bwmenu --auto-lock 10800 -c 10 &"
+
+# change focus
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
+
+# move focused window
+bindsym $mod+Mod1+j move down
+bindsym $mod+Mod1+k move up
+bindsym $mod+Mod1+l move right
+bindsym $mod+Mod1+h move left
+
+# move workspace to other screen
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+l move workspace to output right
+
+# resize focused window
+bindsym $mod+Mod1+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
+
+# split in horizontal orientation
+bindsym $mod+s split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# kill window
+bindsym $mod+Shift+q kill
+
+# screenshots
+bindsym Print exec spectacle &
+bindsym $mod+Print exec spectacle -a
+bindsym $mod+Shift+Print exec spectacle -r
+bindsym Mod1+Sys_Req exec spectacle -bc # Fix. Somehow Sys_Req is Print
+bindsym $mod+Mod1+Sys_Req exec spectacle -abc # Fix. Somehow Sys_Req is Print
+
+# browsers
+bindsym Control+Mod1+b exec qutebrowser
+bindsym Control+Mod1+f exec firefox --new-window
+
+# repeat mode
+bindsym $mod+Shift+r exec "if [ $(xset -q | grep 'auto repeat:' | awk '{print $3}') = 'on' ]; then xset -r && notify-send 'Turned off an auto key mode'; else xset r && notify-send 'Turned on an auto key mode'; fi"
+
+# scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# workspace navigation
+bindsym $mod+Shift+comma workspace next
+bindsym $mod+Shift+period workspace prev
+bindsym $mod+Shift+slash exec "notify-send Workspace:\ $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name')"
+
+# backspace
+bindsym --release $mod+x $key_command BackSpace
+
+{#
+vim: ft=i3config.jinja2
+#}

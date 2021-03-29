@@ -1,0 +1,23 @@
+---
+
+ddf_polybar_colors:
+  main: "#232628"
+  secondary: "#fcfcfc"
+  critical: "#fca0a7"
+  warning: "#fcfaa7"
+  improvement: "#a7a0fc"
+
+
+ddf_polybar_modules:
+  left:
+    - battery
+    - volume
+    - cpu
+    - ram
+    - temperature
+  center:
+    - date
+  right:
+    - i3
+    - network_eth
+    - network
