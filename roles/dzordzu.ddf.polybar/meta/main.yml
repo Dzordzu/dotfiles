@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  role_name: dzordzu.ddf.i3
+  role_name: dzordzu.ddf.polybar
   author: Tomasz Durda
-  description: Install i3 configuration
+  description: Install polybar configuration
 
   license: GPLv3
 

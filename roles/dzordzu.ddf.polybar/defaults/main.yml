@@ -7,17 +7,42 @@ ddf_polybar_colors:
   warning: "#fcfaa7"
   improvement: "#a7a0fc"
 
+ddf_polybar_fonts:
+  dejavu:
+    font: "DejaVuSerifMono"
+    size: 9
+    vertical_offset: 3
+  fontawesome:
+    name: "Font Awesome 5 Free Solid"
+    size: 10
+    vertical_offset: 3
 
-ddf_polybar_modules:
-  left:
-    - battery
-    - volume
-    - cpu
-    - ram
-    - temperature
-  center:
-    - date
-  right:
-    - i3
-    - network_eth
-    - network
+ddf_polybar_bars:
+  default:
+    fonts:
+      - dejavu
+      - fontawesome
+    props:
+      height: 44
+      padding:
+        left: 5
+        right: 2
+      dim:
+        value: 0.5
+    left:
+      - battery
+      - volume
+      - cpu
+      - ram
+      - temperature
+    center:
+      - date
+    right:
+      - i3
+      - network
+
+  network:
+    left:
+      - network_detailed
+    right:
+      - date
