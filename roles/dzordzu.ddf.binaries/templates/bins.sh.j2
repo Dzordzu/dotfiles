@@ -2,6 +2,8 @@
 # Add binaries to PATH
 # {{ ansible_managed }}
 
+export PATH="$PATH:{{ lookup('env', 'HOME') }}/.ddf/bin"
+
 {% for single_path in _ddf_bin_dirs %}
 export PATH="$PATH:{{ single_path }}"
 {% endfor %}

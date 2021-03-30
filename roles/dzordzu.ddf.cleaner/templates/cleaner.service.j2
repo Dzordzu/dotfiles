@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Clean home from time to time
+
+[Service]
+Type=oneshot
+ExecStart=~/.ddf/bin/ddf_home_clean
+
+[Install]
+WantedBy=default.target
+
+# vim: ft=systemd

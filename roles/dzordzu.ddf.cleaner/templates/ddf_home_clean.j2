@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Move to Pictures
+mv --backup=existing ~/*.png ~/Pictures
+mv --backup=existing ~/*.jpg ~/Pictures
+mv --backup=existing ~/*.gif ~/Pictures
+
+# Move to Music
+mv --backup=existing ~/*.mp3 ~/Music
+mv --backup=existing ~/*.wav ~/Music
+mv --backup=existing ~/*.flac ~/Music
+mv --backup=existing ~/*.opus ~/Music
+
+# Move to Graphic
+mv --backup=existing ~/*.odg ~/Music
+
+# Move to Documents
+mv --backup=existing ~/*.pdf ~/Documents
+mv --backup=existing ~/*.odt ~/Documents
+mv --backup=existing ~/*.odp ~/Documents
+
+return 0
+
+{#
+# vim: ft=sh.jinja2
+#}

@@ -1,0 +1,28 @@
+---
+
+- name: Create user dir ~/Pictures/
+  file:
+    path: ~/Pictures/
+    state: directory
+
+- name: Create user dir ~/Graphic/
+  file:
+    path: ~/Graphic/
+    state: directory
+
+- name: Create user dir ~/Documents/
+  file:
+    path: ~/Documents/
+    state: directory
+
+- name: Create user dir ~/Music/
+  file:
+    path: ~/Music/
+    state: directory
+
+- name: Create clean binary
+  become: false
+  template:
+    src: ddf_home_clean.j2
+    dest: ~/.ddf/bin/ddf-utils-homeclean
+    mode: '700'
