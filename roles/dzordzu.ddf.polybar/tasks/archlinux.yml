@@ -1,24 +1,15 @@
 ---
 
-- name: Install i3
+- name: Install polybar
   become: false
   aur:
     name:
-      - i3-gaps
-      - i3lock
-      - perl-anyevent-i3
+      - polybar-git
 
 - name: Install other packages
   become: false
   aur:
     name:
-      - libevent
-      - polybar-git
-      - rofi
-      - rofi-dmenu
-      - dunst
-      - xdotool
-      - unclutter
       - termsyn-font
       - ttf-font-awesome
 

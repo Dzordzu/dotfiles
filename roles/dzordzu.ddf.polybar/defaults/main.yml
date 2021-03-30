@@ -17,6 +17,12 @@ ddf_polybar_fonts:
     size: 10
     vertical_offset: 3
 
+ddf_polybar_modules:
+  battery:
+    battery: BAT0
+    adapter: ADP1
+    full-at: 98
+
 ddf_polybar_bars:
   default:
     fonts:

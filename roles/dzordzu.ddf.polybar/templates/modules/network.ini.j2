@@ -1,0 +1,38 @@
+
+[module/networkwifi]
+type = internal/network
+interface = wlp3s0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = 
+label-connected = wlp3s0: %local_ip%
+label-connected-margin-left = 3
+label-disconnected-margin-left = 3
+
+
+[module/networketh]
+type = internal/network
+interface = enp4s0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = enp4s0: %local_ip% 
+label-disconnected = 
+label-connected-margin-left = 3
+label-disconnected-margin-left = 3
+
+[module/networktun]
+type = internal/network
+interface = 
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = : %local_ip% 
+label-disconnected = 
+label-connected-margin-left = 3
+label-disconnected-margin-left = 3
+
+[module/networktunname]
+type = custom/script
+exec = ~/.config/polybar/scripts/vpn
+interval = 5
+
+# vim: ft=toml.j2

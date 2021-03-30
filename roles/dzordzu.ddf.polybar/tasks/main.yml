@@ -3,21 +3,15 @@
   when: ansible_distribution == 'Archlinux'
   include_tasks: "archlinux.yml"
 
-- name: Create user dir ~/.config/i3
+- name: Create user dir ~/.config/polybar
   file:
-    path: ~/.config/i3
+    path: ~/.config/polybar
     state: directory
 
-- name: Install xinit
-  copy:
-    content: "exec i3"
-    dest: ~/.xinitrc
-    force: no
-
-- name: Create ~/.config/i3/config
+- name: Create ~/.config/polybar/config
   template:
     src: config.j2
-    dest: ~/.config/i3/config
+    dest: ~/.config/polybar/config
     mode: '0644'
   tags:
     - "rc"
