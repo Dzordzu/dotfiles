@@ -3,6 +3,10 @@
   when: ansible_distribution == 'Archlinux'
   include_tasks: "archlinux.yml"
 
+- name: Install ArchLinux packages
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+  include_tasks: "rhel.yml"
+
 - name: Create user dir ~/.config/tmux
   file:
     path: ~/.config/tmux

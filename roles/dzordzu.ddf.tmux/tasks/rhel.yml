@@ -1,0 +1,13 @@
+---
+
+- name: Install tmux
+  become: true
+  yum:
+    name:
+      - tmux
+      - git
+      - ruby
+
+# TODO: Tmuxinator
+
+# vim: ft=yaml.ansible
