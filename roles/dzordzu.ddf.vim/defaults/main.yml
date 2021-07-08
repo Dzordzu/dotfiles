@@ -36,7 +36,7 @@ ddf_vim_plugins:
   - 'rodjek/vim-puppet'
 
   # Ansible
-  - 'pearofduck/ansible-vim'
+  - 'pearofducks/ansible-vim'
 
   # YAML
   - 'pedrohdz/vim-yaml-folds'
@@ -73,7 +73,7 @@ ddf_vim_plugins:
     params: {'rtp': 'vim'}
 
   # Jinja
-  - 'Glench/Vim-Jinja2-Syntx'
+  - 'Glench/Vim-Jinja2-Syntax'
 
   # Git
   - 'airblade/vim-gitgutter'

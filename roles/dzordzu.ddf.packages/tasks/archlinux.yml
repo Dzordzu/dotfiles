@@ -7,8 +7,8 @@
       - trizen
       - yay
 
-- name: Install basic languages
-  become: false
+- name: Install basic languages (1)
+  become: true
   aur:
     name:
       - python
@@ -19,12 +19,22 @@
       - cabal-install
       - ruby
       - perl
+
+- name: Install basic languages (2)
+  become: false
+  aur:
+    name:
       - scons
       - dotnet-sdk-bin
       - dotnet-runtime-bin
       - cmake
       - clang
       - bison
+
+- name: Install basic languages (3)
+  become: false
+  aur:
+    name:
       - ocaml
       - valgrind
       - gdb
@@ -45,7 +55,7 @@
       - ttf-liberation
       - ttf-roboto
       - cantarell-fonts
-      - fontawesome.sty
+      - texlive-fontsextra
       - gsfonts
       - nerd-fonts-complete
       - noto-fonts
