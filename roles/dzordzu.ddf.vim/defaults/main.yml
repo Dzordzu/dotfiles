@@ -35,9 +35,11 @@ ddf_vim_plugins:
   # Puppet
   - 'rodjek/vim-puppet'
 
+  # Ansible
+  - 'pearofduck/ansible-vim'
+
   # YAML
   - 'pedrohdz/vim-yaml-folds'
-
 
   # Snippets
   - 'SirVer/ultisnips'
@@ -69,6 +71,9 @@ ddf_vim_plugins:
   - 'morhetz/gruvbox'
   - name: 'sonph/onehalf'
     params: {'rtp': 'vim'}
+
+  # Jinja
+  - 'Glench/Vim-Jinja2-Syntx'
 
   # Git
   - 'airblade/vim-gitgutter'
