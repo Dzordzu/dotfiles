@@ -1,5 +1,7 @@
 ---
 
+ddf_vault_addr: https://vault.dzordzu.pl
+
 ddf_zsh_keyboard_layout: pl
 
 ddf_zsh_plugins:

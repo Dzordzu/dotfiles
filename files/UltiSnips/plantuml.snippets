@@ -1,7 +1,32 @@
-snippet plant "Start plantuml" b
+snippet start "Start plantuml" b
 @startuml
+!include https://gist.githubusercontent.com/Dzordzu/229fcfe24ea53505cab0ee930176379d/raw/2176619728dbf9754934c8af5ed6f984a08e1661/cyborgy-theme.puml
 $0
 @enduml
+' vim: ft=plantuml
+endsnippet
+
+snippet bact "Activity" b
+start
+:$1;
+$0
+stop
+endsnippet
+
+snippet act "Activity" b
+:$1;
+$0
+endsnippet
+
+snippet part "Partition" b
+partition "$1" {
+	$0
+}
+endsnippet
+
+snippet swim "Swimlane" b
+|#${2:color}|${1:name}|
+$0
 endsnippet
 
 snippet cls "Generate class definition" b
