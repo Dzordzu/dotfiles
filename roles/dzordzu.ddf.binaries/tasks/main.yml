@@ -58,4 +58,11 @@
     dest: /usr/local/bin/ddf
     mode: '755'
 
+- name: (ddf-brightness) Change permission of the brightness file
+  become: true
+  template:
+    src: backlight-rules.j2
+    dest: /lib/udev/rules.d/90-brightnessctl.rules
+    mode: '0644'
+
 # vim: ft=yaml.ansible

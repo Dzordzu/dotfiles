@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BRIGHTNESS_DEVICE=$(brightnessctl -l | grep "class 'backlight'" | awk '{print $2}' | sed "s/'//g")
+if [[ "$1" == "+" ]]; then
+   brightnessctl -d $BRIGHTNESS_DEVICE set +8% &> /dev/null
+else
+   brightnessctl -d $BRIGHTNESS_DEVICE set 8%- &> /dev/null
+fi

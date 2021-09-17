@@ -4,6 +4,8 @@
 ###############
 
 set $mod Mod4
+
+set $x_backlight brightnessctl -l | grep "class 'backlight'" | awk '{print $2}'
 font pango:monospace 8
 
 floating_modifier $mod

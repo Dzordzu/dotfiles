@@ -12,6 +12,7 @@
   become: false
   aur:
     name:
+      - brightnessctl
       - libevent
       - polybar-git
       - rofi

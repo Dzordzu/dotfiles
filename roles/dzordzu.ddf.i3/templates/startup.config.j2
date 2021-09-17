@@ -15,6 +15,7 @@ exec_always "for dev in $($x_touchpad); do xinput disable $dev; done"
 
 
 exec_always {{ ddf_i3_xrandr }}
+exec_always brightnessctl -d `$x_backlight` set 50%
 exec --no-startup-id /usr/lib/pam_kwallet_init
 
 {#

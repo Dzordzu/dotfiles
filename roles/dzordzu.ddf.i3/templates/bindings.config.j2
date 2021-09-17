@@ -82,6 +82,10 @@ bindsym $mod+Shift+slash exec "notify-send Workspace:\ $(i3-msg -t get_workspace
 # backspace
 bindsym --release $mod+x $key_command BackSpace
 
+# backlight
+bindcode 224 exec ddf-brightness -
+bindcode 225 exec ddf-brightness +
+
 {#
 vim: ft=i3config.jinja2
 #}
