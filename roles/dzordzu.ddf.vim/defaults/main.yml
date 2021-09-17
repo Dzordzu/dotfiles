@@ -152,3 +152,6 @@ ddf_vim_plugins:
 
   # i3 config
   - 'mboughaba/i3config.vim'
+
+  # Icinga
+  - 'crazy-canux/icinga2.vim'
