@@ -3,8 +3,12 @@ export TERM="xterm-256color"
 
 # POWERLEVEL customization
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode user dir vcs newline)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs newline)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vim_shell terraform rust_version status root_indicator background_jobs history)
+
 
 # Set prompt
 autoload -Uz promptinit
