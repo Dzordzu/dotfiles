@@ -13,7 +13,7 @@ ddf_polybar_fonts:
     size: 9
     vertical_offset: 3
   fontawesome:
-    name: "Font Awesome 5 Free Solid"
+    name: "Font Awesome 6 Free Solid"
     size: 10
     vertical_offset: 3
 
