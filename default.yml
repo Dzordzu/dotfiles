@@ -1,12 +1,14 @@
 ---
 - hosts: localhost
+  connection: local
   roles:
+     # - dzordzu.ddf.polybar
      - dzordzu.ddf.i3
      - dzordzu.ddf.alacritty
 #      - dzordzu.ddf.binaries
 #      - dzordzu.ddf.export_vars
 #      - dzordzu.ddf.packages
-#      - dzordzu.ddf.vim
-#      - dzordzu.ddf.zsh
-#      - dzordzu.ddf.tmux
+     - dzordzu.ddf.vim
+     - dzordzu.ddf.zsh
+     - dzordzu.ddf.tmux
 #      - dzordzu.ddf.cleaner

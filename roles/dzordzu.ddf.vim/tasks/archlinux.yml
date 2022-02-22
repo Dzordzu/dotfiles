@@ -3,18 +3,20 @@
 - name: Install vim(s)
   become: false
   aur:
-    name:
-      - neovim
-      - gvim
-      - vim
+    name: "{{ item }}"
+  with_items:
+    - neovim
+    - gvim
+    - vim
 
 - name: Install file navigation tools
   become: false
   aur:
-    name:
-      - ranger
-      - fzf
-      - tmux
-      - ripgrep
+    name: "{{ item }}"
+  with_items:
+    - ranger
+    - fzf
+    - tmux
+    - ripgrep
 
 # vim: ft=yaml.ansible

@@ -11,16 +11,17 @@
 - name: Install other packages
   become: false
   aur:
-    name:
-      - brightnessctl
-      - libevent
-      - polybar-git
-      - rofi
-      - rofi-dmenu
-      - dunst
-      - xdotool
-      - unclutter
-      - termsyn-font
-      - ttf-font-awesome
+    name: "{{ item }}"
+  with_items:
+    - brightnessctl
+    - libevent
+    - polybar-git
+    - rofi
+    - rofi-dmenu
+    - dunst
+    - xdotool
+    - unclutter
+    - termsyn-font
+    - ttf-font-awesome
 
 # vim: ft=yaml.ansible
