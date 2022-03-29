@@ -2,19 +2,23 @@
 - hosts: localhost
   tags:
      - editors
+  connection: local
   roles:
      - dzordzu.ddf.vim
 
 - hosts: localhost
   tags:
      - graphical
+  connection: local
   roles:
+     # - dzordzu.ddf.polybar
      - dzordzu.ddf.i3
      - dzordzu.ddf.alacritty
 
 - hosts: localhost
   tags:
      - common
+  connection: local
   roles:
      - dzordzu.ddf.binaries
      - dzordzu.ddf.export_vars
@@ -22,6 +26,7 @@
      - dzordzu.ddf.cleaner
 
 - hosts: localhost
+  connection: local
   tags:
      - terminal
   roles:

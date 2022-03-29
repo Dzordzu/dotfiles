@@ -3,8 +3,10 @@
 - name: Install tmux
   become: false
   aur:
-    name:
-      - tmux
-      - tmuxinator
+    name: "{{ item }}"
+  with_items:
+    - tmux
+    - tmuxinator
+
 
 # vim: ft=yaml.ansible
