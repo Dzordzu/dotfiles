@@ -1,12 +1,29 @@
 ---
 - hosts: localhost
+  tags:
+     - editors
+  roles:
+     - dzordzu.ddf.vim
+
+- hosts: localhost
+  tags:
+     - graphical
   roles:
      - dzordzu.ddf.i3
      - dzordzu.ddf.alacritty
-#      - dzordzu.ddf.binaries
-#      - dzordzu.ddf.export_vars
-#      - dzordzu.ddf.packages
-#      - dzordzu.ddf.vim
-#      - dzordzu.ddf.zsh
-#      - dzordzu.ddf.tmux
-#      - dzordzu.ddf.cleaner
+
+- hosts: localhost
+  tags:
+     - common
+  roles:
+     - dzordzu.ddf.binaries
+     - dzordzu.ddf.export_vars
+     - dzordzu.ddf.packages
+     - dzordzu.ddf.cleaner
+
+- hosts: localhost
+  tags:
+     - terminal
+  roles:
+     - dzordzu.ddf.zsh
+     - dzordzu.ddf.tmux

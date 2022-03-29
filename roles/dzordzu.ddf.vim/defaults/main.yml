@@ -113,7 +113,7 @@ ddf_vim_plugins:
 
   # C++
   - 'rip-rip/clang_complete'
-  - 'vhdirk/vim-cmake'
+    # - 'vhdirk/vim-cmake'
   - 'richq/vim-cmake-completion'
 
 
