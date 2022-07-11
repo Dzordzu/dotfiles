@@ -21,3 +21,13 @@
     mode: '0644'
   tags:
     - "rc"
+
+- name: Copy wallpapers
+  copy:
+    src: "{{ playbook_dir }}/files/wallpapers/"
+    dest: ~/Wallpapers/Package/
+
+- name: Set default wallpaper
+  copy:
+    src: "{{ playbook_dir }}/files/wallpapers/{{ ddf_i3_wallpaper }}"
+    dest: ~/Wallpapers/main

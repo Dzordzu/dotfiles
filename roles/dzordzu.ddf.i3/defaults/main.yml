@@ -1,5 +1,7 @@
 ---
 
+ddf_i3_wallpaper: "get-back-to-work.jpg"
+
 ddf_i3_modes:
   - name: 'launch'
     binding: '$mod+Shift+l'

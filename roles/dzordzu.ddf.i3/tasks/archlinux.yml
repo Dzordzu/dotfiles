@@ -15,7 +15,7 @@
   with_items:
     - brightnessctl
     - libevent
-    - polybar-git
+    - polybar
     - rofi
     - rofi-dmenu
     - dunst

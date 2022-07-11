@@ -1,0 +1,8 @@
+---
+- name: Create ~/.config/picom.conf.j2
+  template:
+    src: picom.conf.j2
+    dest: ~/.config/picom.conf
+    mode: '0644'
+  tags:
+    - "rc"
