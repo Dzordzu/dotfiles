@@ -3,8 +3,15 @@
 ## Startup ##
 #############
 
+# Change default workspace
+exec i3-msg workspace 1
+
 exec alacritty &
-for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 900 600, move position center, move right +350px
+exec_always --no-startup-id pkill glava && i3-msg "OK" && glava &
+
+for_window [workspace="1" class="[Aa]lacritty"] floating enable, resize set 910 910, move position center, move right +450px, move down +10px
+
+for_window [workspace="2" class="[Aa]lacritty"] floating enable, resize set 900 600, move position center, move right +450px
 
 exec --no-startup-id feh --bg-scale --auto-reload ~/Wallpapers/main
 exec dunst &
