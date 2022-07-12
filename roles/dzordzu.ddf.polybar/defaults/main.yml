@@ -12,8 +12,12 @@ ddf_polybar_fonts:
     font: "DejaVuSerifMono"
     size: 9
     vertical_offset: 3
+  hurmit:
+    font: "HurmitNerdFont"
+    size: 9
+    vertical_offset: 3
   fontawesome:
-    name: "Font Awesome 6 Free Solid"
+    font: "Font Awesome 6 Free Solid"
     size: 10
     vertical_offset: 3
 
@@ -26,15 +30,12 @@ ddf_polybar_modules:
 ddf_polybar_bars:
   default:
     fonts:
-      - dejavu
+      - hurmit
       - fontawesome
     props:
       height: 44
-      padding:
-        left: 5
-        right: 2
-      dim:
-        value: 0.5
+      padding-left: 5
+      padding-right: 2
     left:
       - battery
       - volume

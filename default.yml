@@ -11,7 +11,7 @@
      - graphical
   connection: local
   roles:
-     # - dzordzu.ddf.polybar
+     - dzordzu.ddf.polybar
      - dzordzu.ddf.i3
      - dzordzu.ddf.alacritty
      - dzordzu.ddf.picom

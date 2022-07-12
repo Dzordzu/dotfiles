@@ -1,6 +1,6 @@
 [colors]
-{% for color,value in ddf_polybar_colors %}
-{{ color }} = {{ value }} 
+{% for color,value in ddf_polybar_colors.items() %}
+{{ color }} = {{ value }}
 {% endfor %}
 
 {#

@@ -1,0 +1,24 @@
+{% for bar_name, bar_config in ddf_polybar_bars.items() %}
+[bar/{{ bar_name }}]
+{# Modules #}
+{% for module_location in ['center', 'left', 'right'] %}
+{% if module_location in bar_config %}
+modules-{{ module_location }}= {{ " ".join(bar_config[module_location]) }}
+{% endif %}
+{% endfor %}
+{# Fonts #}
+{% if 'fonts' in bar_config %}
+{% for font_index in range(0, bar_config['fonts'] | length) %}
+{% set current_font = ddf_polybar_fonts[bar_config['fonts'][font_index]] %}
+font-{{ font_index }} = {{ current_font['font'] }}:size={{ current_font['size'] }};{{ current_font['vertical_offset'] }}
+{% endfor %}
+{% endif %}
+{# Props #}
+{% if 'props' in bar_config %}
+{% for key,value in bar_config['props'].items() %}
+{{ key }} = {{ value }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
