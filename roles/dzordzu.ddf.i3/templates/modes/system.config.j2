@@ -3,8 +3,8 @@ set $x_touchpad xinput list | awk ' /[Tt]ouchpad/ {print $0}' | awk 'match($0, /
 set $x_mouse xinput list | awk ' /[Mm]ouse/ {print $0}' | awk 'match($0, /id=([0-9]+)/, a) {print a[1]}' 
 
 bindsym s exec "shutdown -h now"
-bindsym Shift+l exec "i3lock -t -i ~/Wallpapers/lock.resized && i3-msg mode 'default'"
-bindsym l exec "i3-msg mode 'default' && dm-tool switch-to-greeter"
+bindsym l exec "i3lock -t -i ~/Wallpapers/Package/logo.png && i3-msg mode 'default'"
+bindsym Shift+l exec "i3-msg mode 'default' && dm-tool switch-to-greeter"
 bindsym e exit
 
 # like i3
