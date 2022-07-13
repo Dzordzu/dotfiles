@@ -18,6 +18,7 @@ exec dunst &
 exec unclutter --timeout 1 &
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id conky
 exec_always "for dev in $($x_touchpad); do xinput disable $dev; done"
 
 
