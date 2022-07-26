@@ -2,6 +2,7 @@
 - hosts: localhost
   tags:
      - editors
+     - vim
   connection: local
   roles:
      - dzordzu.ddf.vim
