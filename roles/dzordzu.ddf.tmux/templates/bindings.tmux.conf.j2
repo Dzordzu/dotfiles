@@ -17,6 +17,10 @@ bind -n M-v split-window -h -c "#{pane_current_path}"
 
 # Better new window
 bind -n M-c new-window -c "#{pane_current_path}"\; display-message "New window"
+bind -n M-C new-session -c "#{pane_current_path}"\; display-message "New session"
+
+# Better new window
+bind -n M-c new-window -c "#{pane_current_path}"\; display-message "New window"
 
 # Better window moving
 bind -n M-w next-window \; display-message "Next window"
