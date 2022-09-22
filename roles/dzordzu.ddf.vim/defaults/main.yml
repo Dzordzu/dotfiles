@@ -161,3 +161,6 @@ ddf_vim_plugins:
   - 'pangloss/vim-javascript'
   - name: 'evanleck/vim-svelte'
     params: {'branch': 'main'}
+
+  # ANTRL4
+  - 'dylon/vim-antlr'
