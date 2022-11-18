@@ -20,9 +20,16 @@
 - hosts: localhost
   tags:
      - common
+     - bin
   connection: local
   roles:
      - dzordzu.ddf.binaries
+
+- hosts: localhost
+  tags:
+     - common
+  connection: local
+  roles:
      - dzordzu.ddf.export_vars
      - dzordzu.ddf.packages
      - dzordzu.ddf.cleaner

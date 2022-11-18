@@ -164,3 +164,6 @@ ddf_vim_plugins:
 
   # ANTRL4
   - 'dylon/vim-antlr'
+
+  # Config highlighting
+  - 'Fymyte/mbsync.vim'
