@@ -12,7 +12,7 @@ alias muxs='tmuxinator start' #mux terminate
 alias muxt='tmuxinator stop' #mux terminate
 alias muxl='tmuxinator list'
 alias m='neomutt'
-alias sa='ssh-add'
+alias sa='for key in ${SSH_ADD_KEYS}; do ssh-add $key; done'
 
 {#
 vim: ft=zsh.jinja2
