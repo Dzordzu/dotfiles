@@ -20,6 +20,8 @@ elif [[ "$1" == "--dir" ]]; then
    echo "{{ playbook_dir }}"
 elif [[ "$1" == '--version' ]]; then
    echo '(unstable) 1.0.0'
+elif [[ ! -z "$1" ]] && [[ "$1" != "--*" ]]; then
+   `ddf-$1`
 else
    echo """
 ddf - Dzordzu Dotfiles
