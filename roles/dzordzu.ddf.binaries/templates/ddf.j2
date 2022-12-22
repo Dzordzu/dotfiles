@@ -21,17 +21,25 @@ elif [[ "$1" == "--dir" ]]; then
 elif [[ "$1" == '--version' ]]; then
    echo '(unstable) 1.0.0'
 elif [[ ! -z "$1" ]] && [[ "$1" != "--*" ]]; then
-   `ddf-$1 ${@:2}`
+   bash -c "ddf-$1 ${@:2}"
 else
+   available_subcmd=`compgen -c | grep -e "^ddf-" | sed 's/^ddf-/   /g' | sort | uniq`
+   bold=`tput bold`
+   normal=`tput sgr0`
    echo """
 ddf - Dzordzu Dotfiles
 
-Available arguments:
---help      Shows help
---dir       Shows an absolute path to the dir with the playbook
---bin-dir   Shows an absolute path to the dir with the ddf binaries
---binaries  Shows available ddf binaries
---version   Display version of the ddf
+${bold}Usage${normal}: ddf <argument/subcommand>
+
+${bold}Available arguments${normal}:
+   --help      Shows help
+   --dir       Shows an absolute path to the dir with the playbook
+   --bin-dir   Shows an absolute path to the dir with the ddf binaries
+   --binaries  Shows available ddf binaries
+   --version   Display version of the ddf
+
+${bold}Available subcommands${normal}:
+$available_subcmd
    """
 fi
 
