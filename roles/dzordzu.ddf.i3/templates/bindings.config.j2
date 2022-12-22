@@ -66,6 +66,7 @@ bindsym $mod+Mod1+Sys_Req exec spectacle -abc # Fix. Somehow Sys_Req is Print
 # browsers
 bindsym Control+Mod1+b exec qutebrowser
 bindsym Control+Mod1+f exec firefox --new-window
+bindsym Control+Mod1+Shift+F exec firefox --P personal --new-window
 
 # repeat mode
 bindsym $mod+Shift+r exec "if [ $(xset -q | grep 'auto repeat:' | awk '{print $3}') = 'on' ]; then xset -r && notify-send 'Turned off an auto key mode'; else xset r && notify-send 'Turned on an auto key mode'; fi"

@@ -7,13 +7,21 @@
   roles:
      - dzordzu.ddf.vim
 
+
+- hosts: localhost
+  tags:
+     - graphical
+     - i3
+  connection: local
+  roles:
+     - dzordzu.ddf.i3
+
 - hosts: localhost
   tags:
      - graphical
   connection: local
   roles:
      - dzordzu.ddf.polybar
-     - dzordzu.ddf.i3
      - dzordzu.ddf.alacritty
      - dzordzu.ddf.picom
 
