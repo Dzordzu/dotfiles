@@ -19,4 +19,12 @@
     - tmux
     - ripgrep
 
+- name: Install required tools
+  become: false
+  aur:
+    name: "{{ item }}"
+  with_items:
+    - ansible-lint
+
+
 # vim: ft=yaml.ansible
