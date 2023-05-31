@@ -121,7 +121,7 @@
   aur:
     name:
       - nano
-      - tmux
+        # - tmux (custom compilation)
 
 - name: Install archive tools
   become: false

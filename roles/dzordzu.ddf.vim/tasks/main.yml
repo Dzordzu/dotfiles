@@ -41,7 +41,7 @@
     - "rc"
 
 - name: Install vim plugins
-  command: "vim -c :PlugUpdate -c :qa"
+  command: "nvim -c :PlugUpdate -c :qa"
   tags:
     - "updates"
 

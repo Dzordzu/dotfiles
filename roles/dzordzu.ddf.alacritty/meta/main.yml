@@ -12,6 +12,4 @@ galaxy_info:
 
 collections:
   - ansible.posix
-
-dependencies:
   - kewlfft.aur

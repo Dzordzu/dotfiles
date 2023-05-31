@@ -1,8 +1,8 @@
 
-let g:ale_linters = { 'cs': ['OmniSharp']}
+let g:ale_linters = { 'cs': ['OmniSharp'], 'python': ['ruff', 'pylint', 'flake8']}
 let g:ale_fixers = { 'cpp': ['astyle', ] }
 
-let g:ale_linters_ignore = { 'cpp': ['cc'] }
+let g:ale_linters_ignore = { 'cpp': ['cc']}
 
 {#
 vim: ft=vim.jinja2

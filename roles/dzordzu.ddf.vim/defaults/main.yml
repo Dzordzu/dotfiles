@@ -167,3 +167,9 @@ ddf_vim_plugins:
 
   # Config highlighting
   - 'Fymyte/mbsync.vim'
+
+  # ChatGPT (v3)
+  - 'nvim-lua/plenary.nvim'
+  - 'nvim-telescope/telescope.nvim'
+  - 'MunifTanjim/nui.nvim'
+  - 'jackMort/ChatGPT.nvim'

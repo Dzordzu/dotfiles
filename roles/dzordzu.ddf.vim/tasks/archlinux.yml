@@ -16,7 +16,7 @@
   with_items:
     - ranger
     - fzf
-    - tmux
+      # - tmux (custom compilation)
     - ripgrep
 
 - name: Install required tools
