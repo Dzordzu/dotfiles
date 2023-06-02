@@ -14,6 +14,9 @@ alias muxl='tmuxinator list'
 alias m='neomutt'
 alias sa='for key in ${SSH_ADD_KEYS}; do ssh-add $key; done'
 
+alias gmp="v -c ':let g:workspace_session_disable_on_args = 1' $(git rev-parse --show-toplevel)/.git/.new_commit_message"
+alias gcap="git commit -aveF $(git rev-parse --show-toplevel)/.git/.new_commit_message && rm $(git rev-parse --show-toplevel)/.git/.new_commit_message"
+
 {#
 vim: ft=zsh.jinja2
 #}
