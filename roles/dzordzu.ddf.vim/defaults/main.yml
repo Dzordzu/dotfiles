@@ -29,6 +29,7 @@ ddf_vim_plugins:
   - 'easymotion/vim-easymotion'
   - 'ctrlpvim/ctrlp.vim'
   - 'francoiscabrol/ranger.vim'
+  - 'theniceboy/joshuto.nvim'
   - 'rbgrouleff/bclose.vim'
   - 'dbakker/vim-projectroot'
 

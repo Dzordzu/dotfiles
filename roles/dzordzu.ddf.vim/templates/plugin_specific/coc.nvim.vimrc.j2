@@ -1,0 +1,19 @@
+nmap <Leader><C-c><C-a>  <Plug>(coc-codeaction)
+nmap <Leader><C-c><C-f>  <Plug>(coc-fix-current)
+nmap <silent> <Leader><C-c><C-d> <Plug>(coc-definition)
+nmap <silent> <Leader><C-c><C-t> <Plug>(coc-type-definition)
+nmap <silent> <Leader><C-c><C-i> <Plug>(coc-implementation)
+nmap <silent> <Leader><C-c><C-r> <Plug>(coc-references)
+
+noremap <silent> <Leader><C-c><C-s> :call CocActionAsync('showSignatureHelp') <CR>
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+{#
+vim: ft=vim.jinja2
+#}
