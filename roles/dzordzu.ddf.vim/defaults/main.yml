@@ -174,3 +174,6 @@ ddf_vim_plugins:
   - 'nvim-telescope/telescope.nvim'
   - 'MunifTanjim/nui.nvim'
   - 'jackMort/ChatGPT.nvim'
+
+  # Cedar
+  - 'Dzordzu/vim-cedar'

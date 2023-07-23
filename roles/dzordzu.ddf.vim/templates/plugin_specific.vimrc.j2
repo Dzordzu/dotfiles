@@ -6,10 +6,12 @@
 {% if 'config' in plugin %}
 {% set template = 'plugin_specific/' + plugin.config + '.vimrc.j2'%}
 " Config for {{ plugin.name }}
+
 {% include template %}
 {% else %}
 {% set plugin_name = plugin.name | regex_replace(regex_search, '\\1') %}
 " Config for {{ plugin.name }}
+
 {% set template = 'plugin_specific/' + plugin_name + '.vimrc.j2' %}
 {% include template ignore missing %}
 {% endif %}
@@ -17,6 +19,7 @@
 {% set plugin_name = plugin | regex_replace(regex_search, '\\1') %}
 {% set template = 'plugin_specific/' + plugin_name + '.vimrc.j2' %}
 " Config for {{ plugin_name }}
+
 {% include template ignore missing %}
 {% endif %}
 {% endfor %}
