@@ -5,7 +5,7 @@ nmap <silent> <Leader><C-c><C-t> <Plug>(coc-type-definition)
 nmap <silent> <Leader><C-c><C-i> <Plug>(coc-implementation)
 nmap <silent> <Leader><C-c><C-r> <Plug>(coc-references)
 
-noremap <silent> <Leader><C-c><C-s> :call CocActionAsync('showSignatureHelp') <CR>
+nnoremap <silent> K :call CocAction("doHover")<CR>
 
 " Use <c-space> to trigger completion.
 if has('nvim')
